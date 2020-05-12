@@ -18,6 +18,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.placeholder.frostburnexpansion.core.registry.BlockRegistry;
+import com.placeholder.frostburnexpansion.core.registry.EntityRegistry;
+import com.placeholder.frostburnexpansion.core.registry.FeatureRegistry;
 import com.placeholder.frostburnexpansion.core.registry.ItemRegistry;
 
 import java.util.stream.Collectors;
@@ -34,6 +36,8 @@ public class FrostburnExpansion
     	eventBus.addListener(this::setup);
     	BlockRegistry.BLOCKS.register(eventBus);
     	ItemRegistry.ITEMS.register(eventBus);
+    	EntityRegistry.ENTITIES.register(eventBus);
+    	FeatureRegistry.FEATURES.register(eventBus);
        
     }
 
