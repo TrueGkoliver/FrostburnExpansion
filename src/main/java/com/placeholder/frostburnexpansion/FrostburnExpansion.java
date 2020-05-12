@@ -17,6 +17,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.placeholder.frostburnexpansion.core.registry.BiomeRegistry;
 import com.placeholder.frostburnexpansion.core.registry.BlockRegistry;
 import com.placeholder.frostburnexpansion.core.registry.EntityRegistry;
 import com.placeholder.frostburnexpansion.core.registry.FeatureRegistry;
@@ -38,6 +39,7 @@ public class FrostburnExpansion
     	ItemRegistry.ITEMS.register(eventBus);
     	EntityRegistry.ENTITIES.register(eventBus);
     	FeatureRegistry.FEATURES.register(eventBus);
+    	BiomeRegistry.BIOMES.register(eventBus);
        
     }
 
