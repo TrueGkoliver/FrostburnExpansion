@@ -17,6 +17,9 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.placeholder.frostburnexpansion.core.registry.BlockRegistry;
+import com.placeholder.frostburnexpansion.core.registry.ItemRegistry;
+
 import java.util.stream.Collectors;
 
 @Mod(FrostburnExpansion.MODID)
@@ -29,10 +32,11 @@ public class FrostburnExpansion
     public FrostburnExpansion() {
     	IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
     	eventBus.addListener(this::setup);
+    	BlockRegistry.BLOCKS.register(eventBus);
+    	ItemRegistry.ITEMS.register(eventBus);
        
     }
 
     private void setup(final FMLCommonSetupEvent event)
-    {
-    }
+    {}
 }
