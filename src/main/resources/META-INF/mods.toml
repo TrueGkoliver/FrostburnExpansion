@@ -31,8 +31,6 @@ authors="Shock Micro, Epic312, Hellothere, Khastkor, mmg28rtt, ShockMicro" #opti
 description='''
 No.
 '''
-
-#poggers
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.frostburnexpansion]] #optional
     # the modid of the dependency
