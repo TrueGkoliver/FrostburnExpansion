@@ -1,14 +1,13 @@
 package com.placeholder.frostburnexpansion.core.registry;
 
-import com.placeholder.frostburnexpansion.FrostburnExpansion;
+import com.placeholder.frostburnexpansion.core.FrostburnExpansion;
 
-import net.minecraft.block.Block;
-import net.minecraft.entity.EntityType;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class FeatureRegistry {
+public class FrostburnExpansionFeatures {
 	public static final DeferredRegister<Feature<?>> FEATURES = new DeferredRegister<Feature<?>>(ForgeRegistries.FEATURES, FrostburnExpansion.MODID);
 
+	// do something with this idk. there's no feature registry in AbC
 }
