@@ -1,4 +1,4 @@
-package com.placeholder.frostburnexpansion.common.entity;
+package com.teamaurora.frostburnexpansion.common.entity;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;

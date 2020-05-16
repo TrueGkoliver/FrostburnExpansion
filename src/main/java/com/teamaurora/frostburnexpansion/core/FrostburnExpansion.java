@@ -1,4 +1,4 @@
-package com.placeholder.frostburnexpansion.core;
+package com.teamaurora.frostburnexpansion.core;
 
 import com.teamabnormals.abnormals_core.core.utils.RegistryHelper;
 import net.minecraftforge.api.distmarker.Dist;
@@ -12,11 +12,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.placeholder.frostburnexpansion.core.registry.FrostburnExpansionBiomes;
-import com.placeholder.frostburnexpansion.core.registry.FrostburnExpansionBlocks;
-import com.placeholder.frostburnexpansion.core.registry.FrostburnExpansionEntities;
-import com.placeholder.frostburnexpansion.core.registry.FrostburnExpansionFeatures;
-import com.placeholder.frostburnexpansion.core.registry.FrostburnExpansionItems;
+import com.teamaurora.frostburnexpansion.core.registry.FrostburnExpansionBiomes;
 
 @Mod(FrostburnExpansion.MODID)
 @Mod.EventBusSubscriber(modid=FrostburnExpansion.MODID)

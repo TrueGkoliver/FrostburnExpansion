@@ -1,4 +1,4 @@
-package com.placeholder.frostburnexpansion.common.world.biome;
+package com.teamaurora.frostburnexpansion.common.world.biome;
 
 import java.util.Random;
 

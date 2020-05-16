@@ -1,6 +1,6 @@
-package com.placeholder.frostburnexpansion.core.registry;
+package com.teamaurora.frostburnexpansion.core.registry;
 
-import com.placeholder.frostburnexpansion.core.FrostburnExpansion;
+import com.teamaurora.frostburnexpansion.core.FrostburnExpansion;
 
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraftforge.registries.DeferredRegister;
