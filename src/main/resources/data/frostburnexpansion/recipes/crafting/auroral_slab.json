@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "frostburnexpansion:auroral_planks"
+    }
+  },
+  "result": {
+    "item": "frostburnexpansion:auroral_slab",
+    "count": 6
+  }
+}
