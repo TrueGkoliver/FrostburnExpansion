@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "frostburnexpansion:block/auroral_log",
+    "side": "frostburnexpansion:block/auroral_log"
+  }
+}
