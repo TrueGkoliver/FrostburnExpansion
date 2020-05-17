@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "frostburnexpansion:borealene_brick_slab"
+      "item": "frostburnexpansion:snow_brick_slab"
     }
   },
   "result": {
-    "item": "frostburnexpansion:chiseled_borealene_bricks",
+    "item": "frostburnexpansion:chiseled_snow_bricks",
     "count": 1
   }
 }

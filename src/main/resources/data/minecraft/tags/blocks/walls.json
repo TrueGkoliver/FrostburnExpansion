@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "frostburnexpansion:borealene_brick_wall"
+    "frostburnexpansion:borealene_brick_wall",
+    "frostburnexpansion:snow_brick_wall"
   ]
 }
