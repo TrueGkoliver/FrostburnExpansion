@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "planks",
+  "group": "wooden_button",
   "ingredients": [
     {
       "item": "frostburnexpansion:auroral_planks"
