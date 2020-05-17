@@ -9,5 +9,11 @@
   "block.frostburnexpansion.cracked_borealene_bricks": "Cracked Borealene Bricks",
   "block.frostburnexpansion.chiseled_borealene_bricks": "Chiseled Borealene Bricks",
   "block.frostburnexpansion.borealene_pillar": "Borealene Pillar",
-  "block.frostburnexpansion.borealene_lamp": "Borealene Lamp"
+  "block.frostburnexpansion.borealene_lamp": "Borealene Lamp",
+
+  "block.frostburnexpansion.snow_bricks": "Snow Bricks",
+  "block.frostburnexpansion.snow_brick_slab": "Snow Brick Slab",
+  "block.frostburnexpansion.snow_brick_stairs": "Snow Brick Stairs",
+  "block.frostburnexpansion.snow_brick_wall": "Snow Brick Wall",
+  "block.frostburnexpansion.chiseled_snow_bricks": "Chiseled Snow Bricks"
 }
