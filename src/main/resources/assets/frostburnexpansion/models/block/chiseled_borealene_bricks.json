@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "frostburnexpansion:block/chiseled_borealene_bricks"
+  }
+}

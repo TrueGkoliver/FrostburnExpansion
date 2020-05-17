@@ -1,0 +1,6 @@
+{
+  "parent": "block/wall_inventory",
+  "textures": {
+    "wall": "frostburnexpansion:block/borealene_bricks"
+  }
+}
