@@ -21,5 +21,11 @@
   "block.frostburnexpansion.stripped_auroral_wood": "Stripped Auroral Wood",
   "block.frostburnexpansion.auroral_log": "Auroral Log",
   "block.frostburnexpansion.auroral_wood": "Auroral Wood",
-  "block.frostburnexpansion.auroral_planks": "Auroral Planks"
+  "block.frostburnexpansion.auroral_planks": "Auroral Planks",
+  "block.frostburnexpansion.auroral_slab": "Auroral Slab",
+  "block.frostburnexpansion.auroral_stairs": "Auroral Stairs",
+  "block.frostburnexpansion.auroral_pressure_plate": "Auroral Pressure Plate",
+  "block.frostburnexpansion.auroral_fence": "Auroral Fence",
+  "block.frostburnexpansion.auroral_fence_gate": "Auroral Fence Gate",
+  "block.frostburnexpansion.auroral_button": "Auroral Button"
 }

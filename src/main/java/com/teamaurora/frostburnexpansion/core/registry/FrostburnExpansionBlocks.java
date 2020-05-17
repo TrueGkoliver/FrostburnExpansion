@@ -42,4 +42,10 @@ public class FrostburnExpansionBlocks {
 	public static final RegistryObject<Block> STRIPPED_AURORAL_WOOD = HELPER.createBlock("stripped_auroral_wood", ()->new StrippedWoodBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS);
 	public static final RegistryObject<Block> AURORAL_WOOD = HELPER.createBlock("auroral_wood", ()->new WoodBlock(STRIPPED_AURORAL_WOOD, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS);
 	public static final RegistryObject<Block> AURORAL_PLANKS = HELPER.createBlock("auroral_planks", ()->new PlanksBlock(Block.Properties.from(Blocks.OAK_PLANKS)), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> AURORAL_SLAB = HELPER.createBlock("auroral_slab", ()->new WoodSlabBlock(Block.Properties.from(Blocks.OAK_SLAB)), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> AURORAL_STAIRS = HELPER.createBlock("auroral_stairs", ()->new WoodStairsBlock(AURORAL_PLANKS.get().getDefaultState(), Block.Properties.from(Blocks.OAK_STAIRS)), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> AURORAL_PRESSURE_PLATE = HELPER.createBlock("auroral_pressure_plate", ()->new WoodPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.from(Blocks.OAK_PRESSURE_PLATE)), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> AURORAL_FENCE = HELPER.createBlock("auroral_fence", ()->new WoodFenceBlock(Block.Properties.from(Blocks.OAK_FENCE)), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> AURORAL_FENCE_GATE = HELPER.createBlock("auroral_fence_gate", ()->new WoodFenceGateBlock(Block.Properties.from(Blocks.OAK_FENCE_GATE)), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> AURORAL_BUTTON = HELPER.createBlock("auroral_button", ()->new AbnormalsWoodButtonBlock(Block.Properties.from(Blocks.OAK_BUTTON)), ItemGroup.REDSTONE);
 }

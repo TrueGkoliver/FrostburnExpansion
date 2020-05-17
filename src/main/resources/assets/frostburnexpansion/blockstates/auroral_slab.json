@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "frostburnexpansion:block/auroral_slab" },
+    "type=top": { "model": "frostburnexpansion:block/auroral_slab_top" },
+    "type=double": { "model": "frostburnexpansion:block/auroral_planks" }
+  }
+}
