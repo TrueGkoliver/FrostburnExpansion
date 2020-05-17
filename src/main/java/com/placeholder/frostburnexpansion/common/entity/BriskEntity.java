@@ -8,9 +8,9 @@ import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.IPacket;
 import net.minecraft.world.World;
 
-public class BrassCreeperEntity extends MonsterEntity {
+public class BriskEntity extends MonsterEntity {
 
-	public BrassCreeperEntity(EntityType<? extends MonsterEntity> entityTypeIn, World worldIn) {
+	public BriskEntity(EntityType<? extends MonsterEntity> entityTypeIn, World worldIn) {
 		super(entityTypeIn, worldIn);
 	}
 	
