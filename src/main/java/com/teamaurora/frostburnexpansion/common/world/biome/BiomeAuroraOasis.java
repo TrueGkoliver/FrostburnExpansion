@@ -14,7 +14,7 @@ public class BiomeAuroraOasis extends Biome {
 				.category(Category.ICY)
 				.temperature(-0.1F)
 				.surfaceBuilder(SurfaceBuilder.DEFAULT, SurfaceBuilder.GRASS_DIRT_GRAVEL_CONFIG)
-				.depth(0.5F)
+				.depth(0.125F)
 				.downfall(0.4F)
 				.waterColor(0x967bb6)
 				.waterFogColor(0x967bb6)
@@ -22,6 +22,7 @@ public class BiomeAuroraOasis extends Biome {
 		DefaultBiomeFeatures.addOres(this);
 		DefaultBiomeFeatures.addCarvers(this);
 		DefaultBiomeFeatures.addFreezeTopLayer(this);
+		DefaultBiomeFeatures.addBlueIce(this);
 	}
 	int i = 0;
 	/*
