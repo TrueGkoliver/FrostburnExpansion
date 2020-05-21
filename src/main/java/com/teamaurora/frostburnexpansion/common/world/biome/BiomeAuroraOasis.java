@@ -2,8 +2,15 @@ package com.teamaurora.frostburnexpansion.common.world.biome;
 
 import java.util.Random;
 
+import com.teamaurora.frostburnexpansion.core.registry.FrostburnExpansionFeatures;
+
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
+import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.IFeatureConfig;
+import net.minecraft.world.gen.placement.FrequencyConfig;
+import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 
 public class BiomeAuroraOasis extends Biome {
@@ -23,6 +30,8 @@ public class BiomeAuroraOasis extends Biome {
 		DefaultBiomeFeatures.addCarvers(this);
 		DefaultBiomeFeatures.addFreezeTopLayer(this);
 		DefaultBiomeFeatures.addBlueIce(this);
+		this.addStructure(Feature.IGLOO.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+		this.addFeature(GenerationStage.Decoration.SURFACE_STRUCTURES, FrostburnExpansionFeatures.BOREALENE_SPIKES.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.COUNT_HEIGHTMAP.configure(new FrequencyConfig(2))));
 	}
 	int i = 0;
 	/*
