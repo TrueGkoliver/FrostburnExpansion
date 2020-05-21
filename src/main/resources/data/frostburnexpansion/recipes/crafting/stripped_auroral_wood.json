@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "frostburnexpansion:stripped_auroral_log"
+    }
+  },
+  "result": {
+    "item": "frostburnexpansion:stripped_auroral_wood",
+    "count": 3
+  }
+}

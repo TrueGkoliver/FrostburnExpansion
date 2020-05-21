@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "frostburnexpansion:snow_brick_slab"
+    }
+  },
+  "result": {
+    "item": "frostburnexpansion:chiseled_snow_bricks",
+    "count": 1
+  }
+}

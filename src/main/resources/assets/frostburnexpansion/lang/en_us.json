@@ -9,5 +9,23 @@
   "block.frostburnexpansion.cracked_borealene_bricks": "Cracked Borealene Bricks",
   "block.frostburnexpansion.chiseled_borealene_bricks": "Chiseled Borealene Bricks",
   "block.frostburnexpansion.borealene_pillar": "Borealene Pillar",
-  "block.frostburnexpansion.borealene_lamp": "Borealene Lamp"
+  "block.frostburnexpansion.borealene_lamp": "Borealene Lamp",
+
+  "block.frostburnexpansion.snow_bricks": "Snow Bricks",
+  "block.frostburnexpansion.snow_brick_slab": "Snow Brick Slab",
+  "block.frostburnexpansion.snow_brick_stairs": "Snow Brick Stairs",
+  "block.frostburnexpansion.snow_brick_wall": "Snow Brick Wall",
+  "block.frostburnexpansion.chiseled_snow_bricks": "Chiseled Snow Bricks",
+
+  "block.frostburnexpansion.stripped_auroral_log": "Stripped Auroral Log",
+  "block.frostburnexpansion.stripped_auroral_wood": "Stripped Auroral Wood",
+  "block.frostburnexpansion.auroral_log": "Auroral Log",
+  "block.frostburnexpansion.auroral_wood": "Auroral Wood",
+  "block.frostburnexpansion.auroral_planks": "Auroral Planks",
+  "block.frostburnexpansion.auroral_slab": "Auroral Slab",
+  "block.frostburnexpansion.auroral_stairs": "Auroral Stairs",
+  "block.frostburnexpansion.auroral_pressure_plate": "Auroral Pressure Plate",
+  "block.frostburnexpansion.auroral_fence": "Auroral Fence",
+  "block.frostburnexpansion.auroral_fence_gate": "Auroral Fence Gate",
+  "block.frostburnexpansion.auroral_button": "Auroral Button"
 }
