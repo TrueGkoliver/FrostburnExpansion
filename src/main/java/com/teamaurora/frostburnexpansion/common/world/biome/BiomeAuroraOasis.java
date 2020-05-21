@@ -12,7 +12,7 @@ public class BiomeAuroraOasis extends Biome {
 				.precipitation(RainType.SNOW)
 				.scale(1F)
 				.category(Category.ICY)
-				.temperature(-0.05F)
+				.temperature(-0.1F)
 				.surfaceBuilder(SurfaceBuilder.DEFAULT, SurfaceBuilder.GRASS_DIRT_GRAVEL_CONFIG)
 				.depth(0.5F)
 				.downfall(0.4F)
@@ -21,6 +21,7 @@ public class BiomeAuroraOasis extends Biome {
 				.parent((String)null));
 		DefaultBiomeFeatures.addOres(this);
 		DefaultBiomeFeatures.addCarvers(this);
+		DefaultBiomeFeatures.addFreezeTopLayer(this);
 	}
 	int i = 0;
 	/*
