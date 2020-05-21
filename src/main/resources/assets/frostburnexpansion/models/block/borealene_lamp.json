@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "frostburnexpansion:block/borealene_lamp"
+  }
+}
