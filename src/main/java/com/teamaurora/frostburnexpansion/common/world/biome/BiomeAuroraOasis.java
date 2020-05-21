@@ -17,7 +17,7 @@ public class BiomeAuroraOasis extends Biome {
 	public BiomeAuroraOasis() {
 		super(new Biome.Builder()
 				.precipitation(RainType.SNOW)
-				.scale(1F)
+				.scale(0.05F)
 				.category(Category.ICY)
 				.temperature(-0.1F)
 				.surfaceBuilder(SurfaceBuilder.DEFAULT, SurfaceBuilder.GRASS_DIRT_GRAVEL_CONFIG)
@@ -31,7 +31,7 @@ public class BiomeAuroraOasis extends Biome {
 		DefaultBiomeFeatures.addFreezeTopLayer(this);
 		DefaultBiomeFeatures.addBlueIce(this);
 		this.addStructure(Feature.IGLOO.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
-		this.addFeature(GenerationStage.Decoration.SURFACE_STRUCTURES, FrostburnExpansionFeatures.BOREALENE_SPIKES.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.COUNT_HEIGHTMAP.configure(new FrequencyConfig(2))));
+		this.addFeature(GenerationStage.Decoration.SURFACE_STRUCTURES, FrostburnExpansionFeatures.BOREALENE_SPIKES.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.COUNT_HEIGHTMAP.configure(new FrequencyConfig(1))));
 	}
 	int i = 0;
 	/*

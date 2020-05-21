@@ -30,7 +30,7 @@ public class BorealeneSpikesFeature extends Feature<NoFeatureConfig>{
 	         pos = pos.down();
 	      }
 
-	      if (worldIn.getBlockState(pos).getBlock() == Blocks.SNOW_BLOCK) {
+	      if (worldIn.getBlockState(pos).getBlock() == Blocks.ICE) {
 	         return false;
 	      } else {
 	         pos = pos.up(rand.nextInt(4));
