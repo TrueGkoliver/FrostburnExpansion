@@ -19,11 +19,11 @@ public class BiomeAuroraOasis extends Biome {
 				.waterColor(0x967bb6)
 				.waterFogColor(0x967bb6)
 				.parent((String)null));
-		DefaultBiomeFeatures.addFreezeTopLayer(this);
 		DefaultBiomeFeatures.addOres(this);
 		DefaultBiomeFeatures.addCarvers(this);
 	}
 	int i = 0;
+	/*
 	boolean direction = true;
 	@Override
 	public int getSkyColor() {
@@ -40,5 +40,5 @@ public class BiomeAuroraOasis extends Biome {
 		}
 		
 		return i;
-	}
+	}*/
 }
