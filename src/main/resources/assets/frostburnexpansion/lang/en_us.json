@@ -27,5 +27,7 @@
   "block.frostburnexpansion.auroral_pressure_plate": "Auroral Pressure Plate",
   "block.frostburnexpansion.auroral_fence": "Auroral Fence",
   "block.frostburnexpansion.auroral_fence_gate": "Auroral Fence Gate",
-  "block.frostburnexpansion.auroral_button": "Auroral Button"
+  "block.frostburnexpansion.auroral_button": "Auroral Button",
+  
+  "effect.frostburnexpansion.fraility" : "Fraility"
 }
