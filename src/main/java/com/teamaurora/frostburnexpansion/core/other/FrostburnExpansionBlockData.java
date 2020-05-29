@@ -34,6 +34,7 @@ public class FrostburnExpansionBlockData {
         RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.AURORAL_LEAVES.get(), RenderType.getCutoutMipped());
         RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.AURORAL_LEAF_CARPET.get(),RenderType.getCutoutMipped());
         RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.AURORAL_SAPLING.get(),RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.POTTED_AURORAL_SAPLING.get(),RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.AURORAL_LADDER.get(),RenderType.getCutout());
     }
 }

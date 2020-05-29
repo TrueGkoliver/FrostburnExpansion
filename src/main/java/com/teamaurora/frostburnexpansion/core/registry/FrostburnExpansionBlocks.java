@@ -65,6 +65,7 @@ public class FrostburnExpansionBlocks {
 	public static final RegistryObject<Block> AURORAL_TRAPDOOR = HELPER.createBlock("auroral_trapdoor", ()->new WoodTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ItemGroup.REDSTONE);
 	public static final RegistryObject<Block> AURORAL_LEAVES = HELPER.createBlock("auroral_leaves", ()->new AbnormalsLeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)), ItemGroup.DECORATIONS);
 	public static final RegistryObject<Block> AURORAL_SAPLING = HELPER.createBlock("auroral_sapling", ()->new AbnormalsSaplingBlock(new OakTree(), Block.Properties.from(Blocks.OAK_SAPLING)), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> POTTED_AURORAL_SAPLING = HELPER.createBlockNoItem("potted_auroral_sapling", ()->new FlowerPotBlock(AURORAL_SAPLING.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
 
 	public static final RegistryObject<Block> VERTICAL_AURORAL_PLANKS = HELPER.createCompatBlock("quark", "vertical_auroral_planks", ()->new Block(Block.Properties.from(Blocks.OAK_PLANKS)), ItemGroup.BUILDING_BLOCKS);
 	public static final RegistryObject<Block> AURORAL_VERTICAL_SLAB = HELPER.createCompatBlock("quark", "auroral_vertical_slab", ()->new VerticalSlabBlock(Block.Properties.from(Blocks.OAK_PLANKS)), ItemGroup.BUILDING_BLOCKS);
