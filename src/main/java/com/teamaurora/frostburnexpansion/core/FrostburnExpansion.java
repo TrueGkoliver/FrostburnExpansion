@@ -40,7 +40,6 @@ public class FrostburnExpansion
 		FrostburnExpansionFeatures.FEATURES.register(eventBus);
     	FrostburnExpansionBiomes.BIOMES.register(eventBus);
     	FrostburnExpansionEffects.POTION_EFFECTS.register(eventBus);
-		MinecraftForge.EVENT_BUS.register(this);
 
 		eventBus.addListener(this::setup);
 		DistExecutor.runWhenOn(Dist.CLIENT, ()->()->{
