@@ -29,8 +29,10 @@ public class FrostburnExpansionBlockData {
     }
 
     public static void setupRenderLayer() {
+        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.AURORAL_DOOR.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.AURORAL_TRAPDOOR.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.AURORAL_LEAVES.get(), RenderType.getCutoutMipped());
-        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.AURORAL_LEAF_CARPET.get(),RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.AURORAL_LEAF_CARPET.get(),RenderType.getCutoutMipped());
         RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.AURORAL_SAPLING.get(),RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.AURORAL_LADDER.get(),RenderType.getCutout());
     }
