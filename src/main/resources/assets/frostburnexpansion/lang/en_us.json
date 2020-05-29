@@ -27,5 +27,13 @@
   "block.frostburnexpansion.auroral_pressure_plate": "Auroral Pressure Plate",
   "block.frostburnexpansion.auroral_fence": "Auroral Fence",
   "block.frostburnexpansion.auroral_fence_gate": "Auroral Fence Gate",
-  "block.frostburnexpansion.auroral_button": "Auroral Button"
+  "block.frostburnexpansion.auroral_button": "Auroral Button",
+  "block.frostburnexpansion.auroral_door": "Auroral Door",
+  "block.frostburnexpansion.auroral_trapdoor": "Auroral Trapdoor",
+  "block.frostburnexpansion.auroral_leaves": "Auroral Leaves",
+  "block.frostburnexpansion.auroral_sapling": "Auroral Sapling",
+  "block.frostburnexpansion.vertical_auroral_planks": "Vertical Auroral Planks",
+  "block.frostburnexpansion.auroral_vertical_slab": "Auroral Vertical Slab",
+  "block.frostburnexpansion.auroral_ladder": "Auroral Ladder",
+  "block.frostburnexpansion.auroral_leaf_carpet": "Auroral Leaf Carpet"
 }

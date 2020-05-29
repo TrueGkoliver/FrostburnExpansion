@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "frostburnexpansion:block/auroral_sapling"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "frostburnexpansion:block/auroral_leaves"
+  }
+}
