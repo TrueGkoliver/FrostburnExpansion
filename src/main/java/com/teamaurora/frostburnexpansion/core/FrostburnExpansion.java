@@ -1,6 +1,7 @@
 package com.teamaurora.frostburnexpansion.core;
 
 import com.teamabnormals.abnormals_core.core.utils.RegistryHelper;
+import com.teamaurora.frostburnexpansion.core.other.FrostburnExpansionBlockData;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.api.distmarker.Dist;
@@ -47,10 +48,12 @@ public class FrostburnExpansion
 
     private void setup(final FMLCommonSetupEvent event) {
 		FrostburnExpansionBiomes.registerBiomesToDictionary();
+		FrostburnExpansionBlockData.registerCompostables();
+		FrostburnExpansionBlockData.registerFlammables();
 	}
 
 	private void clientSetup(final FMLClientSetupEvent event) {
-
+		FrostburnExpansionBlockData.setupRenderLayer();
 	}
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
