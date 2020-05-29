@@ -37,12 +37,17 @@ public class FrostburnExpansionBlocks {
 	public static final RegistryObject<Block> BOREALENE_PILLAR = HELPER.createBlock("borealene_pillar", ()->new RotatedPillarBlock(FrostburnExpansionProperties.BOREALENE), ItemGroup.BUILDING_BLOCKS);
 	public static final RegistryObject<Block> BOREALENE_LAMP = HELPER.createBlock("borealene_lamp", ()->new Block(FrostburnExpansionProperties.BOREALENE.lightValue(14)), ItemGroup.BUILDING_BLOCKS);
 
+	public static final RegistryObject<Block> BOREALENE_VERTICAL_SLAB = HELPER.createCompatBlock("quark", "borealene_vertical_slab", ()->new VerticalSlabBlock(FrostburnExpansionProperties.BOREALENE), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> BOREALENE_BRICK_VERTICAL_SLAB = HELPER.createCompatBlock("quark", "borealene_brick_vertical_slab", ()->new VerticalSlabBlock(FrostburnExpansionProperties.BOREALENE), ItemGroup.BUILDING_BLOCKS);
+
 	// Snow Bricks
 	public static final RegistryObject<Block> SNOW_BRICKS = HELPER.createBlock("snow_bricks", ()->new Block(Block.Properties.from(Blocks.SNOW_BLOCK)), ItemGroup.BUILDING_BLOCKS);
 	public static final RegistryObject<Block> SNOW_BRICK_SLAB = HELPER.createBlock("snow_brick_slab", ()->new SlabBlock(Block.Properties.from(Blocks.SNOW_BLOCK)), ItemGroup.BUILDING_BLOCKS);
 	public static final RegistryObject<Block> SNOW_BRICK_STAIRS = HELPER.createBlock("snow_brick_stairs", ()->new AbnormalsStairsBlock(SNOW_BRICKS.get().getDefaultState(),Block.Properties.from(Blocks.SNOW_BLOCK)), ItemGroup.BUILDING_BLOCKS);
 	public static final RegistryObject<Block> SNOW_BRICK_WALL = HELPER.createBlock("snow_brick_wall", ()->new WallBlock(Block.Properties.from(Blocks.SNOW_BLOCK)), ItemGroup.BUILDING_BLOCKS);
 	public static final RegistryObject<Block> CHISELED_SNOW_BRICKS = HELPER.createBlock("chiseled_snow_bricks", ()->new Block(Block.Properties.from(Blocks.SNOW_BLOCK)), ItemGroup.BUILDING_BLOCKS);
+
+	public static final RegistryObject<Block> SNOW_BRICK_VERTICAL_SLAB = HELPER.createCompatBlock("quark", "snow_brick_vertical_slab", ()->new VerticalSlabBlock(Block.Properties.from(Blocks.SNOW_BLOCK)), ItemGroup.BUILDING_BLOCKS);
 
 	// Auroral Wood
 	public static final RegistryObject<Block> STRIPPED_AURORAL_LOG = HELPER.createBlock("stripped_auroral_log", ()->new StrippedLogBlock(Block.Properties.from(Blocks.STRIPPED_OAK_LOG)), ItemGroup.BUILDING_BLOCKS);
