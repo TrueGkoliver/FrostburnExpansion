@@ -17,6 +17,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.teamaurora.frostburnexpansion.core.registry.FrostburnExpansionBiomes;
+import com.teamaurora.frostburnexpansion.core.registry.FrostburnExpansionEffects;
 import com.teamaurora.frostburnexpansion.core.registry.FrostburnExpansionFeatures;
 
 @Mod(FrostburnExpansion.MODID)
@@ -38,6 +39,7 @@ public class FrostburnExpansion
 		//haha lol no
 		FrostburnExpansionFeatures.FEATURES.register(eventBus);
     	FrostburnExpansionBiomes.BIOMES.register(eventBus);
+    	FrostburnExpansionEffects.POTION_EFFECTS.register(eventBus);
 		MinecraftForge.EVENT_BUS.register(this);
 
 		eventBus.addListener(this::setup);
