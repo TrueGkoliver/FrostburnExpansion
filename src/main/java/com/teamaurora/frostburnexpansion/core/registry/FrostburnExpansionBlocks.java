@@ -8,7 +8,7 @@ import com.teamabnormals.abnormals_core.common.blocks.wood.*;
 import com.teamaurora.frostburnexpansion.core.FrostburnExpansion;
 
 import com.teamabnormals.abnormals_core.core.utils.RegistryHelper;
-import com.teamaurora.frostburnexpansion.core.data.FrostburnExpansionProperties;
+import com.teamaurora.frostburnexpansion.core.other.FrostburnExpansionProperties;
 import net.minecraft.block.*;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.trees.OakTree;

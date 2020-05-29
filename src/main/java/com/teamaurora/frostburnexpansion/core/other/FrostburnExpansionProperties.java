@@ -1,4 +1,4 @@
-package com.teamaurora.frostburnexpansion.core.data;
+package com.teamaurora.frostburnexpansion.core.other;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;

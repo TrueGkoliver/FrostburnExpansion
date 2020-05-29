@@ -1,5 +1,5 @@
 {
-  "parent": "abnormalscore:block/vertical_slab",
+  "parent": "frostburnexpansion:block/vertical_slab",
   "textures": {
     "side": "frostburnexpansion:block/auroral_planks",
     "top": "frostburnexpansion:block/auroral_planks",
