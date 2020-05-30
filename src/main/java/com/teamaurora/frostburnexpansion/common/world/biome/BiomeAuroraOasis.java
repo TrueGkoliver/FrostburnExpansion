@@ -9,7 +9,9 @@ import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.IFeatureConfig;
+import net.minecraft.world.gen.placement.ChanceConfig;
 import net.minecraft.world.gen.placement.FrequencyConfig;
+import net.minecraft.world.gen.placement.NoPlacementConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 
@@ -20,7 +22,7 @@ public class BiomeAuroraOasis extends Biome {
 				.scale(0.05F)
 				.category(Category.ICY)
 				.temperature(-0.1F)
-				.surfaceBuilder(SurfaceBuilder.DEFAULT, SurfaceBuilder.GRASS_DIRT_GRAVEL_CONFIG)
+				.surfaceBuilder(FrostburnExpansionFeatures.BOREALENE_AURORA_OASIS, SurfaceBuilder.GRASS_DIRT_GRAVEL_CONFIG)
 				.depth(0.125F)
 				.downfall(0.4F)
 				.waterColor(0x967bb6)
@@ -31,7 +33,7 @@ public class BiomeAuroraOasis extends Biome {
 		DefaultBiomeFeatures.addFreezeTopLayer(this);
 		DefaultBiomeFeatures.addBlueIce(this);
 		this.addStructure(Feature.IGLOO.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
-		this.addFeature(GenerationStage.Decoration.SURFACE_STRUCTURES, FrostburnExpansionFeatures.BOREALENE_SPIKES.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.COUNT_HEIGHTMAP.configure(new FrequencyConfig(1))));
+		//this.addFeature(GenerationStage.Decoration.SURFACE_STRUCTURES, FrostburnExpansionFeatures.BOREALENE_SPIKES.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.COUNT_HEIGHTMAP.configure(new FrequencyConfig(1))));
 		DefaultBiomeFeatures.addHugeMushrooms(this);
 	}
 	int i = 0;

@@ -1,13 +1,15 @@
 package com.teamaurora.frostburnexpansion.core.registry;
 
-import com.teamaurora.frostburnexpansion.common.world.feature.BorealeneSpikesFeature;
+import com.teamaurora.frostburnexpansion.common.world.gen.feature.BorealeneSpikesFeature;
+import com.teamaurora.frostburnexpansion.common.world.gen.surfacebuilders.AuroraOasisSurfaceBuilder;
+import com.teamaurora.frostburnexpansion.common.world.gen.surfacebuilders.BorealeneAuroraOasisSurfaceBuilder;
 import com.teamaurora.frostburnexpansion.core.FrostburnExpansion;
 
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
+import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -19,6 +21,9 @@ public class FrostburnExpansionFeatures {
 
 	// do something with this idk. there's no feature registry in AbC
 	public static final Feature<NoFeatureConfig> BOREALENE_SPIKES = new BorealeneSpikesFeature(NoFeatureConfig::deserialize);
+
+	public static final SurfaceBuilder<SurfaceBuilderConfig> AURORA_OASIS = new AuroraOasisSurfaceBuilder(SurfaceBuilderConfig::deserialize);
+	public static final SurfaceBuilder<SurfaceBuilderConfig> BOREALENE_AURORA_OASIS = new BorealeneAuroraOasisSurfaceBuilder(SurfaceBuilderConfig::deserialize);
 	
 	@SubscribeEvent
 	public static void onFeatureRegistryEvent(Register<Feature<?>> event) 
