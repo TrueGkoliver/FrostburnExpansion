@@ -2,6 +2,7 @@ package com.teamaurora.frostburnexpansion.core.registry;
 
 import com.teamaurora.frostburnexpansion.common.world.gen.feature.BorealeneSpikesFeature;
 import com.teamaurora.frostburnexpansion.common.world.gen.surfacebuilders.AuroraOasisSurfaceBuilder;
+import com.teamaurora.frostburnexpansion.common.world.gen.surfacebuilders.BorealeneAuroraOasisSurfaceBuilder;
 import com.teamaurora.frostburnexpansion.core.FrostburnExpansion;
 
 import net.minecraft.world.gen.feature.Feature;
@@ -22,6 +23,7 @@ public class FrostburnExpansionFeatures {
 	public static final Feature<NoFeatureConfig> BOREALENE_SPIKES = new BorealeneSpikesFeature(NoFeatureConfig::deserialize);
 
 	public static final SurfaceBuilder<SurfaceBuilderConfig> AURORA_OASIS = new AuroraOasisSurfaceBuilder(SurfaceBuilderConfig::deserialize);
+	public static final SurfaceBuilder<SurfaceBuilderConfig> BOREALENE_AURORA_OASIS = new BorealeneAuroraOasisSurfaceBuilder(SurfaceBuilderConfig::deserialize);
 	
 	@SubscribeEvent
 	public static void onFeatureRegistryEvent(Register<Feature<?>> event) 
