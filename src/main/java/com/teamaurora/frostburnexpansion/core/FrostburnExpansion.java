@@ -50,6 +50,12 @@ public class FrostburnExpansion
 
     private void setup(final FMLCommonSetupEvent event) {
 		FrostburnExpansionBiomes.registerBiomesToDictionary();
+<<<<<<< Updated upstream
+=======
+		FrostburnExpansionBiomes.registerSpawns();
+		FrostburnExpansionBlockData.registerCompostables();
+		FrostburnExpansionBlockData.registerFlammables();
+>>>>>>> Stashed changes
 	}
 
 	private void clientSetup(final FMLClientSetupEvent event) {
