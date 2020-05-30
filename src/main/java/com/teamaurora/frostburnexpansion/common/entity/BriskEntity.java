@@ -146,8 +146,8 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
 	    */
 	   private void explode() {
 	      if (!this.world.isRemote) {
-	         Explosion.Mode explosion$mode = net.minecraftforge.event.ForgeEventFactory.getMobGriefingEvent(this.world, this) ? Explosion.Mode.DESTROY : Explosion.Mode.NONE;
-	         float f = this.getPowered() ? 2.0F : 1.0F;
+	         Explosion.Mode explosion$mode = net.minecraftforge.event.ForgeEventFactory.getMobGriefingEvent(this.world, this) ? Explosion.Mode.NONE : Explosion.Mode.NONE;
+	         float f = this.getPowered() ? 2.0F : 1F;
 	         this.dead = true;
 	         this.world.createExplosion(this, this.getPosX(), this.getPosY(), this.getPosZ(), (float)this.explosionRadius * f, explosion$mode);
 	         this.remove();
