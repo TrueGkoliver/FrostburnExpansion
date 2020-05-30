@@ -29,5 +29,9 @@
   "block.frostburnexpansion.auroral_fence_gate": "Auroral Fence Gate",
   "block.frostburnexpansion.auroral_button": "Auroral Button",
   
-  "effect.frostburnexpansion.fraility" : "Fraility"
+  "effect.frostburnexpansion.fraility" : "Fraility",
+  
+  "item.frostburnexpansion.brisk_spawn_egg" : "Brisk Spawn Egg",
+  
+  "entity.frostburnexpansion.brisk" : "Brisk"
 }
