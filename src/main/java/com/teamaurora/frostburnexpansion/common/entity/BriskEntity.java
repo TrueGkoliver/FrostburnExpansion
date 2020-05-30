@@ -173,7 +173,7 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
 	   protected boolean processInteract(PlayerEntity player, Hand hand) {
 	      ItemStack itemstack = player.getHeldItem(hand);
 	      if (itemstack.getItem() == Items.FLINT_AND_STEEL) {
-	         this.world.playSound(player, this.getPosX(), this.getPosY(), this.getPosZ(), SoundEvents.ITEM_FLINTANDSTEEL_USE, this.getSoundCategory(), 1.0F, this.rand.nextFloat() * 0.4F + 0.8F);
+	         this.world.playSound(player, this.getPosX(), this.getPosY(), this.getPosZ(), SoundEvents.ITEM_FLINTANDSTEEL_USE, this.getSoundCategory(), 0.5F, this.rand.nextFloat() * 0.4F + 0.8F);
 	         if (!this.world.isRemote) {
 	            this.ignite();
 	            itemstack.damageItem(1, player, (p_213625_1_) -> {
