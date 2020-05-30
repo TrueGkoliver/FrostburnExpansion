@@ -37,5 +37,17 @@
   
   "item.frostburnexpansion.brisk_spawn_egg" : "Brisk Spawn Egg",
   
-  "entity.frostburnexpansion.brisk" : "Brisk"
+  "entity.frostburnexpansion.brisk" : "Brisk",
+  
+  "item.minecraft.potion.effect.fraility" : "Potion of Fraility",
+  "item.minecraft.potion.effect.long_fraility" : "Potion of Fraility",
+  "item.minecraft.potion.effect.strong_fraility" : "Potion of Fraility",
+  
+  "item.minecraft.splash_potion.effect.fraility" : "Splash Potion of Fraility",
+  "item.minecraft.splash_potion.effect.long_fraility" : "Splash Potion of Fraility",
+  "item.minecraft.splash_potion.effect.strong_fraility" : "Splash Potion of Fraility",
+  
+  "item.minecraft.lingering_potion.effect.fraility" : "Lingering Potion of Fraility",
+  "item.minecraft.lingering_potion.effect.long_fraility" : "Lingering Potion of Fraility",
+  "item.minecraft.lingering_potion.effect.strong_fraility" : "Lingering Potion of Fraility",
 }

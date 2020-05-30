@@ -40,6 +40,7 @@ public class FrostburnExpansion
 		FrostburnExpansionFeatures.FEATURES.register(eventBus);
     	FrostburnExpansionBiomes.BIOMES.register(eventBus);
     	FrostburnExpansionEffects.POTION_EFFECTS.register(eventBus);
+    	FrostburnExpansionEffects.POTIONS.register(eventBus);
   
 
 		eventBus.addListener(this::setup);

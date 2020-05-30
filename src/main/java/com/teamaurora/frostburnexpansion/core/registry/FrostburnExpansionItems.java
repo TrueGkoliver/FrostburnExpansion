@@ -14,5 +14,6 @@ public class FrostburnExpansionItems {
 	public static final RegistryHelper HELPER = FrostburnExpansion.REGISTRY_HELPER;
 	//Add items here
 	public static final RegistryObject<Item> BRISK_SPAWN_EGG = HELPER.createSpawnEggItem("brisk", ()->FrostburnExpansionEntities.BRISK.get(), 0x84D6DB, 0x359289);
-
+	
+	
 }
