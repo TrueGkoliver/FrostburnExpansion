@@ -34,8 +34,11 @@ import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.util.Hand;
 import net.minecraft.util.SoundEvents;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class BriskEntity extends MonsterEntity implements IChargeableMob {
 	private static final DataParameter<Integer> STATE = EntityDataManager.createKey(BriskEntity.class, DataSerializers.VARINT);
@@ -96,7 +99,7 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
 
 	@Override
 	public boolean isCharged() {
-		return this.dataManager.get(IGNITED);
+		return this.dataManager.get(POWERED);
 	}
 	
 	public int getCreeperState() {
@@ -120,6 +123,7 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
 	   public void ignite() {
 		   this.dataManager.set(IGNITED, true);
 	   }
+	   @Override
 	   protected boolean processInteract(PlayerEntity player, Hand hand) {
 	      ItemStack itemstack = player.getHeldItem(hand);
 	      if (itemstack.getItem() == Items.FLINT_AND_STEEL) {
@@ -130,7 +134,7 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
 	               p_213625_1_.sendBreakAnimation(hand);
 	            });
 	         }
-
+	
 	         return true;
 	      } else {
 	         return super.processInteract(player, hand);
@@ -169,7 +173,37 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
 	      }
 	
 	   }
-	   
+   public void tick() {
+      if (this.isAlive()) {
+         this.lastActiveTime = this.timeSinceIgnited;
+         if (this.hasIgnited()) {
+            this.setCreeperState(1);
+         }
+
+         int i = this.getCreeperState();
+         if (i > 0 && this.timeSinceIgnited == 0) {
+            this.playSound(SoundEvents.ENTITY_CREEPER_PRIMED, 1.0F, 0.5F);
+         }
+
+         this.timeSinceIgnited += i;
+         if (this.timeSinceIgnited < 0) {
+            this.timeSinceIgnited = 0;
+         }
+
+         if (this.timeSinceIgnited >= this.fuseTime) {
+            this.timeSinceIgnited = this.fuseTime;
+            this.explode();
+         }
+      }
+   }
+   @OnlyIn(Dist.CLIENT)
+   public float getCreeperFlashIntensity(float partialTicks) {
+      return MathHelper.lerp(partialTicks, (float)this.lastActiveTime, (float)this.timeSinceIgnited) / (float)(this.fuseTime - 2);
+   }
+	      
+	  public boolean hasIgnited() {
+	      return this.dataManager.get(IGNITED);
+	   }
 	   public boolean getPowered() {
 		      return this.dataManager.get(POWERED);
 	   }
