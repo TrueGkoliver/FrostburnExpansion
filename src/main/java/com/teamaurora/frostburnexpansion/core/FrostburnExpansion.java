@@ -34,12 +34,12 @@ public class FrostburnExpansion
 		REGISTRY_HELPER.getDeferredItemRegister().register(eventBus);
 		REGISTRY_HELPER.getDeferredBlockRegister().register(eventBus);
 		REGISTRY_HELPER.getDeferredEntityRegister().register(eventBus);
-
 		// features do not need to be registered: for an example as to how they work see SwampEx or Atmospheric source
 		//haha lol no
 		FrostburnExpansionFeatures.FEATURES.register(eventBus);
     	FrostburnExpansionBiomes.BIOMES.register(eventBus);
     	FrostburnExpansionEffects.POTION_EFFECTS.register(eventBus);
+  
 
 		eventBus.addListener(this::setup);
 		DistExecutor.runWhenOn(Dist.CLIENT, ()->()->{

@@ -1,4 +1,4 @@
-package com.teamaurora.frostburnexpansion.client.render.entity;
+package com.teamaurora.frostburnexpansion.client.model.entity;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
