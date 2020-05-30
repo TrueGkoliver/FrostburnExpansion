@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.SegmentedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.math.MathHelper;
 
 public class BriskModel<T extends BriskEntity> extends EntityModel<T> {
 
@@ -65,8 +66,13 @@ public class BriskModel<T extends BriskEntity> extends EntityModel<T> {
 	}
 
 	@Override
-	public void setRotationAngles(T arg0, float arg1, float arg2, float arg3, float arg4, float arg5) {
-		
+	public void setRotationAngles(T arg0, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+		this.head.rotateAngleY = netHeadYaw * ((float)Math.PI / 180F);
+		this.head.rotateAngleX = headPitch * ((float)Math.PI / 180F);
+		this.leg1.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
+		this.leg2.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
+		this.leg3.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
+		this.leg4.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
 	}
 
 }
