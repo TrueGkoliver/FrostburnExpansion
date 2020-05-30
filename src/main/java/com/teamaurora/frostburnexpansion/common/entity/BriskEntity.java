@@ -1,11 +1,17 @@
 package com.teamaurora.frostburnexpansion.common.entity;
 
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Random;
+import java.util.stream.Stream;
 
 import com.teamaurora.frostburnexpansion.common.entity.ai.BriskSwellGoal;
 import com.teamaurora.frostburnexpansion.core.registry.FrostburnExpansionEffects;
 
+import net.minecraft.block.Blocks;
+import net.minecraft.block.SnowBlock;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.AreaEffectCloudEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -38,6 +44,7 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.util.Hand;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
@@ -191,6 +198,26 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
 	         
 	         float f = this.getPowered() ? 1.5F : 0.75F;
 	         List<LivingEntity> bi = world.getEntitiesWithinAABB(LivingEntity.class, new AxisAlignedBB(this.getPosition()).grow(f*5));
+	         BlockPos pos = this.getPosition();
+	         Stream<BlockPos> b = BlockPos.getAllInBox(pos.add(-2, -2, -2), pos.add(2, 2, 2));
+	         Iterator<BlockPos> iter = b.iterator();
+	         this.world.playSound(Minecraft.getInstance().player, this.getPosX(), this.getPosY(), this.getPosZ(), SoundEvents.BLOCK_SNOW_PLACE, this.getSoundCategory(), 1.0F, this.rand.nextFloat() * 0.4F + 0.8F);
+	         while(iter.hasNext()) {
+	        	 BlockPos poser = iter.next();
+	        	 if (poser.withinDistance(pos, 2)) {
+	        		 if (world.isAirBlock(poser) && world.getBlockState(poser.down()).isSolid() && world.getBlockState(poser.down()).getBlock()!=Blocks.SNOW) {
+	        			 world.setBlockState(poser, Blocks.SNOW.getDefaultState().with(SnowBlock.LAYERS, new Random().nextInt(1)+1));
+	        		 } else if (world.getBlockState(poser).getBlock() == Blocks.SNOW) {
+	        			 int i = world.getBlockState(poser).get(SnowBlock.LAYERS);
+	        			 if (i==7) {
+	        				 
+	        			 } else if (new Random().nextBoolean()){
+	        				 i++;
+	        			 }
+	        			 world.setBlockState(poser, world.getBlockState(poser).with(SnowBlock.LAYERS, i));
+	        		 }
+	        	 }
+	         }
 	         for (LivingEntity entity : bi) {
 	        	 if (entity instanceof BriskEntity) {
 	        		 
