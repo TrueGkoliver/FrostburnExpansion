@@ -31,12 +31,13 @@ public class BiomeAuroraOasis extends Biome {
 				.parent((String)null));
 		DefaultBiomeFeatures.addOres(this);
 		DefaultBiomeFeatures.addCarvers(this);
+		DefaultBiomeFeatures.addLakes(this);
 		DefaultBiomeFeatures.addFreezeTopLayer(this);
 		DefaultBiomeFeatures.addBlueIce(this);
 		this.addStructure(Feature.IGLOO.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
 
-		this.addFeature(GenerationStage.Decoration.SURFACE_STRUCTURES, FrostburnExpansionFeatures.BOREALENE_SPIKES.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.COUNT_HEIGHTMAP.configure(new FrequencyConfig(1))));
-		DefaultBiomeFeatures.addHugeMushrooms(this);
+		//this.addFeature(GenerationStage.Decoration.SURFACE_STRUCTURES, FrostburnExpansionFeatures.BOREALENE_SPIKES.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.COUNT_HEIGHTMAP.configure(new FrequencyConfig(1))));
+		//DefaultBiomeFeatures.addHugeMushrooms(this);
 
 		//Tthis.addFeature(GenerationStage.Decoration.SURFACE_STRUCTURES, FrostburnExpansionFeatures.BOREALENE_SPIKES.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.COUNT_HEIGHTMAP.configure(new FrequencyConfig(1))));
 		
