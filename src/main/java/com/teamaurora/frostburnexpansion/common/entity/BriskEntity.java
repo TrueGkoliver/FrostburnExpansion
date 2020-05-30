@@ -1,13 +1,16 @@
 package com.teamaurora.frostburnexpansion.common.entity;
 
 import java.util.Collection;
+import java.util.List;
 
 import com.teamaurora.frostburnexpansion.common.entity.ai.BriskSwellGoal;
+import com.teamaurora.frostburnexpansion.core.registry.FrostburnExpansionEffects;
 
 import net.minecraft.entity.AreaEffectCloudEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.IChargeableMob;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.entity.ai.goal.CreeperSwellGoal;
@@ -34,6 +37,7 @@ import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.util.Hand;
 import net.minecraft.util.SoundEvents;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
@@ -147,7 +151,30 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
 	   private void explode() {
 	      if (!this.world.isRemote) {
 	         Explosion.Mode explosion$mode = net.minecraftforge.event.ForgeEventFactory.getMobGriefingEvent(this.world, this) ? Explosion.Mode.NONE : Explosion.Mode.NONE;
+	 		
+	         
+	         
 	         float f = this.getPowered() ? 2.0F : 1F;
+	         List<LivingEntity> bi = world.getEntitiesWithinAABB(LivingEntity.class, new AxisAlignedBB(this.getPosition()).grow(f*5));
+	         for (LivingEntity entity : bi) {
+	        	 if (entity instanceof BriskEntity) {
+	        		 
+	        	 } else {
+	        		 if (entity.isPotionActive(FrostburnExpansionEffects.FRALITY.get())) {
+		        		 int lv = entity.getActivePotionEffect(FrostburnExpansionEffects.FRALITY.get()).getAmplifier();
+		        		 if ((!this.getPowered() && lv==5)||(this.getPowered() && lv==8)) {
+		        			 
+		        		 } else {
+		        			 EffectInstance i = new EffectInstance(FrostburnExpansionEffects.FRALITY.get(), entity.getActivePotionEffect(FrostburnExpansionEffects.FRALITY.get()).getAmplifier()+1, 3600);
+		        			 entity.getActivePotionEffect(FrostburnExpansionEffects.FRALITY.get()).combine(i);
+		        		 }
+		        	 } else {
+		        		 System.out.println(entity.toString());
+		        		 entity.addPotionEffect(new EffectInstance(FrostburnExpansionEffects.FRALITY.get(), 1, 3600));
+		        	 }
+	        	 }
+	   
+	         }
 	         this.dead = true;
 	         this.world.createExplosion(this, this.getPosX(), this.getPosY(), this.getPosZ(), (float)this.explosionRadius * f, explosion$mode);
 	         this.remove();
