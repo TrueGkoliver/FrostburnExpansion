@@ -9,7 +9,9 @@ import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.IFeatureConfig;
+import net.minecraft.world.gen.placement.ChanceConfig;
 import net.minecraft.world.gen.placement.FrequencyConfig;
+import net.minecraft.world.gen.placement.NoPlacementConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 
@@ -20,7 +22,7 @@ public class BiomeAuroraOasis extends Biome {
 				.scale(0.05F)
 				.category(Category.ICY)
 				.temperature(-0.1F)
-				.surfaceBuilder(SurfaceBuilder.DEFAULT, SurfaceBuilder.GRASS_DIRT_GRAVEL_CONFIG)
+				.surfaceBuilder(FrostburnExpansionFeatures.AURORA_OASIS, SurfaceBuilder.GRASS_DIRT_GRAVEL_CONFIG)
 				.depth(0.125F)
 				.downfall(0.4F)
 				.waterColor(0x967bb6)

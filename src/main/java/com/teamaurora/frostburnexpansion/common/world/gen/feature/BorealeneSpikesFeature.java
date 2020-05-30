@@ -1,4 +1,4 @@
-package com.teamaurora.frostburnexpansion.common.world.feature;
+package com.teamaurora.frostburnexpansion.common.world.gen.feature;
 
 import java.util.Random;
 import java.util.function.Function;
