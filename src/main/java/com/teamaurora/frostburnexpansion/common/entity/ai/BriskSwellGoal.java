@@ -7,7 +7,11 @@ import com.teamaurora.frostburnexpansion.common.entity.BriskEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.Goal;
 import net.minecraft.entity.monster.CreeperEntity;
-
+/**
+ * Brisk
+ * @author mostly mojang lol
+ *
+ */
 public class BriskSwellGoal extends Goal {
 		private BriskEntity swellingBrisk;
 		private LivingEntity creeperAttackTarget;
@@ -15,7 +19,13 @@ public class BriskSwellGoal extends Goal {
 			this.swellingBrisk = entitycreeperIn;
 			this.setMutexFlags(EnumSet.of(Goal.Flag.MOVE));
 	   }
-
+		
+	   /**
+	    * Reset the task's internal state. Called when this task is interrupted by another one
+	    */
+	   public void resetTask() {
+	      this.creeperAttackTarget = null;
+	   }
 	   /**
 	    * Returns whether execution should begin. You can also read and cache any state necessary for execution in this
 	    * method as well.
@@ -36,9 +46,7 @@ public class BriskSwellGoal extends Goal {
 	   /**
 	    * Reset the task's internal state. Called when this task is interrupted by another one
 	    */
-	   public void resetTask() {
-	      this.creeperAttackTarget = null;
-	   }
+
 
 	   /**
 	    * Keep ticking a continuous task that has already been started

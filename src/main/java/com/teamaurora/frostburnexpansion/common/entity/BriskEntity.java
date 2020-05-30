@@ -43,7 +43,11 @@ import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-
+/**
+ * Brisk
+ * @author mostly mojang lol
+ *
+ */
 public class BriskEntity extends MonsterEntity implements IChargeableMob {
 	private static final DataParameter<Integer> STATE = EntityDataManager.createKey(BriskEntity.class, DataSerializers.VARINT);
 	   private static final DataParameter<Boolean> POWERED = EntityDataManager.createKey(BriskEntity.class, DataSerializers.BOOLEAN);
@@ -75,25 +79,44 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
 	@Override
 	protected void registerGoals() {
 		this.goalSelector.addGoal(1, new SwimGoal(this));
-	      this.goalSelector.addGoal(2, new BriskSwellGoal(this));
-	      this.goalSelector.addGoal(3, new AvoidEntityGoal<>(this, OcelotEntity.class, 6.0F, 1.0D, 1.2D));
-	      this.goalSelector.addGoal(3, new AvoidEntityGoal<>(this, CatEntity.class, 6.0F, 1.0D, 1.2D));
-	      this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.0D, false));
-	      this.goalSelector.addGoal(5, new WaterAvoidingRandomWalkingGoal(this, 0.8D));
-	      this.goalSelector.addGoal(6, new LookAtGoal(this, PlayerEntity.class, 8.0F));
-	      this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
-	      this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
-	      this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(2, new BriskSwellGoal(this));
+		this.goalSelector.addGoal(3, new AvoidEntityGoal<>(this, OcelotEntity.class, 6.0F, 1.0D, 1.2D));
+		this.goalSelector.addGoal(3, new AvoidEntityGoal<>(this, CatEntity.class, 6.0F, 1.0D, 1.2D));
+		this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.0D, false));
+		this.goalSelector.addGoal(5, new WaterAvoidingRandomWalkingGoal(this, 0.8D));
+		this.goalSelector.addGoal(6, new LookAtGoal(this, PlayerEntity.class, 8.0F));
+		this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
+		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
+		this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
 	}
 
 	@Override
 	public void readAdditional(CompoundNBT compound) {
-		
+		super.readAdditional(compound);
+	      this.dataManager.set(POWERED, compound.getBoolean("powered"));
+	      if (compound.contains("Fuse", 99)) {
+	         this.fuseTime = compound.getShort("Fuse");
+	      }
+
+	      if (compound.contains("ExplosionRadius", 99)) {
+	         this.explosionRadius = compound.getByte("ExplosionRadius");
+	      }
+
+	      if (compound.getBoolean("ignited")) {
+	         this.ignite();
+	      }
 	}
 
 	@Override
 	public void writeAdditional(CompoundNBT compound) {
-		
+		super.writeAdditional(compound);
+	      if (this.dataManager.get(POWERED)) {
+	         compound.putBoolean("powered", true);
+	      }
+
+	      compound.putShort("Fuse", (short)this.fuseTime);
+	      compound.putByte("ExplosionRadius", (byte)this.explosionRadius);
+	      compound.putBoolean("ignited", this.hasIgnited());
 	}
 
 	@Override
@@ -105,7 +128,19 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
 	public boolean isCharged() {
 		return this.dataManager.get(POWERED);
 	}
-	
+	public int getMaxFallHeight() {
+	      return this.getAttackTarget() == null ? 3 : 3 + (int)(this.getHealth() - 1.0F);
+	}
+
+   public boolean onLivingFall(float distance, float damageMultiplier) {
+      boolean flag = super.onLivingFall(distance, damageMultiplier);
+      this.timeSinceIgnited = (int)((float)this.timeSinceIgnited + distance * 1.5F);
+      if (this.timeSinceIgnited > this.fuseTime - 5) {
+         this.timeSinceIgnited = this.fuseTime - 5;
+      }
+
+      return flag;
+   }
 	public int getCreeperState() {
 	      return this.dataManager.get(STATE);
 	   }
@@ -154,7 +189,7 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
 	 		
 	         
 	         
-	         float f = this.getPowered() ? 2.0F : 1F;
+	         float f = this.getPowered() ? 1.5F : 0.75F;
 	         List<LivingEntity> bi = world.getEntitiesWithinAABB(LivingEntity.class, new AxisAlignedBB(this.getPosition()).grow(f*5));
 	         for (LivingEntity entity : bi) {
 	        	 if (entity instanceof BriskEntity) {
@@ -222,18 +257,23 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
             this.explode();
          }
       }
+      super.tick();
    }
    @OnlyIn(Dist.CLIENT)
    public float getCreeperFlashIntensity(float partialTicks) {
       return MathHelper.lerp(partialTicks, (float)this.lastActiveTime, (float)this.timeSinceIgnited) / (float)(this.fuseTime - 2);
    }
 	      
-	  public boolean hasIgnited() {
-	      return this.dataManager.get(IGNITED);
-	   }
-	   public boolean getPowered() {
-		      return this.dataManager.get(POWERED);
-	   }
+  public boolean hasIgnited() {
+      return this.dataManager.get(IGNITED);
+   }
+   public boolean getPowered() {
+	      return this.dataManager.get(POWERED);
+   }
+   @Override
+	public boolean attackEntityAsMob(Entity entityIn) {
+		return true;
+	}
 	
 
 }
