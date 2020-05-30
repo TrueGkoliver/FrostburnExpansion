@@ -23,7 +23,7 @@ public class FrostburnExpansionBiomes {
 	public static final RegistryObject<BiomeAuroraOasis> AURORA_OASIS = BIOMES.register("aurora_oasis", ()->new BiomeAuroraOasis());
 
 	public static void registerBiomesToDictionary() {
-		BiomeManager.addBiome(BiomeType.ICY, new BiomeEntry(AURORA_OASIS.get(), 1));
+		BiomeManager.addBiome(BiomeType.ICY, new BiomeEntry(AURORA_OASIS.get(), 5));
 		BiomeDictionary.addTypes(AURORA_OASIS.get(), BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.RARE);
 	}
 	
