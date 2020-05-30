@@ -10,15 +10,12 @@
   "block.frostburnexpansion.chiseled_borealene_bricks": "Chiseled Borealene Bricks",
   "block.frostburnexpansion.borealene_pillar": "Borealene Pillar",
   "block.frostburnexpansion.borealene_lamp": "Borealene Lamp",
-  "block.frostburnexpansion.borealene_vertical_slab": "Borealene Vertical Slab",
-  "block.frostburnexpansion.borealene_brick_vertical_slab": "Borealene Brick Vertical Slab",
 
   "block.frostburnexpansion.snow_bricks": "Snow Bricks",
   "block.frostburnexpansion.snow_brick_slab": "Snow Brick Slab",
   "block.frostburnexpansion.snow_brick_stairs": "Snow Brick Stairs",
   "block.frostburnexpansion.snow_brick_wall": "Snow Brick Wall",
   "block.frostburnexpansion.chiseled_snow_bricks": "Chiseled Snow Bricks",
-  "block.frostburnexpansion.snow_brick_vertical_slab": "Snow Brick Vertical Slab",
 
   "block.frostburnexpansion.stripped_auroral_log": "Stripped Auroral Log",
   "block.frostburnexpansion.stripped_auroral_wood": "Stripped Auroral Wood",
@@ -31,12 +28,6 @@
   "block.frostburnexpansion.auroral_fence": "Auroral Fence",
   "block.frostburnexpansion.auroral_fence_gate": "Auroral Fence Gate",
   "block.frostburnexpansion.auroral_button": "Auroral Button",
-  "block.frostburnexpansion.auroral_door": "Auroral Door",
-  "block.frostburnexpansion.auroral_trapdoor": "Auroral Trapdoor",
-  "block.frostburnexpansion.auroral_leaves": "Auroral Leaves",
-  "block.frostburnexpansion.auroral_sapling": "Auroral Sapling",
-  "block.frostburnexpansion.vertical_auroral_planks": "Vertical Auroral Planks",
-  "block.frostburnexpansion.auroral_vertical_slab": "Auroral Vertical Slab",
-  "block.frostburnexpansion.auroral_ladder": "Auroral Ladder",
-  "block.frostburnexpansion.auroral_leaf_carpet": "Auroral Leaf Carpet"
+  
+  "effect.frostburnexpansion.fraility" : "Fraility"
 }
