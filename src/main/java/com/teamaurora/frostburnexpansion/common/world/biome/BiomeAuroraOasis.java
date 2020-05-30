@@ -23,7 +23,7 @@ public class BiomeAuroraOasis extends Biome {
 				.scale(0.05F)
 				.category(Category.ICY)
 				.temperature(-0.1F)
-				.surfaceBuilder(SurfaceBuilder.DEFAULT, SurfaceBuilder.GRASS_DIRT_GRAVEL_CONFIG)
+				.surfaceBuilder(FrostburnExpansionFeatures.BOREALENE_AURORA_OASIS, SurfaceBuilder.GRASS_DIRT_GRAVEL_CONFIG)
 				.depth(0.125F)
 				.downfall(0.4F)
 				.waterColor(0x967bb6)
