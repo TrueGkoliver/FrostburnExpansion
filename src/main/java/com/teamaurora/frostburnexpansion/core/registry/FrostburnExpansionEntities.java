@@ -22,7 +22,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 @Mod.EventBusSubscriber(modid = FrostburnExpansion.MODID, bus= Mod.EventBusSubscriber.Bus.MOD)
 public class FrostburnExpansionEntities {
 	public static final RegistryHelper HELPER = FrostburnExpansion.REGISTRY_HELPER;
-	public static final RegistryObject<EntityType<BriskEntity>> BRISK = HELPER.createLivingEntity("brisk", BriskEntity::new, EntityClassification.MONSTER, 3, 3);
+	public static final RegistryObject<EntityType<BriskEntity>> BRISK = HELPER.createLivingEntity("brisk", BriskEntity::new, EntityClassification.MONSTER, 0.6F, 1.7F);
 	// Put RegistryObjects here
 
 	@OnlyIn(Dist.CLIENT)

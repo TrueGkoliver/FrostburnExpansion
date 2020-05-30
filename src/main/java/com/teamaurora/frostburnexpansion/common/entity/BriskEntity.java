@@ -96,7 +96,7 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
 
 	@Override
 	public boolean isCharged() {
-		return false;
+		return this.dataManager.get(IGNITED);
 	}
 	
 	public int getCreeperState() {
