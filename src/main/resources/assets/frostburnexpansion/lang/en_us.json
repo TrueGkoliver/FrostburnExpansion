@@ -11,7 +11,7 @@
   "block.frostburnexpansion.borealene_pillar": "Borealene Pillar",
   "block.frostburnexpansion.borealene_lamp": "Borealene Lamp",
 
-  "block.frostburnexpansion.snow_bricks": "Snow Bricks",
+  "block.frostburnexpansion.snow_bricks": "Large Snow Bricks",
   "block.frostburnexpansion.snow_brick_slab": "Snow Brick Slab",
   "block.frostburnexpansion.snow_brick_stairs": "Snow Brick Stairs",
   "block.frostburnexpansion.snow_brick_wall": "Snow Brick Wall",
@@ -28,7 +28,10 @@
   "block.frostburnexpansion.auroral_fence": "Auroral Fence",
   "block.frostburnexpansion.auroral_fence_gate": "Auroral Fence Gate",
   "block.frostburnexpansion.auroral_button": "Auroral Button",
-  "block.frostburnexpansion.auroral_trapdoor" : "Auroral Trapdoor"
+  "block.frostburnexpansion.auroral_trapdoor" : "Auroral Trapdoor",
+  "block.frostburnexpansion.auroral_leaves" : "Auroral Leaves",
+  "block.frostburnexpansion.auroral_sapling" : "Auroral Sapling",
+  "block.frostburnexpansion.auroral_door" : "Auroral Door",
   
   "effect.frostburnexpansion.fraility" : "Fraility",
   
