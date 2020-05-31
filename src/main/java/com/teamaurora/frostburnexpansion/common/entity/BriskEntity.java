@@ -41,7 +41,9 @@ import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.potion.EffectInstance;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.Hand;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
@@ -244,6 +246,16 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
 	      }
 
 	   }
+	   
+
+	   @Override
+	protected SoundEvent getHurtSound(DamageSource p_184601_1_) {
+		return SoundEvents.ENTITY_CREEPER_HURT;
+	}
+	   @Override
+	protected SoundEvent getDeathSound() {
+		return SoundEvents.ENTITY_CREEPER_DEATH;
+	}
 	   private void spawnLingeringCloud() {
 	      Collection<EffectInstance> collection = this.getActivePotionEffects();
 	      if (!collection.isEmpty()) {
