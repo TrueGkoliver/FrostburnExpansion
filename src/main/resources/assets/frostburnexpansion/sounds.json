@@ -1,6 +1,6 @@
 {
 	"music.record.brisksong" : {
-		"catagory" : "record",
+		"category" : "record",
 		"sounds" : [
 			{
 				"name" : "frostburnexpansion:record/brisksong",
