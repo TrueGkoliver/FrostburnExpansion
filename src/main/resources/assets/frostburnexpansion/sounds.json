@@ -1,0 +1,11 @@
+{
+	"music.record.brisksong" : {
+		"catagory" : "record",
+		"sounds" : [
+			{
+				"name" : "frostburnexpansion:record/brisksong",
+				"stream" : true
+			}
+		]
+	}
+}
