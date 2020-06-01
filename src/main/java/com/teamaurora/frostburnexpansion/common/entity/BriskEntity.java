@@ -8,6 +8,7 @@ import java.util.stream.Stream;
 
 import com.teamaurora.frostburnexpansion.common.entity.ai.BriskSwellGoal;
 import com.teamaurora.frostburnexpansion.core.registry.FrostburnExpansionEffects;
+import com.teamaurora.frostburnexpansion.core.registry.FrostburnExpansionSounds;
 
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SnowBlock;
@@ -250,11 +251,11 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
 
 	   @Override
 	protected SoundEvent getHurtSound(DamageSource p_184601_1_) {
-		return SoundEvents.ENTITY_CREEPER_HURT;
+		return FrostburnExpansionSounds.BRISK_HURT.get();
 	}
 	   @Override
 	protected SoundEvent getDeathSound() {
-		return SoundEvents.ENTITY_CREEPER_DEATH;
+		return FrostburnExpansionSounds.BRISK_DEATH.get();
 	}
 	   private void spawnLingeringCloud() {
 	      Collection<EffectInstance> collection = this.getActivePotionEffects();

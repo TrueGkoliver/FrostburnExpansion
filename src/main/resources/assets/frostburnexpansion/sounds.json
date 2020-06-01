@@ -7,5 +7,37 @@
 				"stream" : true
 			}
 		]
+	},
+	"entity.brisk.hurt" : {
+		"category" : "entity",
+		"sounds" : [
+			{
+				"name" : "mob/creeper/say1",
+				"pitch" : 2.0
+			},
+			{
+				"name" : "mob/creeper/say2",
+				"pitch" : 2.0
+			},
+			{
+				"name" : "mob/creeper/say3",
+				"pitch" : 2.0
+			},
+			{
+				"name" : "mob/creeper/say4",
+				"pitch" : 2.0
+			}
+		
+		]
+	},
+	"entity.brisk.death" : {
+		"category" : "entity",
+		"sounds" : [
+			{
+				"name" : "mob/creeper/death",
+				"pitch" : 2.0
+			}
+		]
+
 	}
 }
