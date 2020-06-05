@@ -8,8 +8,10 @@ import java.util.stream.Stream;
 
 import com.teamabnormals.abnormals_core.core.library.endimator.Endimation;
 import com.teamabnormals.abnormals_core.core.library.endimator.entity.IEndimatedEntity;
+import com.teamabnormals.abnormals_core.core.utils.NetworkUtil;
 import com.teamaurora.frostburnexpansion.common.entity.ai.BriskSwellGoal;
 import com.teamaurora.frostburnexpansion.core.registry.FrostburnExpansionEffects;
+import com.teamaurora.frostburnexpansion.core.registry.FrostburnExpansionItems;
 import com.teamaurora.frostburnexpansion.core.registry.FrostburnExpansionSounds;
 
 import net.minecraft.block.Blocks;
@@ -44,6 +46,7 @@ import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.potion.EffectInstance;
+import net.minecraft.tileentity.JukeboxTileEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.Hand;
 import net.minecraft.util.SoundEvent;
@@ -73,6 +76,10 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 	private Endimation endimation = BLANK_ANIMATION;
 	public static final Endimation DANCE = new Endimation(5);
 	private int animationTick;
+	public static boolean isDancing = false;
+	BlockPos jukeBoxPosition;
+	
+	
 	   
 	
 	   
@@ -158,6 +165,31 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 
       return flag;
    }
+   @Override
+	public void setPartying(BlockPos pos, boolean isPartying) {
+	   this.jukeBoxPosition = pos;
+	   this.isDancing = isDancing;
+	}
+   /*@OnlyIn(Dist.CLIENT)
+   public void setDancing(BlockPos pos, boolean isDancing) {
+      this.jukeBoxPosition = pos;
+      this.isDancing = isDancing;
+   }*/
+   @Override
+	public void livingTick() {
+	   if (this.jukeBoxPosition == null || !this.jukeBoxPosition.withinDistance(this.getPositionVec(), 3.46D) || this.world.getBlockState(this.jukeBoxPosition).getBlock() != Blocks.JUKEBOX) {
+		   JukeboxTileEntity jukebox = (JukeboxTileEntity) this.getEntityWorld().getTileEntity(jukeBoxPosition);
+		   if (jukebox.getRecord().getItem()!=FrostburnExpansionItems.BRISKSONG_RECORD.get()) {
+			   this.isDancing = false;
+		       this.jukeBoxPosition = null;
+		   }
+      }
+	  if (this.isDancing) {
+		  if (this.isNoEndimationPlaying()) {
+			  NetworkUtil.setPlayingAnimationMessage(this, DANCE);
+		  }
+	  }
+	}
 	public int getCreeperState() {
 	      return this.dataManager.get(STATE);
 	   }
@@ -332,7 +364,9 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 	
 	@Override
 	public Endimation[] getEndimations() {
-		return null;
+		return new Endimation[] {
+				DANCE
+		};
 	}
 	
 	@Override
