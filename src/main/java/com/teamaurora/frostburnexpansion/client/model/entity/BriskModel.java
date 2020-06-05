@@ -84,7 +84,6 @@ public class BriskModel<T extends BriskEntity> extends EndimatorEntityModel<T> {
 	@Override
 	public void animateModel(T endimatedEntity) {
 		super.animateModel(endimatedEntity);
-		System.out.println(BriskEntity.DANCE.toString());
 		if(this.tryToPlayEndimation(BriskEntity.DANCE)) {
 			this.startKeyframe(10);
 			this.rotate(head, 0, 45, 0);
