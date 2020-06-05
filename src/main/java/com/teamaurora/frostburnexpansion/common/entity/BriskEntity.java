@@ -76,7 +76,7 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 	private Endimation endimation = BLANK_ANIMATION;
 	public static final Endimation DANCE = new Endimation(5);
 	private int animationTick;
-	public static boolean isDancing = false;
+	public boolean isDancing = false;
 	BlockPos jukeBoxPosition;
 	
 	
@@ -175,21 +175,6 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
       this.jukeBoxPosition = pos;
       this.isDancing = isDancing;
    }*/
-   @Override
-	public void livingTick() {
-	   if (this.jukeBoxPosition == null || !this.jukeBoxPosition.withinDistance(this.getPositionVec(), 3.46D) || this.world.getBlockState(this.jukeBoxPosition).getBlock() != Blocks.JUKEBOX) {
-		   JukeboxTileEntity jukebox = (JukeboxTileEntity) this.getEntityWorld().getTileEntity(jukeBoxPosition);
-		   if (jukebox.getRecord().getItem()!=FrostburnExpansionItems.BRISKSONG_RECORD.get()) {
-			   this.isDancing = false;
-		       this.jukeBoxPosition = null;
-		   }
-      }
-	  if (this.isDancing) {
-		  if (this.isNoEndimationPlaying()) {
-			  NetworkUtil.setPlayingAnimationMessage(this, DANCE);
-		  }
-	  }
-	}
 	public int getCreeperState() {
 	      return this.dataManager.get(STATE);
 	   }
@@ -315,6 +300,23 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 	
 	   }
    public void tick() {
+	   if (this.jukeBoxPosition == null || !this.jukeBoxPosition.withinDistance(this.getPositionVec(), 3.46D) || this.world.getBlockState(this.jukeBoxPosition).getBlock() != Blocks.JUKEBOX) {
+		   
+		   this.isDancing = false;
+	       this.jukeBoxPosition = null;
+		   
+	   } else {
+    	  JukeboxTileEntity jukebox = (JukeboxTileEntity) this.getEntityWorld().getTileEntity(jukeBoxPosition);
+		   if (jukebox.getRecord().getItem()!=FrostburnExpansionItems.BRISKSONG_RECORD.get()) {
+			   this.isDancing = false;
+		       this.jukeBoxPosition = null;
+		   }
+      }
+	  if (this.isDancing) {
+		  if (this.isNoEndimationPlaying()) {
+			  NetworkUtil.setPlayingAnimationMessage(this, DANCE);
+		  }
+	  }
       if (this.isAlive()) {
          this.lastActiveTime = this.timeSinceIgnited;
          if (this.hasIgnited()) {

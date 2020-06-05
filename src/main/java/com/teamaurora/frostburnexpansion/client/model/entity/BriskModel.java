@@ -2,6 +2,8 @@ package com.teamaurora.frostburnexpansion.client.model.entity;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
+import com.teamabnormals.abnormals_core.core.library.endimator.EndimatorEntityModel;
+import com.teamabnormals.abnormals_core.core.library.endimator.EndimatorModelRenderer;
 import com.teamaurora.frostburnexpansion.common.entity.BriskEntity;
 
 import net.minecraft.client.renderer.entity.model.EntityModel;
@@ -10,41 +12,41 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
 
-public class BriskModel<T extends BriskEntity> extends EntityModel<T> {
+public class BriskModel<T extends BriskEntity> extends EndimatorEntityModel<T> {
 
-	private final ModelRenderer head;
-	private final ModelRenderer body;
-	private final ModelRenderer leg1;
-	private final ModelRenderer leg2;
-	private final ModelRenderer leg3;
-	private final ModelRenderer leg4;
+	private final EndimatorModelRenderer head;
+	private final EndimatorModelRenderer body;
+	private final EndimatorModelRenderer leg1;
+	private final EndimatorModelRenderer leg2;
+	private final EndimatorModelRenderer leg3;
+	private final EndimatorModelRenderer leg4;
 
 	public BriskModel() {
 		textureWidth = 48;
 		textureHeight = 48;
 
-		head = new ModelRenderer(this);
+		head = new EndimatorModelRenderer(this);
 		head.setRotationPoint(0.0F, 6.0F, 0.0F);
 		head.setTextureOffset(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, 0.0F, false);
 		head.setTextureOffset(0, 32).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, 0.5F, false);
 
-		body = new ModelRenderer(this);
+		body = new EndimatorModelRenderer(this);
 		body.setRotationPoint(0.0F, 6.0F, 0.0F);
 		body.setTextureOffset(16, 16).addBox(-4.0F, 0.0F, -2.0F, 8.0F, 12.0F, 4.0F, 0.0F, false);
 
-		leg1 = new ModelRenderer(this);
+		leg1 = new EndimatorModelRenderer(this);
 		leg1.setRotationPoint(2.0F, 18.0F, 4.0F);
 		leg1.setTextureOffset(0, 16).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 6.0F, 4.0F, 0.0F, false);
 
-		leg2 = new ModelRenderer(this);
+		leg2 = new EndimatorModelRenderer(this);
 		leg2.setRotationPoint(-2.0F, 18.0F, 4.0F);
 		leg2.setTextureOffset(0, 16).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 6.0F, 4.0F, 0.0F, false);
 
-		leg3 = new ModelRenderer(this);
+		leg3 = new EndimatorModelRenderer(this);
 		leg3.setRotationPoint(2.0F, 18.0F, -4.0F);
 		leg3.setTextureOffset(0, 16).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 6.0F, 4.0F, 0.0F, false);
 
-		leg4 = new ModelRenderer(this);
+		leg4 = new EndimatorModelRenderer(this);
 		leg4.setRotationPoint(-2.0F, 18.0F, -4.0F);
 		leg4.setTextureOffset(0, 16).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 6.0F, 4.0F, 0.0F, false);
 	}
@@ -73,6 +75,21 @@ public class BriskModel<T extends BriskEntity> extends EntityModel<T> {
 		this.leg2.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
 		this.leg3.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
 		this.leg4.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
+	}
+	
+	@Override
+	public void animateModel(T endimatedEntity) {
+		
+		super.animateModel(endimatedEntity);
+		if(this.tryToPlayEndimation(BriskEntity.DANCE)) {
+			this.startKeyframe(10);
+			this.rotate(head, 0, 45, 0);
+			this.endKeyframe();
+			this.startKeyframe(10);
+			this.rotate(head, 0, 45, 0);
+			this.endKeyframe();
+			this.resetKeyframe(10);
+		}
 	}
 
 }
