@@ -53,6 +53,7 @@ public class BriskModel<T extends BriskEntity> extends EndimatorEntityModel<T> {
 
 	@Override
 	public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){
+		super.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
 		head.render(matrixStack, buffer, packedLight, packedOverlay);
 		body.render(matrixStack, buffer, packedLight, packedOverlay);
 		leg1.render(matrixStack, buffer, packedLight, packedOverlay);
@@ -79,8 +80,8 @@ public class BriskModel<T extends BriskEntity> extends EndimatorEntityModel<T> {
 	
 	@Override
 	public void animateModel(T endimatedEntity) {
-		
 		super.animateModel(endimatedEntity);
+		System.out.println(BriskEntity.DANCE.toString());
 		if(this.tryToPlayEndimation(BriskEntity.DANCE)) {
 			this.startKeyframe(10);
 			this.rotate(head, 0, 45, 0);

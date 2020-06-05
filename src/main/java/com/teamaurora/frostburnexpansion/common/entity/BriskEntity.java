@@ -67,14 +67,13 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 	private static final DataParameter<Integer> STATE = EntityDataManager.createKey(BriskEntity.class, DataSerializers.VARINT);
 	private static final DataParameter<Boolean> POWERED = EntityDataManager.createKey(BriskEntity.class, DataSerializers.BOOLEAN);
 	private static final DataParameter<Boolean> IGNITED = EntityDataManager.createKey(BriskEntity.class, DataSerializers.BOOLEAN);
-	private static final DataParameter<Boolean> DANCING = EntityDataManager.createKey(BriskEntity.class, DataSerializers.BOOLEAN);
 	private int lastActiveTime;
 	private int timeSinceIgnited;
 	private int fuseTime = 30;
 	private int explosionRadius = 3;
 	private int droppedSkulls;
 	private Endimation endimation = BLANK_ANIMATION;
-	public static final Endimation DANCE = new Endimation(5);
+	public static final Endimation DANCE = new Endimation(10);
 	private int animationTick;
 	public boolean isDancing = false;
 	BlockPos jukeBoxPosition;
