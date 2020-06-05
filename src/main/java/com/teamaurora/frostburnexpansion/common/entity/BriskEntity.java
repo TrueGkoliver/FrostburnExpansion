@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Stream;
 
+import com.teamabnormals.abnormals_core.core.library.endimator.Endimation;
+import com.teamabnormals.abnormals_core.core.library.endimator.entity.IEndimatedEntity;
 import com.teamaurora.frostburnexpansion.common.entity.ai.BriskSwellGoal;
 import com.teamaurora.frostburnexpansion.core.registry.FrostburnExpansionEffects;
 import com.teamaurora.frostburnexpansion.core.registry.FrostburnExpansionSounds;
@@ -58,16 +60,21 @@ import net.minecraftforge.api.distmarker.OnlyIn;
  * @author mostly mojang lol
  *
  */
-public class BriskEntity extends MonsterEntity implements IChargeableMob {
+public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndimatedEntity {
 	private static final DataParameter<Integer> STATE = EntityDataManager.createKey(BriskEntity.class, DataSerializers.VARINT);
-	   private static final DataParameter<Boolean> POWERED = EntityDataManager.createKey(BriskEntity.class, DataSerializers.BOOLEAN);
-	   private static final DataParameter<Boolean> IGNITED = EntityDataManager.createKey(BriskEntity.class, DataSerializers.BOOLEAN);
-	   private int lastActiveTime;
-	   private int timeSinceIgnited;
-	   private int fuseTime = 30;
-	   private int explosionRadius = 3;
-	   private int droppedSkulls;
+	private static final DataParameter<Boolean> POWERED = EntityDataManager.createKey(BriskEntity.class, DataSerializers.BOOLEAN);
+	private static final DataParameter<Boolean> IGNITED = EntityDataManager.createKey(BriskEntity.class, DataSerializers.BOOLEAN);
+	private static final DataParameter<Boolean> DANCING = EntityDataManager.createKey(BriskEntity.class, DataSerializers.BOOLEAN);
+	private int lastActiveTime;
+	private int timeSinceIgnited;
+	private int fuseTime = 30;
+	private int explosionRadius = 3;
+	private int droppedSkulls;
+	private Endimation endimation = BLANK_ANIMATION;
+	public static final Endimation DANCE = new Endimation(5);
+	private int animationTick;
 	   
+	
 	   
 	public BriskEntity(EntityType<? extends MonsterEntity> entityTypeIn, World worldIn) {
 		super(entityTypeIn, worldIn);
@@ -297,6 +304,7 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
             this.explode();
          }
       }
+      this.endimateTick();
       super.tick();
    }
    @OnlyIn(Dist.CLIENT)
@@ -313,6 +321,35 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
    @Override
 	public boolean attackEntityAsMob(Entity entityIn) {
 		return true;
+	}
+   public boolean isEndimationPlaying(Endimation endimation) {
+		return this.getPlayingEndimation() == endimation;
+	}
+	@Override
+	public int getAnimationTick() {
+		return this.animationTick;
+	}
+	
+	@Override
+	public Endimation[] getEndimations() {
+		return null;
+	}
+	
+	@Override
+	public Endimation getPlayingEndimation() {
+		return this.endimation;
+	}
+	
+	@Override
+	public void setAnimationTick(int animationTick) {
+		this.animationTick = animationTick;
+	}
+	
+	@Override
+	public void setPlayingEndimation(Endimation endimationToPlay) {
+		this.onEndimationEnd(this.endimation);
+		this.endimation = endimationToPlay;
+		this.setAnimationTick(0);
 	}
 	
 
