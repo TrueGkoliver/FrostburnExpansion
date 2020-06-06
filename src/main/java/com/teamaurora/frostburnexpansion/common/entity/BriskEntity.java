@@ -24,7 +24,6 @@ import net.minecraft.entity.IChargeableMob;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.goal.AvoidEntityGoal;
-import net.minecraft.entity.ai.goal.CreeperSwellGoal;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
 import net.minecraft.entity.ai.goal.LookAtGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
@@ -33,7 +32,6 @@ import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.WaterAvoidingRandomWalkingGoal;
 import net.minecraft.entity.effect.LightningBoltEntity;
-import net.minecraft.entity.monster.CreeperEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.passive.CatEntity;
 import net.minecraft.entity.passive.OcelotEntity;
@@ -71,9 +69,8 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 	private int timeSinceIgnited;
 	private int fuseTime = 30;
 	private int explosionRadius = 3;
-	private int droppedSkulls;
 	private Endimation endimation = BLANK_ANIMATION;
-	public static final Endimation DANCE = new Endimation(10);
+	public static final Endimation DANCE = new Endimation(60);
 	private int animationTick;
 	public boolean isDancing = false;
 	BlockPos jukeBoxPosition;
@@ -167,7 +164,7 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
    @Override
 	public void setPartying(BlockPos pos, boolean isPartying) {
 	   this.jukeBoxPosition = pos;
-	   this.isDancing = isDancing;
+	   this.isDancing = isPartying;
 	}
    /*@OnlyIn(Dist.CLIENT)
    public void setDancing(BlockPos pos, boolean isDancing) {
@@ -219,9 +216,6 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 	   private void explode() {
 	      if (!this.world.isRemote) {
 	         Explosion.Mode explosion$mode = net.minecraftforge.event.ForgeEventFactory.getMobGriefingEvent(this.world, this) ? Explosion.Mode.NONE : Explosion.Mode.NONE;
-	 		
-	         
-	         
 	         float f = this.getPowered() ? 1.5F : 0.75F;
 	         List<LivingEntity> bi = world.getEntitiesWithinAABB(LivingEntity.class, new AxisAlignedBB(this.getPosition()).grow(f*5));
 	         BlockPos pos = this.getPosition();
@@ -311,6 +305,9 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 		       this.jukeBoxPosition = null;
 		   }
       }
+	   if (this.isNoEndimationPlaying()) {
+			  NetworkUtil.setPlayingAnimationMessage(this, DANCE);
+	   }
 	  if (this.isDancing) {
 		  if (this.isNoEndimationPlaying()) {
 			  NetworkUtil.setPlayingAnimationMessage(this, DANCE);
