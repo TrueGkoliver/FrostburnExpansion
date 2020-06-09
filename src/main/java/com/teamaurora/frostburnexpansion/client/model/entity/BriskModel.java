@@ -94,8 +94,7 @@ public class BriskModel<T extends BriskEntity> extends EndimatorEntityModel<T> {
 			this.startKeyframe(60);
 			this.rotate(head, 0, 0, (float) Math.toRadians(0));
 			this.endKeyframe();
-			this.startKeyframe(0);
-			this.endKeyframe();
+			this.resetKeyframe(80);
 		}
 	}
 
