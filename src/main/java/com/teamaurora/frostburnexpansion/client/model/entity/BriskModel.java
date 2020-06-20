@@ -87,14 +87,16 @@ public class BriskModel<T extends BriskEntity> extends EndimatorEntityModel<T> {
 		if(this.tryToPlayEndimation(BriskEntity.DANCE)) {
 			this.startKeyframe(20);
 			this.rotate(head, 0, 0, (float) Math.toRadians(30));
+			this.rotate(body, 0, (float) Math.toRadians(25), 0);
 			this.endKeyframe();
-			this.startKeyframe(40);
+			this.startKeyframe(20);
 			this.rotate(head, 0, 0, (float) Math.toRadians(-30));
+			this.rotate(body, 0, (float) Math.toRadians(0), 0);
 			this.endKeyframe();
-			this.startKeyframe(60);
+			this.startKeyframe(20);
 			this.rotate(head, 0, 0, (float) Math.toRadians(0));
 			this.endKeyframe();
-			this.resetKeyframe(80);
+			this.resetKeyframe(60);
 		}
 	}
 

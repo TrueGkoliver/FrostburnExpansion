@@ -70,7 +70,7 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 	private int fuseTime = 30;
 	private int explosionRadius = 3;
 	private Endimation endimation = BLANK_ANIMATION;
-	public static final Endimation DANCE = new Endimation(80);
+	public static final Endimation DANCE = new Endimation(60);
 	private int animationTick;
 	public boolean isDancing = false;
 	BlockPos jukeBoxPosition;
