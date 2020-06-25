@@ -34,7 +34,7 @@ public class BrisksongDiscItem extends MusicDiscItem {
 	            ((JukeboxBlock)Blocks.JUKEBOX).insertRecord(world, blockpos, blockstate, itemstack);
 	            world.playEvent((PlayerEntity)null, 1010, blockpos, Item.getIdFromItem(this));
 	            itemstack.shrink(1);
-	            Minecraft.getInstance().world.getEntitiesWithinAABB(BriskEntity.class, new AxisAlignedBB(new BlockPos(blockpos)).grow(3.0D)).forEach(entity -> {
+	            world.getEntitiesWithinAABB(BriskEntity.class, new AxisAlignedBB(new BlockPos(blockpos)).grow(3.0D)).forEach(entity -> {
 					if (entity.isNoEndimationPlaying()) {
 						entity.setIsDancing(true);
 						System.out.println(entity.getIsDancing());
@@ -48,7 +48,7 @@ public class BrisksongDiscItem extends MusicDiscItem {
 	               playerentity.addStat(Stats.PLAY_RECORD);
 	            }
 	         } else {
-	        	 Minecraft.getInstance().world.getEntitiesWithinAABB(BriskEntity.class, new AxisAlignedBB(new BlockPos(blockpos)).grow(3.0D)).forEach(entity -> {
+	        	 world.getEntitiesWithinAABB(BriskEntity.class, new AxisAlignedBB(new BlockPos(blockpos)).grow(3.0D)).forEach(entity -> {
 	        		 entity.setIsDancing(true);
 		        	 NetworkUtil.setPlayingAnimationMessage(entity, (BriskEntity.DANCE));
 	        	 });
