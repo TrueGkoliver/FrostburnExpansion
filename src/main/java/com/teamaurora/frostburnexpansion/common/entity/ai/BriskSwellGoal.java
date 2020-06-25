@@ -31,6 +31,9 @@ public class BriskSwellGoal extends Goal {
 	    * method as well.
 	    */
 	   public boolean shouldExecute() {
+		  if (this.swellingBrisk.isDancing) {
+			  return false;
+		  }
 	      LivingEntity livingentity = this.swellingBrisk.getAttackTarget();
 	      return this.swellingBrisk.getCreeperState() > 0 || livingentity != null && this.swellingBrisk.getDistanceSq(livingentity) < 9.0D;
 	   }

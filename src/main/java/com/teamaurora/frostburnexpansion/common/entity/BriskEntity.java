@@ -6,8 +6,13 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Stream;
 
+import com.teamabnormals.abnormals_core.core.library.endimator.Endimation;
+import com.teamabnormals.abnormals_core.core.library.endimator.entity.IEndimatedEntity;
+import com.teamabnormals.abnormals_core.core.utils.NetworkUtil;
+import com.teamaurora.frostburnexpansion.common.entity.ai.BriskNearestAttackableTargetGoal;
 import com.teamaurora.frostburnexpansion.common.entity.ai.BriskSwellGoal;
 import com.teamaurora.frostburnexpansion.core.registry.FrostburnExpansionEffects;
+import com.teamaurora.frostburnexpansion.core.registry.FrostburnExpansionItems;
 import com.teamaurora.frostburnexpansion.core.registry.FrostburnExpansionSounds;
 
 import net.minecraft.block.Blocks;
@@ -20,7 +25,6 @@ import net.minecraft.entity.IChargeableMob;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.goal.AvoidEntityGoal;
-import net.minecraft.entity.ai.goal.CreeperSwellGoal;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
 import net.minecraft.entity.ai.goal.LookAtGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
@@ -29,7 +33,6 @@ import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.WaterAvoidingRandomWalkingGoal;
 import net.minecraft.entity.effect.LightningBoltEntity;
-import net.minecraft.entity.monster.CreeperEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.passive.CatEntity;
 import net.minecraft.entity.passive.OcelotEntity;
@@ -42,6 +45,7 @@ import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.potion.EffectInstance;
+import net.minecraft.tileentity.JukeboxTileEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.Hand;
 import net.minecraft.util.SoundEvent;
@@ -58,16 +62,23 @@ import net.minecraftforge.api.distmarker.OnlyIn;
  * @author mostly mojang lol
  *
  */
-public class BriskEntity extends MonsterEntity implements IChargeableMob {
+public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndimatedEntity {
 	private static final DataParameter<Integer> STATE = EntityDataManager.createKey(BriskEntity.class, DataSerializers.VARINT);
-	   private static final DataParameter<Boolean> POWERED = EntityDataManager.createKey(BriskEntity.class, DataSerializers.BOOLEAN);
-	   private static final DataParameter<Boolean> IGNITED = EntityDataManager.createKey(BriskEntity.class, DataSerializers.BOOLEAN);
-	   private int lastActiveTime;
-	   private int timeSinceIgnited;
-	   private int fuseTime = 30;
-	   private int explosionRadius = 3;
-	   private int droppedSkulls;
+	private static final DataParameter<Boolean> POWERED = EntityDataManager.createKey(BriskEntity.class, DataSerializers.BOOLEAN);
+	private static final DataParameter<Boolean> IGNITED = EntityDataManager.createKey(BriskEntity.class, DataSerializers.BOOLEAN);
+	private int lastActiveTime;
+	private int timeSinceIgnited;
+	private int fuseTime = 30;
+	private int explosionRadius = 3;
+	private Endimation endimation = BLANK_ANIMATION;
+	public static final Endimation DANCE = new Endimation(2000);
+	private int animationTick;
+	public boolean isDancing = false;
+	BlockPos jukeBoxPosition;
+	
+	
 	   
+	
 	   
 	public BriskEntity(EntityType<? extends MonsterEntity> entityTypeIn, World worldIn) {
 		super(entityTypeIn, worldIn);
@@ -96,7 +107,7 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
 		this.goalSelector.addGoal(5, new WaterAvoidingRandomWalkingGoal(this, 0.8D));
 		this.goalSelector.addGoal(6, new LookAtGoal(this, PlayerEntity.class, 8.0F));
 		this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
-		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
+		this.targetSelector.addGoal(1, new BriskNearestAttackableTargetGoal<>(this, PlayerEntity.class));
 		this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
 	}
 
@@ -127,6 +138,7 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
 	      compound.putShort("Fuse", (short)this.fuseTime);
 	      compound.putByte("ExplosionRadius", (byte)this.explosionRadius);
 	      compound.putBoolean("ignited", this.hasIgnited());
+	      compound.putBoolean("dancing", isDancing);
 	}
 
 	@Override
@@ -151,6 +163,16 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
 
       return flag;
    }
+   @Override
+	public void setPartying(BlockPos pos, boolean isPartying) {
+	   this.jukeBoxPosition = pos;
+	   this.isDancing = true;
+	}
+   /*@OnlyIn(Dist.CLIENT)
+   public void setDancing(BlockPos pos, boolean isDancing) {
+      this.jukeBoxPosition = pos;
+      this.isDancing = isDancing;
+   }*/
 	public int getCreeperState() {
 	      return this.dataManager.get(STATE);
 	   }
@@ -196,9 +218,6 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
 	   private void explode() {
 	      if (!this.world.isRemote) {
 	         Explosion.Mode explosion$mode = net.minecraftforge.event.ForgeEventFactory.getMobGriefingEvent(this.world, this) ? Explosion.Mode.NONE : Explosion.Mode.NONE;
-	 		
-	         
-	         
 	         float f = this.getPowered() ? 1.5F : 0.75F;
 	         List<LivingEntity> bi = world.getEntitiesWithinAABB(LivingEntity.class, new AxisAlignedBB(this.getPosition()).grow(f*5));
 	         BlockPos pos = this.getPosition();
@@ -276,6 +295,10 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
 	
 	   }
    public void tick() {
+	  System.out.println(this.getPlayingEndimation().getAnimationTickDuration());
+	  if (!this.isEndimationPlaying(DANCE)) {
+		  this.setIsDancing(false);
+	  }
       if (this.isAlive()) {
          this.lastActiveTime = this.timeSinceIgnited;
          if (this.hasIgnited()) {
@@ -297,6 +320,7 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
             this.explode();
          }
       }
+      this.endimateTick();
       super.tick();
    }
    @OnlyIn(Dist.CLIENT)
@@ -314,6 +338,42 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob {
 	public boolean attackEntityAsMob(Entity entityIn) {
 		return true;
 	}
+   public boolean isEndimationPlaying(Endimation endimation) {
+		return this.getPlayingEndimation() == endimation;
+	}
+	@Override
+	public int getAnimationTick() {
+		return this.animationTick;
+	}
 	
+	@Override
+	public Endimation[] getEndimations() {
+		return new Endimation[] {
+				DANCE
+		};
+	}
+	
+	@Override
+	public Endimation getPlayingEndimation() {
+		return this.endimation;
+	}
+	
+	@Override
+	public void setAnimationTick(int animationTick) {
+		this.animationTick = animationTick;
+	}
+	
+	@Override
+	public void setPlayingEndimation(Endimation endimationToPlay) {
+		this.onEndimationEnd(this.endimation);
+		this.endimation = endimationToPlay;
+		this.setAnimationTick(0);
+	}
+	public void setIsDancing(boolean dancing) {
+		this.isDancing = dancing;
+	}
+	public boolean getIsDancing() {
+		return this.isDancing;
+	}
 
 }
