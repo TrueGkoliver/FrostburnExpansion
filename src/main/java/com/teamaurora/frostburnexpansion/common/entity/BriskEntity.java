@@ -9,6 +9,7 @@ import java.util.stream.Stream;
 import com.teamabnormals.abnormals_core.core.library.endimator.Endimation;
 import com.teamabnormals.abnormals_core.core.library.endimator.entity.IEndimatedEntity;
 import com.teamabnormals.abnormals_core.core.utils.NetworkUtil;
+import com.teamaurora.frostburnexpansion.common.entity.ai.BriskNearestAttackableTargetGoal;
 import com.teamaurora.frostburnexpansion.common.entity.ai.BriskSwellGoal;
 import com.teamaurora.frostburnexpansion.core.registry.FrostburnExpansionEffects;
 import com.teamaurora.frostburnexpansion.core.registry.FrostburnExpansionItems;
@@ -70,7 +71,7 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 	private int fuseTime = 30;
 	private int explosionRadius = 3;
 	private Endimation endimation = BLANK_ANIMATION;
-	public static final Endimation DANCE = new Endimation(60);
+	public static final Endimation DANCE = new Endimation(2000);
 	private int animationTick;
 	public boolean isDancing = false;
 	BlockPos jukeBoxPosition;
@@ -106,7 +107,7 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 		this.goalSelector.addGoal(5, new WaterAvoidingRandomWalkingGoal(this, 0.8D));
 		this.goalSelector.addGoal(6, new LookAtGoal(this, PlayerEntity.class, 8.0F));
 		this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
-		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
+		this.targetSelector.addGoal(1, new BriskNearestAttackableTargetGoal<>(this, PlayerEntity.class));
 		this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
 	}
 
@@ -137,6 +138,7 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 	      compound.putShort("Fuse", (short)this.fuseTime);
 	      compound.putByte("ExplosionRadius", (byte)this.explosionRadius);
 	      compound.putBoolean("ignited", this.hasIgnited());
+	      compound.putBoolean("dancing", isDancing);
 	}
 
 	@Override
@@ -164,7 +166,7 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
    @Override
 	public void setPartying(BlockPos pos, boolean isPartying) {
 	   this.jukeBoxPosition = pos;
-	   this.isDancing = isPartying;
+	   this.isDancing = true;
 	}
    /*@OnlyIn(Dist.CLIENT)
    public void setDancing(BlockPos pos, boolean isDancing) {
@@ -293,25 +295,9 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 	
 	   }
    public void tick() {
-	   if (this.jukeBoxPosition == null || !this.jukeBoxPosition.withinDistance(this.getPositionVec(), 3.46D) || this.world.getBlockState(this.jukeBoxPosition).getBlock() != Blocks.JUKEBOX) {
-		   
-		   this.isDancing = false;
-	       this.jukeBoxPosition = null;
-		   
-	   } else {
-    	  JukeboxTileEntity jukebox = (JukeboxTileEntity) this.getEntityWorld().getTileEntity(jukeBoxPosition);
-		   if (jukebox.getRecord().getItem()!=FrostburnExpansionItems.BRISKSONG_RECORD.get()) {
-			   this.isDancing = false;
-		       this.jukeBoxPosition = null;
-		   }
-      }
-	   if (this.isNoEndimationPlaying()) {
-			  NetworkUtil.setPlayingAnimationMessage(this, DANCE);
-	   }
-	  if (this.isDancing) {
-		  if (this.isNoEndimationPlaying()) {
-			  NetworkUtil.setPlayingAnimationMessage(this, DANCE);
-		  }
+	  System.out.println(this.getPlayingEndimation().getAnimationTickDuration());
+	  if (!this.isEndimationPlaying(DANCE)) {
+		  this.setIsDancing(false);
 	  }
       if (this.isAlive()) {
          this.lastActiveTime = this.timeSinceIgnited;
@@ -383,6 +369,11 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 		this.endimation = endimationToPlay;
 		this.setAnimationTick(0);
 	}
-	
+	public void setIsDancing(boolean dancing) {
+		this.isDancing = dancing;
+	}
+	public boolean getIsDancing() {
+		return this.isDancing;
+	}
 
 }
