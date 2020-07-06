@@ -5,11 +5,13 @@ import com.teamabnormals.abnormals_core.common.blocks.AbnormalsStairsBlock;
 import com.teamabnormals.abnormals_core.common.blocks.LeafCarpetBlock;
 import com.teamabnormals.abnormals_core.common.blocks.VerticalSlabBlock;
 import com.teamabnormals.abnormals_core.common.blocks.wood.*;
+import com.teamaurora.frostburnexpansion.common.block.BriskberryBlock;
 import com.teamaurora.frostburnexpansion.core.FrostburnExpansion;
 
 import com.teamabnormals.abnormals_core.core.utils.RegistryHelper;
 import com.teamaurora.frostburnexpansion.core.other.FrostburnExpansionProperties;
 import net.minecraft.block.*;
+import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.trees.OakTree;
 import net.minecraft.item.ItemGroup;
@@ -71,4 +73,6 @@ public class FrostburnExpansionBlocks {
 	public static final RegistryObject<Block> AURORAL_VERTICAL_SLAB = HELPER.createCompatBlock("quark", "auroral_vertical_slab", ()->new VerticalSlabBlock(Block.Properties.from(Blocks.OAK_PLANKS)), ItemGroup.BUILDING_BLOCKS);
 	public static final RegistryObject<Block> AURORAL_LADDER = HELPER.createCompatBlock("quark", "auroral_ladder", ()->new AbnormalsLadderBlock(Block.Properties.from(Blocks.LADDER).harvestTool(ToolType.AXE)), ItemGroup.DECORATIONS);
 	public static final RegistryObject<Block> AURORAL_LEAF_CARPET = HELPER.createCompatBlock("quark", "auroral_leaf_carpet", ()->new LeafCarpetBlock(Block.Properties.from(AURORAL_LEAVES.get())), ItemGroup.DECORATIONS);
+
+	public static final RegistryObject<Block> BRISKBERRY = HELPER.createBlock("briskberry", ()->new BriskberryBlock(Block.Properties.create(Material.PLANTS).tickRandomly()), ItemGroup.DECORATIONS);
 }

@@ -25,8 +25,9 @@ public class BriskberryBlock extends BushBlock implements IGrowable {
 	//SHOULD BE 12000 USUALLY
 	static int temp = 5;
 	public static final IntegerProperty TICKSLEFT = IntegerProperty.create("time_until_explosion", 0, temp);
-	protected BriskberryBlock(Properties properties) {
+	public BriskberryBlock(Properties properties) {
 		super(properties);
+		this.setDefaultState(this.getDefaultState().with(TICKSLEFT, temp));
 	}
 
 	@Override
@@ -48,18 +49,18 @@ public class BriskberryBlock extends BushBlock implements IGrowable {
          net.minecraftforge.common.ForgeHooks.onCropsGrowPost(worldIn, pos, state);
       }
       if (i>=3) {
-      	worldIn.setBlockState(pos, state.with(TICKSLEFT, state.get(TICKSLEFT)-1));
+      	worldIn.setBlockState(pos, state.with(TICKSLEFT, Math.max(0, state.get(TICKSLEFT)-1)));
 	  }
       if (state.get(TICKSLEFT)<=1) {
-      	createExplosion(worldIn, null, null, pos.getX(), pos.getY(), pos.getZ(), 4, false, Explosion.Mode.BREAK);
+      	createExplosion(worldIn, null, DamageSource.netherBedExplosion(), pos.getX(), pos.getY(), pos.getZ(), 4, false, Explosion.Mode.BREAK);
 	  }
 	}
-	public static Explosion createExplosion(World worldIn, @Nullable Entity entityIn, @Nullable DamageSource damageSourceIn, double xIn, double yIn, double zIn, float explosionRadius, boolean causesFire, Explosion.Mode modeIn) {
-		Explosion explosion = new BriskBerryExplosion(worldIn, entityIn, xIn, yIn, zIn, explosionRadius, causesFire, modeIn);
+	public static BriskBerryExplosion createExplosion(World worldIn, @Nullable Entity entityIn, @Nullable DamageSource damageSourceIn, double xIn, double yIn, double zIn, float explosionRadius, boolean causesFire, Explosion.Mode modeIn) {
+		BriskBerryExplosion explosion = new BriskBerryExplosion(worldIn, entityIn, xIn, yIn, zIn, explosionRadius, causesFire, modeIn);
 		if (damageSourceIn != null) {
 			explosion.setDamageSource(damageSourceIn);
 		}
-		if (net.minecraftforge.event.ForgeEventFactory.onExplosionStart(worldIn, explosion)) return explosion;
+		//if (net.minecraftforge.event.ForgeEventFactory.onExplosionStart(worldIn, explosion)) return explosion;
 
 		explosion.doExplosionA();
 		explosion.doExplosionB(true);
