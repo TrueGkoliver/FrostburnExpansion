@@ -9,6 +9,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -23,6 +24,7 @@ import com.teamaurora.frostburnexpansion.core.registry.FrostburnExpansionFeature
 
 @Mod(FrostburnExpansion.MODID)
 @Mod.EventBusSubscriber(modid=FrostburnExpansion.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@SuppressWarnings("deprecation")
 public class FrostburnExpansion {
 	public static final String MODID = "frostburnexpansion";
 	public static final RegistryHelper REGISTRY_HELPER = new RegistryHelper(MODID);
@@ -49,13 +51,17 @@ public class FrostburnExpansion {
 	}
 
 	private void setup(final FMLCommonSetupEvent event) {
-		FrostburnExpansionBiomes.registerBiomesToDictionary();
-		FrostburnExpansionBlockData.registerCompostables();
-		FrostburnExpansionBlockData.registerFlammables();
+		DeferredWorkQueue.runLater(() -> {
+			FrostburnExpansionBiomes.registerBiomesToDictionary();
+			FrostburnExpansionBlockData.registerCompostables();
+			FrostburnExpansionBlockData.registerFlammables();
+		});
 	}
 
 	private void clientSetup(final FMLClientSetupEvent event) {
-		FrostburnExpansionBlockData.setupRenderLayer();
+		DeferredWorkQueue.runLater(() -> {
+			FrostburnExpansionBlockData.setupRenderLayer();
+		});
 	}
 
 }
