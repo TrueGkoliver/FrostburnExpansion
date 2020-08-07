@@ -22,36 +22,33 @@ import com.teamaurora.frostburnexpansion.core.registry.FrostburnExpansionEffects
 import com.teamaurora.frostburnexpansion.core.registry.FrostburnExpansionFeatures;
 
 @Mod(FrostburnExpansion.MODID)
-@Mod.EventBusSubscriber(modid=FrostburnExpansion.MODID)
-public class FrostburnExpansion
-{
+@Mod.EventBusSubscriber(modid=FrostburnExpansion.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+public class FrostburnExpansion {
 	public static final String MODID = "frostburnexpansion";
 	public static final RegistryHelper REGISTRY_HELPER = new RegistryHelper(MODID);
-    private static final Logger LOGGER = LogManager.getLogger();
+	private static final Logger LOGGER = LogManager.getLogger();
 
-    public FrostburnExpansion() {
-    	IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+	public FrostburnExpansion() {
+		IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		REGISTRY_HELPER.getDeferredItemRegister().register(eventBus);
 		REGISTRY_HELPER.getDeferredBlockRegister().register(eventBus);
 		REGISTRY_HELPER.getDeferredEntityRegister().register(eventBus);
 		REGISTRY_HELPER.getDeferredSoundRegister().register(eventBus);
 
-		FrostburnExpansionFeatures.FEATURES.register(eventBus);
-    	FrostburnExpansionBiomes.BIOMES.register(eventBus);
-    	FrostburnExpansionEffects.POTION_EFFECTS.register(eventBus);
-    	FrostburnExpansionEffects.POTIONS.register(eventBus);
+		FrostburnExpansionBiomes.BIOMES.register(eventBus);
+		FrostburnExpansionEffects.POTION_EFFECTS.register(eventBus);
+		FrostburnExpansionEffects.POTIONS.register(eventBus);
 
-  
 
 		eventBus.addListener(this::setup);
-		DistExecutor.runWhenOn(Dist.CLIENT, ()->()->{
+		DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> {
 			eventBus.addListener(this::clientSetup);
 		});
-       
-    }
 
-    private void setup(final FMLCommonSetupEvent event) {
+	}
+
+	private void setup(final FMLCommonSetupEvent event) {
 		FrostburnExpansionBiomes.registerBiomesToDictionary();
 		FrostburnExpansionBlockData.registerCompostables();
 		FrostburnExpansionBlockData.registerFlammables();
@@ -61,16 +58,4 @@ public class FrostburnExpansion
 		FrostburnExpansionBlockData.setupRenderLayer();
 	}
 
-	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-	public static class RegistryEvents {
-		@SubscribeEvent
-		public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
-
-		}
-
-		@SubscribeEvent
-		public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
-
-		}
-	}
 }

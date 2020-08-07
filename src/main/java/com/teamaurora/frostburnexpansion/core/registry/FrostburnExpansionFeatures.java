@@ -1,8 +1,5 @@
 package com.teamaurora.frostburnexpansion.core.registry;
 
-import com.teamaurora.frostburnexpansion.common.world.gen.feature.BorealeneSpikesFeature;
-import com.teamaurora.frostburnexpansion.common.world.gen.surfacebuilders.AuroraOasisSurfaceBuilder;
-import com.teamaurora.frostburnexpansion.common.world.gen.surfacebuilders.BorealeneAuroraOasisSurfaceBuilder;
 import com.teamaurora.frostburnexpansion.core.FrostburnExpansion;
 
 import net.minecraft.world.gen.feature.Feature;
@@ -13,31 +10,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraft.world.gen.feature.NoFeatureConfig;
 
-@Mod.EventBusSubscriber(modid=FrostburnExpansion.MODID)
 public class FrostburnExpansionFeatures {
-	public static final DeferredRegister<Feature<?>> FEATURES = new DeferredRegister<Feature<?>>(ForgeRegistries.FEATURES, FrostburnExpansion.MODID);
-
-	// do something with this idk. there's no feature registry in AbC
-	public static final Feature<NoFeatureConfig> BOREALENE_SPIKES = new BorealeneSpikesFeature(NoFeatureConfig::deserialize);
-
-	public static final SurfaceBuilder<SurfaceBuilderConfig> AURORA_OASIS = new AuroraOasisSurfaceBuilder(SurfaceBuilderConfig::deserialize);
-	public static final SurfaceBuilder<SurfaceBuilderConfig> BOREALENE_AURORA_OASIS = new BorealeneAuroraOasisSurfaceBuilder(SurfaceBuilderConfig::deserialize);
-	
-	@SubscribeEvent
-	public static void onFeatureRegistryEvent(Register<Feature<?>> event) 
-	{
-		BOREALENE_SPIKES.setRegistryName("borealene_spikes");
-		event.getRegistry().register(BOREALENE_SPIKES);
-		
-	}
-	
-	
-	
-	//I'm putting this here, because there's no need to make an entirely new class.
-	//NOTE
-	//It's not that much right now, but I'm saving it for later.
-	public static final DeferredRegister<SurfaceBuilder<?>> SURFACE_BUILDERS = new DeferredRegister<SurfaceBuilder<?>>(ForgeRegistries.SURFACE_BUILDERS, FrostburnExpansion.MODID);
-
+	// Since we're redoing the Aurora biome I decided to just erase all of this. For how to structure it in the future check the Hanami src. -Epic
 }

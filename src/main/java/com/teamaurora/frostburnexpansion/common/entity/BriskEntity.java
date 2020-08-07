@@ -23,7 +23,9 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.IChargeableMob;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.SharedMonsterAttributes;
+//import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.attributes.AttributeModifierMap;
+import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
 import net.minecraft.entity.ai.goal.LookAtGoal;
@@ -46,10 +48,7 @@ import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.tileentity.JukeboxTileEntity;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.Hand;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.SoundEvents;
+import net.minecraft.util.*;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -84,9 +83,8 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 		super(entityTypeIn, worldIn);
 	}
 	
-	protected void registerAttributes() {
-	      super.registerAttributes();
-	      this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.25D);
+	public static AttributeModifierMap.MutableAttribute registerAttributes() {
+		return AttributeModifierMap.func_233803_a_().createMutableAttribute(Attributes.MAX_HEALTH).createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE).createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.25D).createMutableAttribute(Attributes.ARMOR).createMutableAttribute(Attributes.ARMOR_TOUGHNESS).createMutableAttribute(net.minecraftforge.common.ForgeMod.SWIM_SPEED.get()).createMutableAttribute(net.minecraftforge.common.ForgeMod.NAMETAG_DISTANCE.get()).createMutableAttribute(net.minecraftforge.common.ForgeMod.ENTITY_GRAVITY.get());
 	}
 	
 	@Override
@@ -195,7 +193,7 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 		   this.dataManager.set(IGNITED, true);
 	   }
 	   @Override
-	   protected boolean processInteract(PlayerEntity player, Hand hand) {
+	   protected ActionResultType func_230254_b_(PlayerEntity player, Hand hand) {
 	      ItemStack itemstack = player.getHeldItem(hand);
 	      if (itemstack.getItem() == Items.FLINT_AND_STEEL) {
 	         this.world.playSound(player, this.getPosX(), this.getPosY(), this.getPosZ(), SoundEvents.ITEM_FLINTANDSTEEL_USE, this.getSoundCategory(), 0.5F, this.rand.nextFloat() * 0.4F + 0.8F);
@@ -206,9 +204,9 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 	            });
 	         }
 	
-	         return true;
+	         return ActionResultType.func_233537_a_(this.world.isRemote);
 	      } else {
-	         return super.processInteract(player, hand);
+	         return super.func_230254_b_(player, hand);
 	      }
 	   }
 
