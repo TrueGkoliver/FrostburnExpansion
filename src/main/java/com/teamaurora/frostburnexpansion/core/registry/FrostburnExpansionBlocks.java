@@ -1,9 +1,11 @@
 package com.teamaurora.frostburnexpansion.core.registry;
 
-import com.teamabnormals.abnormals_core.common.blocks.AbnormalsLadderBlock;
-import com.teamabnormals.abnormals_core.common.blocks.AbnormalsStairsBlock;
-import com.teamabnormals.abnormals_core.common.blocks.LeafCarpetBlock;
-import com.teamabnormals.abnormals_core.common.blocks.VerticalSlabBlock;
+import com.mojang.datafixers.util.Pair;
+import com.teamabnormals.abnormals_core.common.blocks.*;
+import com.teamabnormals.abnormals_core.common.blocks.chest.AbnormalsChestBlock;
+import com.teamabnormals.abnormals_core.common.blocks.chest.AbnormalsTrappedChestBlock;
+import com.teamabnormals.abnormals_core.common.blocks.sign.AbnormalsStandingSignBlock;
+import com.teamabnormals.abnormals_core.common.blocks.sign.AbnormalsWallSignBlock;
 import com.teamabnormals.abnormals_core.common.blocks.wood.*;
 import com.teamaurora.frostburnexpansion.core.FrostburnExpansion;
 
@@ -67,10 +69,14 @@ public class FrostburnExpansionBlocks {
 	public static final RegistryObject<Block> AURORAL_LEAVES = HELPER.createBlock("auroral_leaves", ()->new AbnormalsLeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)), ItemGroup.DECORATIONS);
 	public static final RegistryObject<Block> AURORAL_SAPLING = HELPER.createBlock("auroral_sapling", ()->new AbnormalsSaplingBlock(new OakTree(), Block.Properties.from(Blocks.OAK_SAPLING)), ItemGroup.DECORATIONS);
 	public static final RegistryObject<Block> POTTED_AURORAL_SAPLING = HELPER.createBlockNoItem("potted_auroral_sapling", ()->new FlowerPotBlock(AURORAL_SAPLING.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
+	public static final Pair<RegistryObject<AbnormalsStandingSignBlock>, RegistryObject<AbnormalsWallSignBlock>> AURORAL_SIGNS = HELPER.createSignBlock("auroral", MaterialColor.PURPLE_TERRACOTTA);
 
 	public static final RegistryObject<Block> VERTICAL_AURORAL_PLANKS = HELPER.createCompatBlock("quark", "vertical_auroral_planks", ()->new Block(Block.Properties.from(Blocks.OAK_PLANKS)), ItemGroup.BUILDING_BLOCKS);
 	public static final RegistryObject<Block> AURORAL_VERTICAL_SLAB = HELPER.createCompatBlock("quark", "auroral_vertical_slab", ()->new VerticalSlabBlock(Block.Properties.from(Blocks.OAK_PLANKS)), ItemGroup.BUILDING_BLOCKS);
 	public static final RegistryObject<Block> AURORAL_LADDER = HELPER.createCompatBlock("quark", "auroral_ladder", ()->new AbnormalsLadderBlock(Block.Properties.from(Blocks.LADDER).harvestTool(ToolType.AXE)), ItemGroup.DECORATIONS);
 	public static final RegistryObject<Block> AURORAL_LEAF_CARPET = HELPER.createCompatBlock("quark", "auroral_leaf_carpet", ()->new LeafCarpetBlock(Block.Properties.from(AURORAL_LEAVES.get())), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> AURORAL_BOOKSHELF = HELPER.createCompatBlock("quark", "auroral_bookshelf", ()->new BookshelfBlock(Block.Properties.from(Blocks.BOOKSHELF)), ItemGroup.BUILDING_BLOCKS);
+	public static final Pair<RegistryObject<AbnormalsChestBlock>, RegistryObject<AbnormalsTrappedChestBlock>> AURORAL_CHESTS = HELPER.createCompatChestBlocks("auroral", MaterialColor.PURPLE_TERRACOTTA);
 
+	public static final RegistryObject<Block> AURORAL_BEEHIVE = HELPER.createCompatBlock("buzzier_bees", "auroral_beehive", ()->new AbnormalsBeehiveBlock(Block.Properties.from(Blocks.BEEHIVE)), ItemGroup.DECORATIONS);
 }

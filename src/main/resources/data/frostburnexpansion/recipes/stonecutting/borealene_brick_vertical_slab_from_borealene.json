@@ -4,5 +4,11 @@
     "item": "frostburnexpansion:borealene"
   },
   "result": "frostburnexpansion:borealene_brick_vertical_slab",
+  "conditions": [
+    {
+      "type": "abnormals_core:quark_flag",
+      "flag": "vertical_slabs"
+    }
+  ],
   "count": 2
 }

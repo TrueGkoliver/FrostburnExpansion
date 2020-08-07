@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    " x "
+  ],
+  "key": {
+    "#": {
+      "item": "frostburnexpansion:auroral_planks"
+    },
+    "x": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "frostburnexpansion:auroral_sign",
+    "count": 3
+  }
+}

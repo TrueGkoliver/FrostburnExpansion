@@ -18,5 +18,7 @@ public class FrostburnExpansionItems {
 	//Add items here
 	public static final RegistryObject<Item> BRISK_SPAWN_EGG = HELPER.createSpawnEggItem("brisk", ()->FrostburnExpansionEntities.BRISK.get(), 0x84D6DB, 0x359289);
 	public static final RegistryObject<Item> BRISKSONG_RECORD = HELPER.createItem("music_disc_brisksong", ()->new BrisksongDiscItem(14, FrostburnExpansionSounds.BRISKSONG, new Item.Properties().maxStackSize(1)));
+
+	public static final RegistryObject<Item> AURORAL_BOAT = HELPER.createBoatItem("auroral", FrostburnExpansionBlocks.AURORAL_PLANKS);
 	
 }

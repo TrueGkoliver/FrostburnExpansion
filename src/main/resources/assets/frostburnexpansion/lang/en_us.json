@@ -32,14 +32,21 @@
   "block.frostburnexpansion.auroral_leaves" : "Auroral Leaves",
   "block.frostburnexpansion.auroral_sapling" : "Auroral Sapling",
   "block.frostburnexpansion.auroral_door" : "Auroral Door",
-  "block.frostburnexpansion.borealene_vertical_slab" : "Borealene Vertical Slab",
-  "block.frostburnexpansion.borealene_brick_vertical_slab" : "Borelene Brick Vertical Slab",
-  "block.frostburnexpansion.snow_brick_vertical_slab" : "Large Snow Brick Vertical Slab",
+  "block.frostburnexpansion.auroral_sign": "Auroral Sign",
   "block.frostburnexpansion.vertical_auroral_planks" : "Vertical Auroral Planks",
   "block.frostburnexpansion.auroral_vertical_slab" : "Auroral Vertical Slab",
   "block.frostburnexpansion.auroral_ladder" : "Auroral Ladder",
   "block.frostburnexpansion.auroral_leaf_carpet" : "Auroral Leaf Carpet",
-  
+  "block.frostburnexpansion.auroral_bookshelf": "Auroral Bookshelf",
+  "block.frostburnexpansion.auroral_chest": "Auroral Chest",
+  "block.frostburnexpansion.auroral_trapped_chest": "Auroral Trapped Chest",
+  "block.frostburnexpansion.auroral_beehive": "Auroral Beehive",
+  "block.frostburnexpansion.potted_auroral_sapling": "Potted Auroral Sapling",
+
+  "block.frostburnexpansion.borealene_vertical_slab" : "Borealene Vertical Slab",
+  "block.frostburnexpansion.borealene_brick_vertical_slab" : "Borelene Brick Vertical Slab",
+  "block.frostburnexpansion.snow_brick_vertical_slab" : "Large Snow Brick Vertical Slab",
+
   "effect.frostburnexpansion.fraility" : "Fraility",
   
   "item.frostburnexpansion.brisk_spawn_egg" : "Brisk Spawn Egg",

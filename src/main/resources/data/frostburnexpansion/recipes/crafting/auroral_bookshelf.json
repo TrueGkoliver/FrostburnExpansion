@@ -1,23 +1,26 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "#",
-    "#",
-    "#"
+    "###",
+    "XXX",
+    "###"
   ],
   "key": {
     "#": {
       "item": "frostburnexpansion:auroral_planks"
+    },
+    "X": {
+      "item": "minecraft:book"
     }
   },
   "result": {
-    "item": "frostburnexpansion:vertical_auroral_planks",
-    "count": 3
+    "item": "frostburnexpansion:auroral_bookshelf",
+    "count": 1
   },
   "conditions": [
     {
       "type": "abnormals_core:quark_flag",
-      "flag": "vertical_planks"
+      "flag": "variant_bookshelves"
     }
   ]
 }
