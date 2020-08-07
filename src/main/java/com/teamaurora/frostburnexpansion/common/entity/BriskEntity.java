@@ -18,12 +18,9 @@ import com.teamaurora.frostburnexpansion.core.registry.FrostburnExpansionSounds;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SnowBlock;
 import net.minecraft.client.Minecraft;
-import net.minecraft.entity.AreaEffectCloudEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.IChargeableMob;
-import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.*;
 //import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.attributes.Attribute;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.AvoidEntityGoal;
@@ -81,10 +78,6 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 	   
 	public BriskEntity(EntityType<? extends MonsterEntity> entityTypeIn, World worldIn) {
 		super(entityTypeIn, worldIn);
-	}
-	
-	public static AttributeModifierMap.MutableAttribute registerAttributes() {
-		return AttributeModifierMap.func_233803_a_().createMutableAttribute(Attributes.MAX_HEALTH).createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE).createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.25D).createMutableAttribute(Attributes.ARMOR).createMutableAttribute(Attributes.ARMOR_TOUGHNESS).createMutableAttribute(net.minecraftforge.common.ForgeMod.SWIM_SPEED.get()).createMutableAttribute(net.minecraftforge.common.ForgeMod.NAMETAG_DISTANCE.get()).createMutableAttribute(net.minecraftforge.common.ForgeMod.ENTITY_GRAVITY.get());
 	}
 	
 	@Override
@@ -374,4 +367,7 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 		return this.isDancing;
 	}
 
+	public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
+	   	return MobEntity.func_233666_p_().createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.25D);
+	}
 }
