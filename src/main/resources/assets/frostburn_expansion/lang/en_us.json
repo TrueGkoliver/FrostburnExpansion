@@ -1,4 +1,41 @@
 {
+  "_comment": "Tundra Content",
+  "block.frostburn_expansion.snow_bricks": "Large Snow Bricks",
+  "block.frostburn_expansion.snow_brick_slab": "Snow Brick Slab",
+  "block.frostburn_expansion.snow_brick_stairs": "Snow Brick Stairs",
+  "block.frostburn_expansion.snow_brick_wall": "Snow Brick Wall",
+  "block.frostburn_expansion.chiseled_snow_bricks": "Chiseled Snow Bricks",
+  "block.frostburn_expansion.snow_brick_vertical_slab" : "Large Snow Brick Vertical Slab",
+
+
+  "item.frostburn_expansion.brisk_spawn_egg" : "Brisk Spawn Egg",
+
+  "entity.frostburn_expansion.brisk" : "Brisk",
+
+  "item.minecraft.potion.effect.fraility" : "Potion of Frailty",
+  "item.minecraft.potion.effect.long_fraility" : "Potion of Frailty",
+  "item.minecraft.potion.effect.strong_fraility" : "Potion of Frailty",
+
+  "item.minecraft.splash_potion.effect.fraility" : "Splash Potion of Frailty",
+  "item.minecraft.splash_potion.effect.long_fraility" : "Splash Potion of Frailty",
+  "item.minecraft.splash_potion.effect.strong_fraility" : "Splash Potion of Frailty",
+
+  "item.minecraft.lingering_potion.effect.fraility" : "Lingering Potion of Frailty",
+  "item.minecraft.lingering_potion.effect.long_fraility" : "Lingering Potion of Frailty",
+  "item.minecraft.lingering_potion.effect.strong_fraility" : "Lingering Potion of Frailty",
+
+  "item.minecraft.tipped_arrow.effect.fraility" : "Arrow of Frailty",
+  "item.minecraft.tipped_arrow.effect.long_fraility" : "Arrow of Frailty",
+  "item.minecraft.tipped_arrow.effect.strong_fraility" : "Arrow of Frailty",
+
+  "effect.frostburn_expansion.fraility" : "Frailty",
+
+  "item.frostburn_expansion.music_disc_brisksong.desc" : "Mista Jub - Brisksong",
+
+  "item.frostburn_expansion.music_disc_brisksong": "Music Disc",
+
+
+  "_comment1": "Aurora Glacier Content",
   "block.frostburn_expansion.borealene": "Borealene",
   "block.frostburn_expansion.borealene_slab": "Borealene Slab",
   "block.frostburn_expansion.borealene_stairs": "Borealene Stairs",
@@ -10,17 +47,18 @@
   "block.frostburn_expansion.chiseled_borealene_bricks": "Chiseled Borealene Bricks",
   "block.frostburn_expansion.borealene_pillar": "Borealene Pillar",
   "block.frostburn_expansion.borealene_lamp": "Borealene Lamp",
+  "block.frostburn_expansion.borealene_vertical_slab" : "Borealene Vertical Slab",
+  "block.frostburn_expansion.borealene_brick_vertical_slab" : "Borelene Brick Vertical Slab",
 
-  "block.frostburn_expansion.snow_bricks": "Large Snow Bricks",
-  "block.frostburn_expansion.snow_brick_slab": "Snow Brick Slab",
-  "block.frostburn_expansion.snow_brick_stairs": "Snow Brick Stairs",
-  "block.frostburn_expansion.snow_brick_wall": "Snow Brick Wall",
-  "block.frostburn_expansion.chiseled_snow_bricks": "Chiseled Snow Bricks",
 
   "block.frostburn_expansion.stripped_auroral_log": "Stripped Auroral Log",
   "block.frostburn_expansion.stripped_auroral_wood": "Stripped Auroral Wood",
   "block.frostburn_expansion.auroral_log": "Auroral Log",
   "block.frostburn_expansion.auroral_wood": "Auroral Wood",
+  "block.frostburn_expansion.auroral_leaves" : "Auroral Leaves",
+  "block.frostburn_expansion.auroral_sapling" : "Auroral Sapling",
+  "block.frostburn_expansion.potted_auroral_sapling": "Potted Auroral Sapling",
+
   "block.frostburn_expansion.auroral_planks": "Auroral Planks",
   "block.frostburn_expansion.auroral_slab": "Auroral Slab",
   "block.frostburn_expansion.auroral_stairs": "Auroral Stairs",
@@ -29,10 +67,9 @@
   "block.frostburn_expansion.auroral_fence_gate": "Auroral Fence Gate",
   "block.frostburn_expansion.auroral_button": "Auroral Button",
   "block.frostburn_expansion.auroral_trapdoor" : "Auroral Trapdoor",
-  "block.frostburn_expansion.auroral_leaves" : "Auroral Leaves",
-  "block.frostburn_expansion.auroral_sapling" : "Auroral Sapling",
   "block.frostburn_expansion.auroral_door" : "Auroral Door",
   "block.frostburn_expansion.auroral_sign": "Auroral Sign",
+
   "block.frostburn_expansion.vertical_auroral_planks" : "Vertical Auroral Planks",
   "block.frostburn_expansion.auroral_vertical_slab" : "Auroral Vertical Slab",
   "block.frostburn_expansion.auroral_ladder" : "Auroral Ladder",
@@ -40,36 +77,6 @@
   "block.frostburn_expansion.auroral_bookshelf": "Auroral Bookshelf",
   "block.frostburn_expansion.auroral_chest": "Auroral Chest",
   "block.frostburn_expansion.auroral_trapped_chest": "Auroral Trapped Chest",
-  "block.frostburn_expansion.auroral_beehive": "Auroral Beehive",
-  "block.frostburn_expansion.potted_auroral_sapling": "Potted Auroral Sapling",
 
-  "block.frostburn_expansion.borealene_vertical_slab" : "Borealene Vertical Slab",
-  "block.frostburn_expansion.borealene_brick_vertical_slab" : "Borelene Brick Vertical Slab",
-  "block.frostburn_expansion.snow_brick_vertical_slab" : "Large Snow Brick Vertical Slab",
-
-  "effect.frostburn_expansion.fraility" : "Fraility",
-  
-  "item.frostburn_expansion.brisk_spawn_egg" : "Brisk Spawn Egg",
-  
-  "entity.frostburn_expansion.brisk" : "Brisk",
-  
-  "item.minecraft.potion.effect.fraility" : "Potion of Fraility",
-  "item.minecraft.potion.effect.long_fraility" : "Potion of Fraility",
-  "item.minecraft.potion.effect.strong_fraility" : "Potion of Fraility",
-  
-  "item.minecraft.splash_potion.effect.fraility" : "Splash Potion of Fraility",
-  "item.minecraft.splash_potion.effect.long_fraility" : "Splash Potion of Fraility",
-  "item.minecraft.splash_potion.effect.strong_fraility" : "Splash Potion of Fraility",
-  
-  "item.minecraft.lingering_potion.effect.fraility" : "Lingering Potion of Fraility",
-  "item.minecraft.lingering_potion.effect.long_fraility" : "Lingering Potion of Fraility",
-  "item.minecraft.lingering_potion.effect.strong_fraility" : "Lingering Potion of Fraility",
-  
-  "item.minecraft.tipped_arrow.effect.fraility" : "Arrow of Fraility",
-  "item.minecraft.tipped_arrow.effect.long_fraility" : "Arrow of Fraility",
-  "item.minecraft.tipped_arrow.effect.strong_fraility" : "Arrow of Fraility",
-  
-  "item.frostburn_expansion.music_disc_brisksong.desc" : "Mista Jub - Brisksong",
-  
-  "item.frostburn_expansion.music_disc_brisksong": "Music Disc"
+  "block.frostburn_expansion.auroral_beehive": "Auroral Beehive"
 }
