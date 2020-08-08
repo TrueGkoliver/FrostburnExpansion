@@ -12,23 +12,23 @@
 
   "entity.frostburn_expansion.brisk" : "Brisk",
 
-  "item.minecraft.potion.effect.fraility" : "Potion of Frailty",
-  "item.minecraft.potion.effect.long_fraility" : "Potion of Frailty",
-  "item.minecraft.potion.effect.strong_fraility" : "Potion of Frailty",
+  "item.minecraft.potion.effect.frailty" : "Potion of Frailty",
+  "item.minecraft.potion.effect.long_frailty" : "Potion of Frailty",
+  "item.minecraft.potion.effect.strong_frailty" : "Potion of Frailty",
 
-  "item.minecraft.splash_potion.effect.fraility" : "Splash Potion of Frailty",
-  "item.minecraft.splash_potion.effect.long_fraility" : "Splash Potion of Frailty",
-  "item.minecraft.splash_potion.effect.strong_fraility" : "Splash Potion of Frailty",
+  "item.minecraft.splash_potion.effect.frailty" : "Splash Potion of Frailty",
+  "item.minecraft.splash_potion.effect.long_frailty" : "Splash Potion of Frailty",
+  "item.minecraft.splash_potion.effect.strong_frailty" : "Splash Potion of Frailty",
 
-  "item.minecraft.lingering_potion.effect.fraility" : "Lingering Potion of Frailty",
-  "item.minecraft.lingering_potion.effect.long_fraility" : "Lingering Potion of Frailty",
-  "item.minecraft.lingering_potion.effect.strong_fraility" : "Lingering Potion of Frailty",
+  "item.minecraft.lingering_potion.effect.frailty" : "Lingering Potion of Frailty",
+  "item.minecraft.lingering_potion.effect.long_frailty" : "Lingering Potion of Frailty",
+  "item.minecraft.lingering_potion.effect.strong_frailty" : "Lingering Potion of Frailty",
 
-  "item.minecraft.tipped_arrow.effect.fraility" : "Arrow of Frailty",
-  "item.minecraft.tipped_arrow.effect.long_fraility" : "Arrow of Frailty",
-  "item.minecraft.tipped_arrow.effect.strong_fraility" : "Arrow of Frailty",
+  "item.minecraft.tipped_arrow.effect.frailty" : "Arrow of Frailty",
+  "item.minecraft.tipped_arrow.effect.long_frailty" : "Arrow of Frailty",
+  "item.minecraft.tipped_arrow.effect.strong_frailty" : "Arrow of Frailty",
 
-  "effect.frostburn_expansion.fraility" : "Frailty",
+  "effect.frostburn_expansion.frailty" : "Frailty",
 
   "item.frostburn_expansion.music_disc_brisksong.desc" : "Mista Jub - Brisksong",
 

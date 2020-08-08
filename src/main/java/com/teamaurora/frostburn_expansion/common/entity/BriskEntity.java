@@ -230,17 +230,17 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 	        	 if (entity instanceof BriskEntity) {
 	        		 
 	        	 } else {
-	        		 if (entity.isPotionActive(FrostburnExpansionEffects.FRALITY.get())) {
-		        		 int lv = entity.getActivePotionEffect(FrostburnExpansionEffects.FRALITY.get()).getAmplifier();
+	        		 if (entity.isPotionActive(FrostburnExpansionEffects.FRAILTY.get())) {
+		        		 int lv = entity.getActivePotionEffect(FrostburnExpansionEffects.FRAILTY.get()).getAmplifier();
 		        		 if ((!this.getPowered() && lv==4)||(this.getPowered() && lv==7)) {
 		        			 
 		        		 } else {
-		        			 EffectInstance i = new EffectInstance(FrostburnExpansionEffects.FRALITY.get(), 3600, entity.getActivePotionEffect(FrostburnExpansionEffects.FRALITY.get()).getAmplifier()+1);
+		        			 EffectInstance i = new EffectInstance(FrostburnExpansionEffects.FRAILTY.get(), 3600, entity.getActivePotionEffect(FrostburnExpansionEffects.FRAILTY.get()).getAmplifier()+1);
 		        			 entity.addPotionEffect(i);
 		        		 }
 		        	 } else {
 		        		 System.out.println(entity.toString());
-		        		 entity.addPotionEffect(new EffectInstance(FrostburnExpansionEffects.FRALITY.get(), 3600, 0));
+		        		 entity.addPotionEffect(new EffectInstance(FrostburnExpansionEffects.FRAILTY.get(), 3600, 0));
 		        	 }
 	        	 }
 	   

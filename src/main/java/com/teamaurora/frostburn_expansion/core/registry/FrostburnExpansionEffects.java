@@ -1,6 +1,6 @@
 package com.teamaurora.frostburn_expansion.core.registry;
 
-import com.teamaurora.frostburn_expansion.common.effect.FralityEffect;
+import com.teamaurora.frostburn_expansion.common.effect.FrailtyEffect;
 import com.teamaurora.frostburn_expansion.core.FrostburnExpansion;
 
 import net.minecraft.potion.Effect;
@@ -14,9 +14,9 @@ public class FrostburnExpansionEffects {
 
 	public static final DeferredRegister<Effect> POTION_EFFECTS = DeferredRegister.create(ForgeRegistries.POTIONS, FrostburnExpansion.MODID);
 	public static final DeferredRegister<Potion> POTIONS = DeferredRegister.create(ForgeRegistries.POTION_TYPES, FrostburnExpansion.MODID);
-	public static final RegistryObject<FralityEffect> FRALITY = POTION_EFFECTS.register("fraility", ()->new FralityEffect());
+	public static final RegistryObject<FrailtyEffect> FRAILTY = POTION_EFFECTS.register("fraility", ()->new FrailtyEffect());
 	
-	public static final RegistryObject<Potion> POTION_FRALITY = POTIONS.register("fraility", ()->new Potion(new EffectInstance(FRALITY.get(), 3600)));
-	public static final RegistryObject<Potion> POTION_FRALITY_LONG = POTIONS.register("long_fraility", ()->new Potion(new EffectInstance(FRALITY.get(), 9600)));
-	public static final RegistryObject<Potion> POTION_FRALITY_STRONG = POTIONS.register("strong_fraility", ()->new Potion(new EffectInstance(FRALITY.get(), 1800, 1)));
+	public static final RegistryObject<Potion> POTION_FRAILTY = POTIONS.register("frailty", ()->new Potion(new EffectInstance(FRAILTY.get(), 3600)));
+	public static final RegistryObject<Potion> POTION_FRAILTY_LONG = POTIONS.register("long_frailty", ()->new Potion(new EffectInstance(FRAILTY.get(), 9600)));
+	public static final RegistryObject<Potion> POTION_FRAILTY_STRONG = POTIONS.register("strong_frailty", ()->new Potion(new EffectInstance(FRAILTY.get(), 1800, 1)));
 }
