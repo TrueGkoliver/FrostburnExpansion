@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "frostburn_expansion:auroral_log",
+    "frostburn_expansion:auroral_wood",
+    "frostburn_expansion:stripped_auroral_log",
+    "frostburn_expansion:stripped_auroral_wood"
+  ]
+}

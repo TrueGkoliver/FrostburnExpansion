@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom_rh",
+  "textures": {
+    "bottom": "frostburn_expansion:block/auroral_door_bottom",
+    "top": "frostburn_expansion:block/auroral_door_top"
+  }
+}

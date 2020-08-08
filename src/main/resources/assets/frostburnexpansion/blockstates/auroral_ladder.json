@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "frostburnexpansion:block/auroral_ladder" },
-    "facing=east":  { "model": "frostburnexpansion:block/auroral_ladder", "y": 90 },
-    "facing=south": { "model": "frostburnexpansion:block/auroral_ladder", "y": 180 },
-    "facing=west":  { "model": "frostburnexpansion:block/auroral_ladder", "y": 270 }
-  }
-}

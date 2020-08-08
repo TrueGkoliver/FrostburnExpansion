@@ -1,7 +1,0 @@
-{
-  "variants": {
-    "type=bottom": { "model": "frostburnexpansion:block/borealene_slab" },
-    "type=top": { "model": "frostburnexpansion:block/borealene_slab_top" },
-    "type=double": { "model": "frostburnexpansion:block/borealene" }
-  }
-}

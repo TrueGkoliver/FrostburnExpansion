@@ -1,0 +1,6 @@
+{
+  "parent": "block/template_wall_post",
+  "textures": {
+    "wall": "frostburn_expansion:block/snow_bricks"
+  }
+}

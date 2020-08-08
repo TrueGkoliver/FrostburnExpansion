@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_trapdoor",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "frostburn_expansion:auroral_planks"
+    }
+  },
+  "result": {
+    "item": "frostburn_expansion:auroral_trapdoor",
+    "count": 2
+  }
+}

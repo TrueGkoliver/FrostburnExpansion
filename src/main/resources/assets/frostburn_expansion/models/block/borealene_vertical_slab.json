@@ -1,0 +1,8 @@
+{
+  "parent": "frostburn_expansion:block/vertical_slab",
+  "textures": {
+    "side": "frostburn_expansion:block/borealene",
+    "top": "frostburn_expansion:block/borealene",
+    "bottom": "frostburn_expansion:block/borealene"
+  }
+}

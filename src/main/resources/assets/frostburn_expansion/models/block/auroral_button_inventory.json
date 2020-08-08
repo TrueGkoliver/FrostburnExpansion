@@ -1,0 +1,6 @@
+{
+  "parent": "block/button_inventory",
+  "textures": {
+    "texture": "frostburn_expansion:block/auroral_planks"
+  }
+}

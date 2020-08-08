@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "frostburnexpansion:block/borealene_pillar_top",
-    "side": "frostburnexpansion:block/borealene_pillar"
-  }
-}

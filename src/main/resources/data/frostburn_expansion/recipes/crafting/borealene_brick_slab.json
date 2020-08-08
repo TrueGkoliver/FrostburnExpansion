@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "frostburn_expansion:borealene_bricks"
+    }
+  },
+  "result": {
+    "item": "frostburn_expansion:borealene_brick_slab",
+    "count": 6
+  }
+}

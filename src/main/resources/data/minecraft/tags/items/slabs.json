@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "frostburnexpansion:borealene_brick_slab",
-    "frostburnexpansion:borealene_slab",
-    "frostburnexpansion:snow_brick_slab",
-    "frostburnexpansion:auroral_slab"
+    "frostburn_expansion:borealene_brick_slab",
+    "frostburn_expansion:borealene_slab",
+    "frostburn_expansion:snow_brick_slab",
+    "frostburn_expansion:auroral_slab"
   ]
 }

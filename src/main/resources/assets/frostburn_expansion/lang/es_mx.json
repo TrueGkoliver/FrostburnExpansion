@@ -1,0 +1,68 @@
+{
+  "block.frostburn_expansion.borealene": "Borealina",
+  "block.frostburn_expansion.borealene_slab": "Losa de borealina",
+  "block.frostburn_expansion.borealene_stairs": "Escaleras de borealina",
+  "block.frostburn_expansion.borealene_bricks": "Ladrillos de borealina",
+  "block.frostburn_expansion.borealene_brick_slab": "Losa de ladrillos de borealina",
+  "block.frostburn_expansion.borealene_brick_stairs": "Escaleras de ladrillos de borealina",
+  "block.frostburn_expansion.borealene_brick_wall": "Pared de ladrillos de borealina",
+  "block.frostburn_expansion.cracked_borealene_bricks": "Ladrillos de borealina rotos",
+  "block.frostburn_expansion.chiseled_borealene_bricks": "Ladrillos de borealina grabados",
+  "block.frostburn_expansion.borealene_pillar": "Pilar de borealina",
+  "block.frostburn_expansion.borealene_lamp": "Lámpara de borealina",
+
+  "block.frostburn_expansion.snow_bricks": "Ladrillos de nieve grandes",
+  "block.frostburn_expansion.snow_brick_slab": "Losa de ladrillos de nieve",
+  "block.frostburn_expansion.snow_brick_stairs": "Escaleras de ladrillos de nieve",
+  "block.frostburn_expansion.snow_brick_wall": "Pared de ladrillos de nieve",
+  "block.frostburn_expansion.chiseled_snow_bricks": "Ladrillos de nieve grabados",
+
+  "block.frostburn_expansion.stripped_auroral_log": "Tronco de aurora sin corteza",
+  "block.frostburn_expansion.stripped_auroral_wood": "Leño de aurora sin corteza",
+  "block.frostburn_expansion.auroral_log": "Tronco de aurora",
+  "block.frostburn_expansion.auroral_wood": "Leño de aurora",
+  "block.frostburn_expansion.auroral_planks": "Madera de aurora",
+  "block.frostburn_expansion.auroral_slab": "Losa de aurora",
+  "block.frostburn_expansion.auroral_stairs": "Escaleras de aurora",
+  "block.frostburn_expansion.auroral_pressure_plate": "Placa de presión de aurora",
+  "block.frostburn_expansion.auroral_fence": "Valla de aurora",
+  "block.frostburn_expansion.auroral_fence_gate": "Puerta de valla de aurora",
+  "block.frostburn_expansion.auroral_button": "Botón de aurora",
+  "block.frostburn_expansion.auroral_trapdoor" : "Trampilla de aurora",
+  "block.frostburn_expansion.auroral_leaves" : "Hojas de aurora",
+  "block.frostburn_expansion.auroral_sapling" : "Retoño de aurora",
+  "block.frostburn_expansion.auroral_door" : "Puerta de aurora",
+  "block.frostburn_expansion.borealene_vertical_slab" : "Losa vertical de borealina",
+  "block.frostburn_expansion.borealene_brick_vertical_slab" : "Losa vertical de ladrillos de borealina",
+  "block.frostburn_expansion.snow_brick_vertical_slab" : "Losa vertical de ladrillos de nieve grandes",
+  "block.frostburn_expansion.vertical_auroral_planks" : "Madera vertical de aurora",
+  "block.frostburn_expansion.auroral_vertical_slab" : "Losa vertical de aurora",
+  "block.frostburn_expansion.auroral_ladder" : "Escalera de mano de aurora",
+  "block.frostburn_expansion.auroral_leaf_carpet" : "Alfombra de hojas de aurora",
+  
+  "effect.frostburn_expansion.fraility" : "Fragilidad",
+  
+  "item.frostburn_expansion.brisk_spawn_egg" : "Generar brisk",
+  
+  "entity.frostburn_expansion.brisk" : "Brisk",
+  
+  "item.minecraft.potion.effect.fraility" : "Poción de fragilidad",
+  "item.minecraft.potion.effect.long_fraility" : "Poción de fragilidad",
+  "item.minecraft.potion.effect.strong_fraility" : "Poción de fragilidad",
+  
+  "item.minecraft.splash_potion.effect.fraility" : "Poción arrojadiza de fragilidad",
+  "item.minecraft.splash_potion.effect.long_fraility" : "Poción arrojadiza de fragilidad",
+  "item.minecraft.splash_potion.effect.strong_fraility" : "Poción arrojadiza de fragilidad",
+  
+  "item.minecraft.lingering_potion.effect.fraility" : "Poción persistente de fragilidad",
+  "item.minecraft.lingering_potion.effect.long_fraility" : "Poción persistente de fragilidad",
+  "item.minecraft.lingering_potion.effect.strong_fraility" : "Poción persistente de fragilidad",
+  
+  "item.minecraft.tipped_arrow.effect.fraility" : "Flecha de fragilidad",
+  "item.minecraft.tipped_arrow.effect.long_fraility" : "Flecha de fragilidad",
+  "item.minecraft.tipped_arrow.effect.strong_fraility" : "Flecha de fragilidad",
+  
+  "item.frostburn_expansion.music_disc_brisksong.desc" : "Mista Jub - Brisksong",
+  
+  "item.frostburn_expansion.music_disc_brisksong": "Disco"
+}

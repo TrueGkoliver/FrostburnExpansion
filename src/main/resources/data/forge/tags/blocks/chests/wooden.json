@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "frostburnexpansion:auroral_chest",
-    "frostburnexpansion:auroral_trapped_chest"
+    "frostburn_expansion:auroral_chest",
+    "frostburn_expansion:auroral_trapped_chest"
   ]
 }

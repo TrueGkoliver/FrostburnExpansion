@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "frostburnexpansion:borealene_brick_stairs",
-    "frostburnexpansion:borealene_stairs",
-    "frostburnexpansion:snow_brick_stairs",
-    "frostburnexpansion:auroral_stairs"
+    "frostburn_expansion:borealene_brick_stairs",
+    "frostburn_expansion:borealene_stairs",
+    "frostburn_expansion:snow_brick_stairs",
+    "frostburn_expansion:auroral_stairs"
   ]
 }

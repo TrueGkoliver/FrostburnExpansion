@@ -1,8 +1,0 @@
-{
-  "parent": "block/inner_stairs",
-  "textures": {
-    "bottom": "frostburnexpansion:block/borealene_bricks",
-    "top": "frostburnexpansion:block/borealene_bricks",
-    "side": "frostburnexpansion:block/borealene_bricks"
-  }
-}

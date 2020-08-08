@@ -1,0 +1,6 @@
+{
+  "parent": "block/pressure_plate_down",
+  "textures": {
+    "texture": "frostburn_expansion:block/auroral_planks"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "frostburn_expansion:borealene_bricks"
+  },
+  "result": "frostburn_expansion:cracked_borealene_bricks",
+  "experience": 0.00,
+  "cookingtime": 200
+}

@@ -17,8 +17,8 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = '1.0'
-group = 'com.teamaurora.frostburnexpansion' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'frostburnexpansion'
+group = 'com.teamaurora.frostburn_expansion' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'frostburn_expansion'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 

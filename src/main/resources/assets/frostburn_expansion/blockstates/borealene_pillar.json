@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=y":  { "model": "frostburn_expansion:block/borealene_pillar" },
+    "axis=z":   { "model": "frostburn_expansion:block/borealene_pillar", "x": 90 },
+    "axis=x":   { "model": "frostburn_expansion:block/borealene_pillar", "x": 90, "y": 90 }
+  }
+}

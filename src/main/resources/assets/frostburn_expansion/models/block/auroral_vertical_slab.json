@@ -1,0 +1,8 @@
+{
+  "parent": "frostburn_expansion:block/vertical_slab",
+  "textures": {
+    "side": "frostburn_expansion:block/auroral_planks",
+    "top": "frostburn_expansion:block/auroral_planks",
+    "bottom": "frostburn_expansion:block/auroral_planks"
+  }
+}
