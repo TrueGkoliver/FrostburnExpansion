@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "frostburn_expansion:auroral_ladder"
+    "frostburn_expansion:auroral_ladder",
+    "frostburn_expansion:olenya_ladder"
   ]
 }

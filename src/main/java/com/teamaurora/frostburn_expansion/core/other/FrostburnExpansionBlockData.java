@@ -27,14 +27,4 @@ public class FrostburnExpansionBlockData {
         DataUtils.registerFlammable(FrostburnExpansionBlocks.AURORAL_LEAF_CARPET.get(), 30, 60);
         DataUtils.registerFlammable(FrostburnExpansionBlocks.AURORAL_VERTICAL_SLAB.get(), 5, 20);
     }
-
-    public static void setupRenderLayer() {
-        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.AURORAL_DOOR.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.AURORAL_TRAPDOOR.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.AURORAL_LEAVES.get(), RenderType.getCutoutMipped());
-        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.AURORAL_LEAF_CARPET.get(),RenderType.getCutoutMipped());
-        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.AURORAL_SAPLING.get(),RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.POTTED_AURORAL_SAPLING.get(),RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.AURORAL_LADDER.get(),RenderType.getCutout());
-    }
 }

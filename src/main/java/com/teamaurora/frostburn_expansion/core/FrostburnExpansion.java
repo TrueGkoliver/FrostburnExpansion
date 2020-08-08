@@ -3,6 +3,7 @@ package com.teamaurora.frostburn_expansion.core;
 import com.teamabnormals.abnormals_core.core.utils.RegistryHelper;
 import com.teamaurora.frostburn_expansion.common.entity.BriskEntity;
 import com.teamaurora.frostburn_expansion.core.other.FrostburnExpansionBlockData;
+import com.teamaurora.frostburn_expansion.core.other.FrostburnExpansionRender;
 import com.teamaurora.frostburn_expansion.core.registry.FrostburnExpansionEntities;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraftforge.api.distmarker.Dist;
@@ -59,7 +60,7 @@ public class FrostburnExpansion {
 
 	private void clientSetup(final FMLClientSetupEvent event) {
 		DeferredWorkQueue.runLater(() -> {
-			FrostburnExpansionBlockData.setupRenderLayer();
+			FrostburnExpansionRender.setupRenderLayer();
 		});
 	}
 

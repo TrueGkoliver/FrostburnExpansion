@@ -18,5 +18,6 @@ public class FrostburnExpansionItems {
 	public static final RegistryObject<Item> BRISKSONG_RECORD = HELPER.createItem("music_disc_brisksong", ()->new BrisksongDiscItem(14, FrostburnExpansionSounds.BRISKSONG, new Item.Properties().maxStackSize(1)));
 
 	public static final RegistryObject<Item> AURORAL_BOAT = HELPER.createBoatItem("auroral", FrostburnExpansionBlocks.AURORAL_PLANKS);
+	public static final RegistryObject<Item> OLENYA_BOAT = HELPER.createBoatItem("olenya", FrostburnExpansionBlocks.OLENYA_PLANKS);
 	
 }

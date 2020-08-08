@@ -85,6 +85,33 @@ public class FrostburnExpansionBlocks {
 
 	///////////////////////////////////DESERT LAKES CONTENT///////////////////////////////////////////
 
+	// Olenya Wood
+	public static final RegistryObject<Block> STRIPPED_OLENYA_LOG = HELPER.createBlock("stripped_olenya_log", ()->new StrippedLogBlock(Block.Properties.from(Blocks.STRIPPED_OAK_LOG)), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> STRIPPED_OLENYA_WOOD = HELPER.createBlock("stripped_olenya_wood", ()->new StrippedWoodBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> OLENYA_LOG= HELPER.createBlock("olenya_log", ()->new AbnormalsLogBlock(STRIPPED_OLENYA_LOG, Block.Properties.from(Blocks.OAK_LOG)), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> OLENYA_WOOD = HELPER.createBlock("olenya_wood", ()->new WoodBlock(STRIPPED_OLENYA_WOOD, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> OLENYA_LEAVES = HELPER.createBlock("olenya_leaves", ()->new AbnormalsLeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> OLENYA_SAPLING = HELPER.createBlock("olenya_sapling", ()->new AbnormalsSaplingBlock(new OakTree(), Block.Properties.from(Blocks.OAK_SAPLING)), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> POTTED_OLENYA_SAPLING = HELPER.createBlockNoItem("potted_olenya_sapling", ()->new FlowerPotBlock(OLENYA_SAPLING.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
+	public static final RegistryObject<Block> OLENYA_PLANKS = HELPER.createBlock("olenya_planks", ()->new PlanksBlock(Block.Properties.from(Blocks.OAK_PLANKS)), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> OLENYA_SLAB = HELPER.createBlock("olenya_slab", ()->new WoodSlabBlock(Block.Properties.from(Blocks.OAK_SLAB)), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> OLENYA_STAIRS = HELPER.createBlock("olenya_stairs", ()->new WoodStairsBlock(OLENYA_PLANKS.get().getDefaultState(), Block.Properties.from(Blocks.OAK_STAIRS)), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> OLENYA_PRESSURE_PLATE = HELPER.createBlock("olenya_pressure_plate", ()->new WoodPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.from(Blocks.OAK_PRESSURE_PLATE)), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> OLENYA_FENCE = HELPER.createBlock("olenya_fence", ()->new WoodFenceBlock(Block.Properties.from(Blocks.OAK_FENCE)), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> OLENYA_FENCE_GATE = HELPER.createBlock("olenya_fence_gate", ()->new WoodFenceGateBlock(Block.Properties.from(Blocks.OAK_FENCE_GATE)), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> OLENYA_BUTTON = HELPER.createBlock("olenya_button", ()->new AbnormalsWoodButtonBlock(Block.Properties.from(Blocks.OAK_BUTTON)), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> OLENYA_DOOR = HELPER.createBlock("olenya_door", ()->new WoodDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> OLENYA_TRAPDOOR = HELPER.createBlock("olenya_trapdoor", ()->new WoodTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ItemGroup.REDSTONE);
+	public static final Pair<RegistryObject<AbnormalsStandingSignBlock>, RegistryObject<AbnormalsWallSignBlock>> OLENYA_SIGNS = HELPER.createSignBlock("olenya", MaterialColor.PURPLE_TERRACOTTA);
+
+	public static final RegistryObject<Block> OLENYA_BOOKSHELF = HELPER.createCompatBlock("quark", "olenya_bookshelf", ()->new BookshelfBlock(Block.Properties.from(Blocks.BOOKSHELF)), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> VERTICAL_OLENYA_PLANKS = HELPER.createCompatBlock("quark", "vertical_olenya_planks", ()->new Block(Block.Properties.from(Blocks.OAK_PLANKS)), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> OLENYA_VERTICAL_SLAB = HELPER.createCompatBlock("quark", "olenya_vertical_slab", ()->new VerticalSlabBlock(Block.Properties.from(Blocks.OAK_PLANKS)), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> OLENYA_LADDER = HELPER.createCompatBlock("quark", "olenya_ladder", ()->new AbnormalsLadderBlock(Block.Properties.from(Blocks.LADDER).harvestTool(ToolType.AXE)), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> OLENYA_LEAF_CARPET = HELPER.createCompatBlock("quark", "olenya_leaf_carpet", ()->new LeafCarpetBlock(Block.Properties.from(OLENYA_LEAVES.get())), ItemGroup.DECORATIONS);
+	public static final Pair<RegistryObject<AbnormalsChestBlock>, RegistryObject<AbnormalsTrappedChestBlock>> OLENYA_CHESTS = HELPER.createCompatChestBlocks("olenya", MaterialColor.PURPLE_TERRACOTTA);
+
+	public static final RegistryObject<Block> OLENYA_BEEHIVE = HELPER.createCompatBlock("buzzier_bees", "olenya_beehive", ()->new AbnormalsBeehiveBlock(Block.Properties.from(Blocks.BEEHIVE)), ItemGroup.DECORATIONS);
 
 
 	}

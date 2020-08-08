@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=y":  { "model": "frostburn_expansion:block/stripped_olenya_wood" },
+    "axis=z":   { "model": "frostburn_expansion:block/stripped_olenya_wood", "x": 90 },
+    "axis=x":   { "model": "frostburn_expansion:block/stripped_olenya_wood", "x": 90, "y": 90 }
+  }
+}
