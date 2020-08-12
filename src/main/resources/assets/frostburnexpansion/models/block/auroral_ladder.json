@@ -1,8 +1,0 @@
-{
-  "parent": "block/ladder",
-  "ambientocclusion": false,
-  "textures": {
-    "particle": "frostburnexpansion:block/auroral_ladder",
-    "texture": "frostburnexpansion:block/auroral_ladder"
-  }
-}

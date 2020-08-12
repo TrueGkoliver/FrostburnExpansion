@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "frostburn_expansion:auroral_planks"
+    }
+  ],
+  "result": {
+    "item": "frostburn_expansion:auroral_button"
+  }
+}

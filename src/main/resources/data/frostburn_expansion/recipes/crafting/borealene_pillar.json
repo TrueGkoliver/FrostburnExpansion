@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "frostburn_expansion:borealene"
+    }
+  },
+  "result": {
+    "item": "frostburn_expansion:borealene_pillar",
+    "count": 2
+  }
+}

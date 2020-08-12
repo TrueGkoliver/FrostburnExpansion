@@ -1,0 +1,120 @@
+{
+  "_comment": "Tundra Content",
+  "block.frostburn_expansion.snow_bricks": "Large Snow Bricks",
+  "block.frostburn_expansion.snow_brick_slab": "Snow Brick Slab",
+  "block.frostburn_expansion.snow_brick_stairs": "Snow Brick Stairs",
+  "block.frostburn_expansion.snow_brick_wall": "Snow Brick Wall",
+  "block.frostburn_expansion.chiseled_snow_bricks": "Chiseled Snow Bricks",
+  "block.frostburn_expansion.snow_brick_vertical_slab" : "Large Snow Brick Vertical Slab",
+
+
+  "item.frostburn_expansion.brisk_spawn_egg" : "Brisk Spawn Egg",
+
+  "entity.frostburn_expansion.brisk" : "Brisk",
+
+  "item.minecraft.potion.effect.frailty" : "Potion of Frailty",
+  "item.minecraft.potion.effect.long_frailty" : "Potion of Frailty",
+  "item.minecraft.potion.effect.strong_frailty" : "Potion of Frailty",
+
+  "item.minecraft.splash_potion.effect.frailty" : "Splash Potion of Frailty",
+  "item.minecraft.splash_potion.effect.long_frailty" : "Splash Potion of Frailty",
+  "item.minecraft.splash_potion.effect.strong_frailty" : "Splash Potion of Frailty",
+
+  "item.minecraft.lingering_potion.effect.frailty" : "Lingering Potion of Frailty",
+  "item.minecraft.lingering_potion.effect.long_frailty" : "Lingering Potion of Frailty",
+  "item.minecraft.lingering_potion.effect.strong_frailty" : "Lingering Potion of Frailty",
+
+  "item.minecraft.tipped_arrow.effect.frailty" : "Arrow of Frailty",
+  "item.minecraft.tipped_arrow.effect.long_frailty" : "Arrow of Frailty",
+  "item.minecraft.tipped_arrow.effect.strong_frailty" : "Arrow of Frailty",
+
+  "effect.frostburn_expansion.frailty" : "Frailty",
+
+  "item.frostburn_expansion.music_disc_brisksong.desc" : "Mista Jub - Brisksong",
+
+  "item.frostburn_expansion.music_disc_brisksong": "Music Disc",
+
+
+  "_comment1": "Aurora Glacier Content",
+  "block.frostburn_expansion.borealene": "Borealene",
+  "block.frostburn_expansion.borealene_slab": "Borealene Slab",
+  "block.frostburn_expansion.borealene_stairs": "Borealene Stairs",
+  "block.frostburn_expansion.borealene_bricks": "Borealene Bricks",
+  "block.frostburn_expansion.borealene_brick_slab": "Borealene Brick Slab",
+  "block.frostburn_expansion.borealene_brick_stairs": "Borealene Brick Stairs",
+  "block.frostburn_expansion.borealene_brick_wall": "Borealene Brick Wall",
+  "block.frostburn_expansion.cracked_borealene_bricks": "Cracked Borealene Bricks",
+  "block.frostburn_expansion.chiseled_borealene_bricks": "Chiseled Borealene Bricks",
+  "block.frostburn_expansion.borealene_pillar": "Borealene Pillar",
+  "block.frostburn_expansion.borealene_lamp": "Borealene Lamp",
+  "block.frostburn_expansion.borealene_vertical_slab" : "Borealene Vertical Slab",
+  "block.frostburn_expansion.borealene_brick_vertical_slab" : "Borelene Brick Vertical Slab",
+
+
+  "block.frostburn_expansion.stripped_auroral_log": "Stripped Auroral Log",
+  "block.frostburn_expansion.stripped_auroral_wood": "Stripped Auroral Wood",
+  "block.frostburn_expansion.auroral_log": "Auroral Log",
+  "block.frostburn_expansion.auroral_wood": "Auroral Wood",
+  "block.frostburn_expansion.auroral_leaves" : "Auroral Leaves",
+  "block.frostburn_expansion.auroral_sapling" : "Auroral Sapling",
+  "block.frostburn_expansion.potted_auroral_sapling": "Potted Auroral Sapling",
+
+  "block.frostburn_expansion.auroral_planks": "Auroral Planks",
+  "block.frostburn_expansion.auroral_slab": "Auroral Slab",
+  "block.frostburn_expansion.auroral_stairs": "Auroral Stairs",
+  "block.frostburn_expansion.auroral_pressure_plate": "Auroral Pressure Plate",
+  "block.frostburn_expansion.auroral_fence": "Auroral Fence",
+  "block.frostburn_expansion.auroral_fence_gate": "Auroral Fence Gate",
+  "block.frostburn_expansion.auroral_button": "Auroral Button",
+  "block.frostburn_expansion.auroral_trapdoor" : "Auroral Trapdoor",
+  "block.frostburn_expansion.auroral_door" : "Auroral Door",
+  "block.frostburn_expansion.auroral_sign": "Auroral Sign",
+
+  "block.frostburn_expansion.vertical_auroral_planks" : "Vertical Auroral Planks",
+  "block.frostburn_expansion.auroral_vertical_slab" : "Auroral Vertical Slab",
+  "block.frostburn_expansion.auroral_ladder" : "Auroral Ladder",
+  "block.frostburn_expansion.auroral_leaf_carpet" : "Auroral Leaf Carpet",
+  "block.frostburn_expansion.auroral_bookshelf": "Auroral Bookshelf",
+  "block.frostburn_expansion.auroral_chest": "Auroral Chest",
+  "block.frostburn_expansion.auroral_trapped_chest": "Auroral Trapped Chest",
+
+  "block.frostburn_expansion.auroral_beehive": "Auroral Beehive",
+
+  "item.frostburn_expansion.auroral_boat": "Auroral Boat",
+
+
+  "_comment2": "Desert Content",
+
+
+  "_comment3": "Desert Lakes Content",
+  "block.frostburn_expansion.stripped_olenya_log": "Stripped Olenya Log",
+  "block.frostburn_expansion.stripped_olenya_wood": "Stripped Olenya Wood",
+  "block.frostburn_expansion.olenya_log": "Olenya Log",
+  "block.frostburn_expansion.olenya_wood": "Olenya Wood",
+  "block.frostburn_expansion.olenya_leaves" : "Olenya Leaves",
+  "block.frostburn_expansion.olenya_sapling" : "Olenya Sapling",
+  "block.frostburn_expansion.potted_olenya_sapling": "Potted Olenya Sapling",
+
+  "block.frostburn_expansion.olenya_planks": "Olenya Planks",
+  "block.frostburn_expansion.olenya_slab": "Olenya Slab",
+  "block.frostburn_expansion.olenya_stairs": "Olenya Stairs",
+  "block.frostburn_expansion.olenya_pressure_plate": "Olenya Pressure Plate",
+  "block.frostburn_expansion.olenya_fence": "Olenya Fence",
+  "block.frostburn_expansion.olenya_fence_gate": "Olenya Fence Gate",
+  "block.frostburn_expansion.olenya_button": "Olenya Button",
+  "block.frostburn_expansion.olenya_trapdoor" : "Olenya Trapdoor",
+  "block.frostburn_expansion.olenya_door" : "Olenya Door",
+  "block.frostburn_expansion.olenya_sign": "Olenya Sign",
+
+  "block.frostburn_expansion.vertical_olenya_planks" : "Vertical Olenya Planks",
+  "block.frostburn_expansion.olenya_vertical_slab" : "Olenya Vertical Slab",
+  "block.frostburn_expansion.olenya_ladder" : "Olenya Ladder",
+  "block.frostburn_expansion.olenya_leaf_carpet" : "Olenya Leaf Carpet",
+  "block.frostburn_expansion.olenya_bookshelf": "Olenya Bookshelf",
+  "block.frostburn_expansion.olenya_chest": "Olenya Chest",
+  "block.frostburn_expansion.olenya_trapped_chest": "Olenya Trapped Chest",
+
+  "block.frostburn_expansion.olenya_beehive": "Olenya Beehive",
+
+  "item.frostburn_expansion.olenya_boat": "Olenya Boat"
+}

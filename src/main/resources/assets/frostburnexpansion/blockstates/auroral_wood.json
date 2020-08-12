@@ -1,7 +1,0 @@
-{
-  "variants": {
-    "axis=y":  { "model": "frostburnexpansion:block/auroral_wood" },
-    "axis=z":   { "model": "frostburnexpansion:block/auroral_wood", "x": 90 },
-    "axis=x":   { "model": "frostburnexpansion:block/auroral_wood", "x": 90, "y": 90 }
-  }
-}

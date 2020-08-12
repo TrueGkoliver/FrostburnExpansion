@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "frostburn_expansion:vertical_olenya_planks"
+    }
+  ],
+  "result": {
+    "item": "frostburn_expansion:olenya_planks"
+  },
+  "conditions": [
+    {
+      "type": "abnormals_core:quark_flag",
+      "flag": "vertical_planks"
+    }
+  ]
+}

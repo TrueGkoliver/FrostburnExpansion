@@ -1,6 +1,0 @@
-{
-  "parent": "block/wall_inventory",
-  "textures": {
-    "wall": "frostburnexpansion:block/snow_bricks"
-  }
-}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "frostburn_expansion:borealene"
+  },
+  "result": "frostburn_expansion:chiseled_borealene_bricks",
+  "count": 1
+}

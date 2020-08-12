@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "frostburn_expansion:auroral_logs"
+    }
+  ],
+  "result": {
+    "item": "frostburn_expansion:auroral_planks",
+    "count": 4
+  }
+}

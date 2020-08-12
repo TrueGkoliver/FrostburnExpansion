@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "frostburnexpansion:borealene"
-  },
-  "result": "frostburnexpansion:borealene_stairs",
-  "count": 1
-}

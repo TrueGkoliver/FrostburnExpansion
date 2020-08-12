@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "frostburnexpansion:auroral_button"
+    "frostburn_expansion:auroral_button",
+    "frostburn_expansion:olenya_button"
   ]
 }

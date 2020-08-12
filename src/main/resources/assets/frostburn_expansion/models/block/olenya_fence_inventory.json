@@ -1,0 +1,6 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "frostburn_expansion:block/olenya_planks"
+  }
+}

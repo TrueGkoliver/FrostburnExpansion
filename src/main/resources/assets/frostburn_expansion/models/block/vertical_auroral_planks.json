@@ -1,0 +1,6 @@
+{
+  "parent": "frostburn_expansion:block/vertical_planks",
+  "textures": {
+    "all": "frostburn_expansion:block/auroral_planks"
+  }
+}

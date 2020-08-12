@@ -1,0 +1,8 @@
+{
+  "parent": "frostburn_expansion:block/vertical_slab",
+  "textures": {
+    "side": "frostburn_expansion:block/olenya_planks",
+    "top": "frostburn_expansion:block/olenya_planks",
+    "bottom": "frostburn_expansion:block/olenya_planks"
+  }
+}

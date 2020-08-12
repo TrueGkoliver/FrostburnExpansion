@@ -1,8 +1,0 @@
-{
-  "parent": "block/slab",
-  "textures": {
-    "bottom": "frostburnexpansion:block/borealene",
-    "top": "frostburnexpansion:block/borealene",
-    "side": "frostburnexpansion:block/borealene"
-  }
-}

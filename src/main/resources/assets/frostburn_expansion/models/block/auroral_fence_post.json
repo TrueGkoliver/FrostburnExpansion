@@ -1,0 +1,6 @@
+{
+  "parent": "block/fence_post",
+  "textures": {
+    "texture": "frostburn_expansion:block/auroral_planks"
+  }
+}
