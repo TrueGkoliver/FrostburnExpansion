@@ -1,8 +1,0 @@
-{
-  "parent": "block/slab_top",
-  "textures": {
-    "bottom": "frostburn_expansion:block/snow_bricks",
-    "top": "frostburn_expansion:block/snow_bricks",
-    "side": "frostburn_expansion:block/snow_bricks"
-  }
-}

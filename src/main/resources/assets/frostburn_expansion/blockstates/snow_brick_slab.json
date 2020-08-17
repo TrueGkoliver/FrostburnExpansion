@@ -1,7 +1,0 @@
-{
-  "variants": {
-    "type=bottom": { "model": "frostburn_expansion:block/snow_brick_slab" },
-    "type=top": { "model": "frostburn_expansion:block/snow_brick_slab_top" },
-    "type=double": { "model": "frostburn_expansion:block/snow_bricks" }
-  }
-}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:snow_block"
+    }
+  },
+  "result": {
+    "item": "frostburn_expansion:large_snow_bricks",
+    "count": 4
+  },
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "abnormals_core:quark_flag",
+        "flag": "more_brick_types"
+      }
+    }
+  ]
+}

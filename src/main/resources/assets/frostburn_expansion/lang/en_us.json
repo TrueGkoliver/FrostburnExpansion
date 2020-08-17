@@ -1,11 +1,11 @@
 {
   "_comment": "Tundra Content",
-  "block.frostburn_expansion.snow_bricks": "Large Snow Bricks",
-  "block.frostburn_expansion.snow_brick_slab": "Snow Brick Slab",
-  "block.frostburn_expansion.snow_brick_stairs": "Snow Brick Stairs",
-  "block.frostburn_expansion.snow_brick_wall": "Snow Brick Wall",
-  "block.frostburn_expansion.chiseled_snow_bricks": "Chiseled Snow Bricks",
-  "block.frostburn_expansion.snow_brick_vertical_slab" : "Large Snow Brick Vertical Slab",
+  "block.frostburn_expansion.large_snow_bricks": "Large Snow Bricks",
+  "block.frostburn_expansion.large_snow_brick_slab": "Large Snow Brick Slab",
+  "block.frostburn_expansion.large_snow_brick_stairs": "Large Snow Brick Stairs",
+  "block.frostburn_expansion.large_snow_brick_wall": "Large Snow Brick Wall",
+  "block.frostburn_expansion.large_chiseled_snow_bricks": "Chiseled Large Snow Bricks",
+  "block.frostburn_expansion.large_snow_brick_vertical_slab" : "Large Snow Brick Vertical Slab",
 
 
   "item.frostburn_expansion.brisk_spawn_egg" : "Brisk Spawn Egg",

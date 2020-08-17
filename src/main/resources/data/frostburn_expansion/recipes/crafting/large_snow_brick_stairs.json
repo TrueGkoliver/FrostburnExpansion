@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "frostburn_expansion:large_snow_bricks"
+    }
+  },
+  "result": {
+    "item": "frostburn_expansion:large_snow_brick_stairs",
+    "count": 4
+  }
+}
