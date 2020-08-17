@@ -116,6 +116,7 @@ dependencies {
     compile fg.deobf("curse.maven:quark:3024740")
     compile fg.deobf("curse.maven:buzzier-bees:3021810")
     compile fg.deobf("curse.maven:jei:2995910")
+    compile fg.deobf("curse.maven:savage-and-ravage:3002128")
 
 }
 

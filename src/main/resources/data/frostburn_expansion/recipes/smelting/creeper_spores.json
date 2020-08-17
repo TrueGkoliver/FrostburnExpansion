@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "frostburn_expansion:frozen_spores"
+  },
+  "result": "savageandravage:creeper_spores",
+  "experience": 0.40,
+  "cookingtime": 200,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "savageandravage"
+    }
+  ]
+}
