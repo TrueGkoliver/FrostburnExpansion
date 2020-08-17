@@ -13,6 +13,8 @@
   "entity.frostburn_expansion.brisk" : "Brisk",
 
   "item.frostburn_expansion.frozen_spores": "Frozen Spores",
+  "block.frostburn_expansion.frozen_spore_sack": "Frozen Spore Sack",
+  "block.frostburn_expansion.potted_frozen_spores": "Potted Frozen Spores",
 
   "item.minecraft.potion.effect.frailty" : "Potion of Frailty",
   "item.minecraft.potion.effect.long_frailty" : "Potion of Frailty",

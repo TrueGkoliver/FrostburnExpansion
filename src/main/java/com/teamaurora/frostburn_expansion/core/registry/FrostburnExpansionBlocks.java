@@ -7,11 +7,13 @@ import com.teamabnormals.abnormals_core.common.blocks.chest.AbnormalsTrappedChes
 import com.teamabnormals.abnormals_core.common.blocks.sign.AbnormalsStandingSignBlock;
 import com.teamabnormals.abnormals_core.common.blocks.sign.AbnormalsWallSignBlock;
 import com.teamabnormals.abnormals_core.common.blocks.wood.*;
+import com.teamaurora.frostburn_expansion.common.block.ImprovedFlowerPotBlock;
 import com.teamaurora.frostburn_expansion.core.FrostburnExpansion;
 
 import com.teamabnormals.abnormals_core.core.utils.RegistryHelper;
 import com.teamaurora.frostburn_expansion.core.other.FrostburnExpansionProperties;
 import net.minecraft.block.*;
+import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.trees.OakTree;
 import net.minecraft.item.ItemGroup;
@@ -34,6 +36,10 @@ public class FrostburnExpansionBlocks {
 	public static final RegistryObject<Block> LARGE_CHISELED_SNOW_BRICKS = HELPER.createBlock("chiseled_large_snow_bricks", ()->new Block(Block.Properties.from(Blocks.SNOW_BLOCK)), ItemGroup.BUILDING_BLOCKS);
 
 	public static final RegistryObject<Block> LARGE_SNOW_BRICK_VERTICAL_SLAB = HELPER.createCompatBlock("quark", "large_snow_brick_vertical_slab", ()->new VerticalSlabBlock(Block.Properties.from(Blocks.SNOW_BLOCK)), ItemGroup.BUILDING_BLOCKS);
+
+	// Frozen Spore stuff
+	public static final RegistryObject<Block> POTTED_BRISK = HELPER.createBlockNoItem("potted_frozen_spores", ()->new ImprovedFlowerPotBlock(FrostburnExpansionItems.FROZEN_SPORES, AbstractBlock.Properties.from(Blocks.FLOWER_POT)));
+	public static final RegistryObject<Block> FROZEN_SPORE_SACK = HELPER.createCompatBlock("quark", "frozen_spore_sack", ()->new Block(AbstractBlock.Properties.create(Material.WOOL, MaterialColor.LIGHT_BLUE).hardnessAndResistance(0.5F).sound(SoundType.CLOTH)), ItemGroup.DECORATIONS);
 
 	//////////////////////////////////AURORA GLACIER CONTENT//////////////////////////////////////////
 

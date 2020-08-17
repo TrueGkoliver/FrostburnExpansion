@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "frostburn_expansion:frozen_spores"
+    },
+    {
+      "item": "frostburn_expansion:frozen_spores"
+    },
+    {
+      "item": "frostburn_expansion:frozen_spores"
+    },
+    {
+      "item": "frostburn_expansion:frozen_spores"
+    },
+    {
+      "item": "frostburn_expansion:frozen_spores"
+    },
+    {
+      "item": "frostburn_expansion:frozen_spores"
+    },
+    {
+      "item": "frostburn_expansion:frozen_spores"
+    },
+    {
+      "item": "frostburn_expansion:frozen_spores"
+    },
+    {
+      "item": "frostburn_expansion:frozen_spores"
+    }
+  ],
+  "result": {
+    "item": "frostburn_expansion:frozen_spore_sack",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "abnormals_core:quark_flag",
+      "flag": "gunpowder_sack"
+    }
+  ]
+}
