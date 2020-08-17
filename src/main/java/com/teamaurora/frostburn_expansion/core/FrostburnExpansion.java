@@ -2,7 +2,7 @@ package com.teamaurora.frostburn_expansion.core;
 
 import com.teamabnormals.abnormals_core.core.utils.RegistryHelper;
 import com.teamaurora.frostburn_expansion.common.entity.BriskEntity;
-import com.teamaurora.frostburn_expansion.core.other.FrostburnExpansionBlockData;
+import com.teamaurora.frostburn_expansion.core.other.FrostburnExpansionData;
 import com.teamaurora.frostburn_expansion.core.other.FrostburnExpansionRender;
 import com.teamaurora.frostburn_expansion.core.registry.FrostburnExpansionEntities;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
@@ -51,9 +51,9 @@ public class FrostburnExpansion {
 	private void setup(final FMLCommonSetupEvent event) {
 		DeferredWorkQueue.runLater(() -> {
 			FrostburnExpansionBiomes.registerBiomesToDictionary();
-			FrostburnExpansionBlockData.registerCompostables();
-			FrostburnExpansionBlockData.registerFlammables();
-
+			FrostburnExpansionData.registerCompostables();
+			FrostburnExpansionData.registerFlammables();
+			FrostburnExpansionEffects.registerBrewingRecipes();
 			GlobalEntityTypeAttributes.put(FrostburnExpansionEntities.BRISK.get(), BriskEntity.setCustomAttributes().create());
 		});
 	}

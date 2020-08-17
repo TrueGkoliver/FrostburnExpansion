@@ -5,7 +5,7 @@ import com.teamaurora.frostburn_expansion.core.registry.FrostburnExpansionBlocks
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 
-public class FrostburnExpansionBlockData {
+public class FrostburnExpansionData {
     public static void registerCompostables() {
         DataUtils.registerCompostable(0.3f, FrostburnExpansionBlocks.AURORAL_LEAVES.get());
         DataUtils.registerCompostable(0.3f, FrostburnExpansionBlocks.AURORAL_SAPLING.get());
