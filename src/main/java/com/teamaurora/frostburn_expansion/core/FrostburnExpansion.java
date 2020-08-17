@@ -5,6 +5,7 @@ import com.teamaurora.frostburn_expansion.common.entity.BriskEntity;
 import com.teamaurora.frostburn_expansion.core.other.FrostburnExpansionData;
 import com.teamaurora.frostburn_expansion.core.other.FrostburnExpansionRender;
 import com.teamaurora.frostburn_expansion.core.registry.FrostburnExpansionEntities;
+import com.teamaurora.frostburn_expansion.core.registry.FrostburnExpansionFeatures;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -54,6 +55,7 @@ public class FrostburnExpansion {
 			FrostburnExpansionData.registerCompostables();
 			FrostburnExpansionData.registerFlammables();
 			FrostburnExpansionEffects.registerBrewingRecipes();
+			FrostburnExpansionFeatures.generateFeatures();
 			GlobalEntityTypeAttributes.put(FrostburnExpansionEntities.BRISK.get(), BriskEntity.setCustomAttributes().create());
 		});
 	}
