@@ -51,6 +51,7 @@ minecraft {
 
             // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
+            arg "-mixin.config=frostburn_expansion.mixins.json"
 
             mods {
                 frostburn_expansion {
@@ -67,6 +68,7 @@ minecraft {
 
             // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
+            arg "-mixin.config=frostburn_expansion.mixins.json"
 
             mods {
                 frostburn_expansion {
