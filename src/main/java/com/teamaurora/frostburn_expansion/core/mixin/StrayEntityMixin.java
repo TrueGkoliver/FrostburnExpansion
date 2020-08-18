@@ -35,11 +35,7 @@ public abstract class StrayEntityMixin extends AbstractSkeletonEntity {
     protected void fireArrow(ItemStack arrowStack, float distanceFactor, CallbackInfoReturnable<AbstractArrowEntity> cir) {
         AbstractArrowEntity abstractarrowentity = super.fireArrow(arrowStack, distanceFactor);
         if (abstractarrowentity instanceof ArrowEntity) {
-            if (world.rand.nextBoolean()) {
-                ((ArrowEntity) abstractarrowentity).addEffect(new EffectInstance(Effects.SLOWNESS, 600));
-            } else {
-                ((ArrowEntity) abstractarrowentity).addEffect(new EffectInstance(FrostburnExpansionEffects.FRAILTY.get(), 600));
-            }
+            ((ArrowEntity) abstractarrowentity).addEffect(new EffectInstance(FrostburnExpansionEffects.FRAILTY.get(), 600));
         }
         System.out.println("mixin fired");
         cir.setReturnValue(abstractarrowentity);
