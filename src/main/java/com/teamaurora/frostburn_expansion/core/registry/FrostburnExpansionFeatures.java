@@ -14,6 +14,13 @@ public class FrostburnExpansionFeatures {
     public static void generate(Biome biome) {
         if (biome == Biomes.SNOWY_TUNDRA || biome == Biomes.SNOWY_MOUNTAINS) {
             DefaultBiomeFeatures.addSparseBerryBushes(biome);
+            DefaultBiomeFeatures.addSparseBerryBushes(biome);
+            DefaultBiomeFeatures.addSparseBerryBushes(biome);
+        } else if (biome == Biomes.SNOWY_TAIGA || biome == Biomes.SNOWY_TAIGA_HILLS || biome == Biomes.SNOWY_TAIGA_MOUNTAINS) {
+            DefaultBiomeFeatures.addSparseBerryBushes(biome);
+            DefaultBiomeFeatures.addSparseBerryBushes(biome);
+            DefaultBiomeFeatures.addSparseBerryBushes(biome);
+            DefaultBiomeFeatures.addSparseBerryBushes(biome);
         }
     }
 }
