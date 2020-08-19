@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X#",
+    "#X"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:ice"
+    },
+    "X": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  "result": {
+    "item": "frostburn_expansion:borealene",
+    "count": 4
+  }
+}
