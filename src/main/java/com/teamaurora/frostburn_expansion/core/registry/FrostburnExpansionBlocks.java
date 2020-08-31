@@ -8,6 +8,7 @@ import com.teamabnormals.abnormals_core.common.blocks.sign.AbnormalsStandingSign
 import com.teamabnormals.abnormals_core.common.blocks.sign.AbnormalsWallSignBlock;
 import com.teamabnormals.abnormals_core.common.blocks.wood.*;
 import com.teamaurora.frostburn_expansion.common.block.ImprovedFlowerPotBlock;
+import com.teamaurora.frostburn_expansion.common.block.OlenyaSaplingBlock;
 import com.teamaurora.frostburn_expansion.common.world.gen.trees.AuroralTree;
 import com.teamaurora.frostburn_expansion.common.world.gen.trees.OlenyaTree;
 import com.teamaurora.frostburn_expansion.core.FrostburnExpansion;
@@ -99,7 +100,7 @@ public class FrostburnExpansionBlocks {
 	public static final RegistryObject<Block> OLENYA_LOG= HELPER.createBlock("olenya_log", ()->new AbnormalsLogBlock(STRIPPED_OLENYA_LOG, Block.Properties.from(Blocks.OAK_LOG)), ItemGroup.BUILDING_BLOCKS);
 	public static final RegistryObject<Block> OLENYA_WOOD = HELPER.createBlock("olenya_wood", ()->new WoodBlock(STRIPPED_OLENYA_WOOD, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS);
 	public static final RegistryObject<Block> OLENYA_LEAVES = HELPER.createBlock("olenya_leaves", ()->new AbnormalsLeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)), ItemGroup.DECORATIONS);
-	public static final RegistryObject<Block> OLENYA_SAPLING = HELPER.createBlock("olenya_sapling", ()->new AbnormalsSaplingBlock(new OlenyaTree(), Block.Properties.from(Blocks.OAK_SAPLING)), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> OLENYA_SAPLING = HELPER.createBlock("olenya_sapling", ()->new OlenyaSaplingBlock(new OlenyaTree(), Block.Properties.from(Blocks.OAK_SAPLING)), ItemGroup.DECORATIONS);
 	public static final RegistryObject<Block> POTTED_OLENYA_SAPLING = HELPER.createBlockNoItem("potted_olenya_sapling", ()->new FlowerPotBlock(OLENYA_SAPLING.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
 	public static final RegistryObject<Block> OLENYA_PLANKS = HELPER.createBlock("olenya_planks", ()->new PlanksBlock(Block.Properties.from(Blocks.OAK_PLANKS)), ItemGroup.BUILDING_BLOCKS);
 	public static final RegistryObject<Block> OLENYA_SLAB = HELPER.createBlock("olenya_slab", ()->new WoodSlabBlock(Block.Properties.from(Blocks.OAK_SLAB)), ItemGroup.BUILDING_BLOCKS);
