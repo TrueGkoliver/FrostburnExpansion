@@ -1,5 +1,7 @@
 package com.teamaurora.frostburn_expansion.common.item;
 
+import com.google.common.base.Supplier;
+import com.teamabnormals.abnormals_core.common.items.AbnormalsMusicDiscItem;
 import com.teamabnormals.abnormals_core.core.utils.NetworkUtil;
 import com.teamaurora.frostburn_expansion.common.entity.BriskEntity;
 
@@ -18,9 +20,9 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class BrisksongDiscItem extends MusicDiscItem {
+public class BrisksongDiscItem extends AbnormalsMusicDiscItem {
 
-	public BrisksongDiscItem(int comparatorValueIn, SoundEvent soundIn, Properties builder) {
+	public BrisksongDiscItem(int comparatorValueIn, Supplier<SoundEvent> soundIn, Properties builder) {
 		super(comparatorValueIn, soundIn, builder);
 	}
 	public ActionResultType onItemUse(ItemUseContext context) {
