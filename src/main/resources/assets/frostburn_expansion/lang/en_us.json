@@ -43,6 +43,7 @@
   "block.frostburn_expansion.borealene": "Borealene",
   "block.frostburn_expansion.borealene_slab": "Borealene Slab",
   "block.frostburn_expansion.borealene_stairs": "Borealene Stairs",
+  "block.frostburn_expansion.borealene_wall": "Borealene Wall",
   "block.frostburn_expansion.borealene_bricks": "Borealene Bricks",
   "block.frostburn_expansion.borealene_brick_slab": "Borealene Brick Slab",
   "block.frostburn_expansion.borealene_brick_stairs": "Borealene Brick Stairs",
@@ -52,7 +53,7 @@
   "block.frostburn_expansion.borealene_pillar": "Borealene Pillar",
   "block.frostburn_expansion.borealene_lamp": "Borealene Lamp",
   "block.frostburn_expansion.borealene_vertical_slab" : "Borealene Vertical Slab",
-  "block.frostburn_expansion.borealene_brick_vertical_slab" : "Borelene Brick Vertical Slab",
+  "block.frostburn_expansion.borealene_brick_vertical_slab" : "Borealene Brick Vertical Slab",
 
 
   "block.frostburn_expansion.stripped_auroral_log": "Stripped Auroral Log",
