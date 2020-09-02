@@ -2,6 +2,7 @@ package com.teamaurora.frostburn_expansion.core.other;
 
 import com.teamaurora.frostburn_expansion.common.entity.BriskEntity;
 import com.teamaurora.frostburn_expansion.core.FrostburnExpansion;
+import com.teamaurora.frostburn_expansion.core.FrostburnExpansionConfig;
 import com.teamaurora.frostburn_expansion.core.registry.FrostburnExpansionBlocks;
 import com.teamaurora.frostburn_expansion.core.registry.FrostburnExpansionEntities;
 import com.teamaurora.frostburn_expansion.core.registry.FrostburnExpansionItems;
@@ -30,7 +31,8 @@ public class FrostburnExpansionEvents {
     public static void onSpecialSpawn(LivingSpawnEvent.SpecialSpawn event) {
         if (event.getSpawnReason() == SpawnReason.NATURAL && event.getEntityLiving().getType() == EntityType.CREEPER) {
             Biome biomeIn = event.getWorld().getBiome(new BlockPos(event.getX(), event.getY(), event.getZ()));
-            if (biomeIn == Biomes.SNOWY_BEACH || biomeIn == Biomes.SNOWY_MOUNTAINS || biomeIn == Biomes.SNOWY_TAIGA || biomeIn == Biomes.SNOWY_TAIGA_HILLS || biomeIn == Biomes.SNOWY_TAIGA_MOUNTAINS || biomeIn == Biomes.SNOWY_TUNDRA || biomeIn == Biomes.ICE_SPIKES) {
+            //if (biomeIn == Biomes.SNOWY_BEACH || biomeIn == Biomes.SNOWY_MOUNTAINS || biomeIn == Biomes.SNOWY_TAIGA || biomeIn == Biomes.SNOWY_TAIGA_HILLS || biomeIn == Biomes.SNOWY_TAIGA_MOUNTAINS || biomeIn == Biomes.SNOWY_TUNDRA || biomeIn == Biomes.ICE_SPIKES) {
+            if (FrostburnExpansionConfig.COMMON.briskBiomes.get().contains(biomeIn.getRegistryName().toString()) && (event.getWorld().getRandom().nextInt(5) > 0 || FrostburnExpansionConfig.COMMON.alwaysBriskSpawn.get())) {
                 // brisk time!
                 BriskEntity brisk = FrostburnExpansionEntities.BRISK.get().create((World) event.getWorld());
                 if (brisk != null) {
