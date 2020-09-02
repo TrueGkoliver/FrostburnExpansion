@@ -4,7 +4,7 @@
   "block.frostburn_expansion.large_snow_brick_slab": "Baldosa de ladrillos de nieve grandes",
   "block.frostburn_expansion.large_snow_brick_stairs": "Escaleras de ladrillos de nieve grandes",
   "block.frostburn_expansion.large_snow_brick_wall": "Pared de ladrillos de nieve grandes",
-  "block.frostburn_expansion.large_chiseled_snow_bricks": "Ladrillos de nieve cincelados grandes",
+  "block.frostburn_expansion.chiseled_large_snow_bricks": "Ladrillos de nieve grandes cincelados",
   "block.frostburn_expansion.large_snow_brick_vertical_slab" : "Baldosa vertical de ladrillos de nieve grandes",
 
 
@@ -40,19 +40,20 @@
 
 
   "_comment1": "Aurora Glacier Content",
-  "block.frostburn_expansion.borealene": "Borealina",
-  "block.frostburn_expansion.borealene_slab": "Baldosa de borealina",
-  "block.frostburn_expansion.borealene_stairs": "Escaleras de borealina",
-  "block.frostburn_expansion.borealene_bricks": "Ladrillos de borealina",
-  "block.frostburn_expansion.borealene_brick_slab": "Baldosa de ladrillos de borealina",
-  "block.frostburn_expansion.borealene_brick_stairs": "Escaleras de ladrillos de borealina",
-  "block.frostburn_expansion.borealene_brick_wall": "Pared de ladrillos de borealina",
-  "block.frostburn_expansion.cracked_borealene_bricks": "Ladrillos de borealina quebrados",
-  "block.frostburn_expansion.chiseled_borealene_bricks": "Ladrillos de borealina cincelados",
-  "block.frostburn_expansion.borealene_pillar": "Columna de borealina",
-  "block.frostburn_expansion.borealene_lamp": "Lámpara de borealina",
-  "block.frostburn_expansion.borealene_vertical_slab" : "Baldosa vertical de borealina",
-  "block.frostburn_expansion.borealene_brick_vertical_slab" : "Baldosa vertical de ladrillos de borealina",
+  "block.frostburn_expansion.borealene": "Borealena",
+  "block.frostburn_expansion.borealene_slab": "Baldosa de borealena",
+  "block.frostburn_expansion.borealene_stairs": "Escaleras de borealena",
+  "block.frostburn_expansion.borealene_wall": "Pared de borealena",
+  "block.frostburn_expansion.borealene_bricks": "Ladrillos de borealena",
+  "block.frostburn_expansion.borealene_brick_slab": "Baldosa de ladrillos de borealena",
+  "block.frostburn_expansion.borealene_brick_stairs": "Escaleras de ladrillos de borealena",
+  "block.frostburn_expansion.borealene_brick_wall": "Pared de ladrillos de borealena",
+  "block.frostburn_expansion.cracked_borealene_bricks": "Ladrillos de borealena quebrados",
+  "block.frostburn_expansion.chiseled_borealene_bricks": "Ladrillos de borealena cincelados",
+  "block.frostburn_expansion.borealene_pillar": "Columna de borealena",
+  "block.frostburn_expansion.borealene_lamp": "Lámpara de borealena",
+  "block.frostburn_expansion.borealene_vertical_slab" : "Baldosa vertical de borealena",
+  "block.frostburn_expansion.borealene_brick_vertical_slab" : "Baldosa vertical de ladrillos de borealena",
 
 
   "block.frostburn_expansion.stripped_auroral_log": "Tronco auroral sin corteza",
