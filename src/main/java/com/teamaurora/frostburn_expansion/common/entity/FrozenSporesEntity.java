@@ -74,15 +74,15 @@ public class FrozenSporesEntity extends ProjectileItemEntity {
             BlockPos pos = this.getPosition();
             World worldIn = this.getEntityWorld();
 
-            for (int x = -1; x <= 1; ++x) {
-                for (int z = -1; z <= 1; ++z) {
+            for (int x = -2; x <= 2; ++x) {
+                for (int z = -2; z <= 2; ++z) {
                     BlockPos blockPos = pos.add(x, -1, z);
                     BlockState state = worldIn.getBlockState(blockPos);
-                    if (state.getBlock() == Blocks.WATER) {
+                    if (state.getBlock() == Blocks.WATER && !(Math.abs(x) == 2 && Math.abs(z) == 2)) {
                         worldIn.setBlockState(blockPos, Blocks.ICE.getDefaultState());
-                    } else if (state.getBlock() == Blocks.ICE && !(Math.abs(x) == 1 && Math.abs(z) == 1)) {
+                    } else if (state.getBlock() == Blocks.ICE && Math.abs(x) != 2 && Math.abs(z) != 2) {
                         worldIn.setBlockState(blockPos, Blocks.PACKED_ICE.getDefaultState());
-                    } else if (state.getBlock() == Blocks.PACKED_ICE && x == 0 && z == 0) {
+                    } else if (state.getBlock() == Blocks.PACKED_ICE && Math.abs(x) != 2 && Math.abs(z) != 2 && !(Math.abs(x) == 1 && Math.abs(z) == 1)) {
                         worldIn.setBlockState(blockPos, Blocks.BLUE_ICE.getDefaultState());
                     }
                 }
@@ -99,17 +99,17 @@ public class FrozenSporesEntity extends ProjectileItemEntity {
         BlockPos pos = this.getPosition();
         World worldIn = this.getEntityWorld();
 
-        for (int x = -1; x <= 1; ++x) {
+        for (int x = -2; x <= 2; ++x) {
             for (int y = 1; y <= 3; ++y) {
-                for (int z = -1; z <= 1; ++z) {
+                for (int z = -2; z <= 2; ++z) {
                     BlockPos blockPos = pos.add(x, y, z);
                     BlockState state = worldIn.getBlockState(blockPos);
                     if (worldIn.isAirBlock(blockPos.up())) {
-                        if (state.getBlock() == Blocks.WATER) {
+                        if (state.getBlock() == Blocks.WATER && !(Math.abs(x) == 2 && Math.abs(z) == 2)) {
                             worldIn.setBlockState(blockPos, Blocks.ICE.getDefaultState());
-                        } else if (state.getBlock() == Blocks.ICE && !(Math.abs(x) == 1 && Math.abs(z) == 1)) {
+                        } else if (state.getBlock() == Blocks.ICE && Math.abs(x) != 2 && Math.abs(z) != 2) {
                             worldIn.setBlockState(blockPos, Blocks.PACKED_ICE.getDefaultState());
-                        } else if (state.getBlock() == Blocks.PACKED_ICE && x == 0 && z == 0) {
+                        } else if (state.getBlock() == Blocks.PACKED_ICE && Math.abs(x) != 2 && Math.abs(z) != 2 && !(Math.abs(x) == 1 && Math.abs(z) == 1)) {
                             worldIn.setBlockState(blockPos, Blocks.BLUE_ICE.getDefaultState());
                         }
                     }
