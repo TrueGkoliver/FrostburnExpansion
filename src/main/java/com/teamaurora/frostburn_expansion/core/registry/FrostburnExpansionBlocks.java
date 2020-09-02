@@ -36,7 +36,7 @@ public class FrostburnExpansionBlocks {
 	public static final RegistryObject<Block> LARGE_SNOW_BRICK_SLAB = HELPER.createBlock("large_snow_brick_slab", ()->new SlabBlock(Block.Properties.from(Blocks.SNOW_BLOCK)), ItemGroup.BUILDING_BLOCKS);
 	public static final RegistryObject<Block> LARGE_SNOW_BRICK_STAIRS = HELPER.createBlock("large_snow_brick_stairs", ()->new AbnormalsStairsBlock(LARGE_SNOW_BRICKS.get().getDefaultState(),Block.Properties.from(Blocks.SNOW_BLOCK)), ItemGroup.BUILDING_BLOCKS);
 	public static final RegistryObject<Block> LARGE_SNOW_BRICK_WALL = HELPER.createBlock("large_snow_brick_wall", ()->new WallBlock(Block.Properties.from(Blocks.SNOW_BLOCK)), ItemGroup.BUILDING_BLOCKS);
-	public static final RegistryObject<Block> LARGE_CHISELED_SNOW_BRICKS = HELPER.createBlock("chiseled_large_snow_bricks", ()->new Block(Block.Properties.from(Blocks.SNOW_BLOCK)), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> CHISELED_LARGE_SNOW_BRICKS = HELPER.createBlock("chiseled_large_snow_bricks", ()->new Block(Block.Properties.from(Blocks.SNOW_BLOCK)), ItemGroup.BUILDING_BLOCKS);
 
 	public static final RegistryObject<Block> LARGE_SNOW_BRICK_VERTICAL_SLAB = HELPER.createCompatBlock("quark", "large_snow_brick_vertical_slab", ()->new VerticalSlabBlock(Block.Properties.from(Blocks.SNOW_BLOCK)), ItemGroup.BUILDING_BLOCKS);
 
