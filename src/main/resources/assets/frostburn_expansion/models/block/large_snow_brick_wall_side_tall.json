@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/template_wall_side",
+  "parent": "minecraft:block/template_wall_side_tall",
   "textures": {
     "wall": "frostburn_expansion:block/large_snow_bricks"
   }
