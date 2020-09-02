@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "frostburn_expansion:olneya_log",
+    "frostburn_expansion:olneya_wood",
+    "frostburn_expansion:stripped_olneya_log",
+    "frostburn_expansion:stripped_olneya_wood"
+  ]
+}

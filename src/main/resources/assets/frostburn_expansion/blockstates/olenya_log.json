@@ -1,7 +1,0 @@
-{
-  "variants": {
-    "axis=y":  { "model": "frostburn_expansion:block/olenya_log" },
-    "axis=z":   { "model": "frostburn_expansion:block/olenya_log", "x": 90 },
-    "axis=x":   { "model": "frostburn_expansion:block/olenya_log", "x": 90, "y": 90 }
-  }
-}

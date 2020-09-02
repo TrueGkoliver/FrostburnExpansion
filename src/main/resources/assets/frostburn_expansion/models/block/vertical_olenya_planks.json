@@ -1,6 +1,0 @@
-{
-  "parent": "frostburn_expansion:block/vertical_planks",
-  "textures": {
-    "all": "frostburn_expansion:block/olenya_planks"
-  }
-}

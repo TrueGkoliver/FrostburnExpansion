@@ -1,6 +1,0 @@
-{
-  "variants": {
-    "powered=false": { "model": "frostburn_expansion:block/olenya_pressure_plate" },
-    "powered=true": { "model": "frostburn_expansion:block/olenya_pressure_plate_down" }
-  }
-}

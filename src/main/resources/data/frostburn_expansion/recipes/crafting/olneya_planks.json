@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "frostburn_expansion:olneya_logs"
+    }
+  ],
+  "result": {
+    "item": "frostburn_expansion:olneya_planks",
+    "count": 4
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom",
+  "textures": {
+    "bottom": "frostburn_expansion:block/olneya_door_bottom",
+    "top": "frostburn_expansion:block/olneya_door_top"
+  }
+}

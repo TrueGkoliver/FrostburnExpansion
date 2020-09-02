@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "frostburn_expansion:block/olenya_planks"
-  }
-}

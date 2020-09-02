@@ -1,0 +1,6 @@
+{
+  "parent": "block/button_pressed",
+  "textures": {
+    "texture": "frostburn_expansion:block/olneya_planks"
+  }
+}

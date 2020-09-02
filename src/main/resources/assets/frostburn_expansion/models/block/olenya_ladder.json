@@ -1,8 +1,0 @@
-{
-  "parent": "block/ladder",
-  "ambientocclusion": false,
-  "textures": {
-    "particle": "frostburn_expansion:block/olenya_ladder",
-    "texture": "frostburn_expansion:block/olenya_ladder"
-  }
-}

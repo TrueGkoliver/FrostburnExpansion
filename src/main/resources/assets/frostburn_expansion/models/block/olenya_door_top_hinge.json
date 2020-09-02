@@ -1,7 +1,0 @@
-{
-  "parent": "block/door_top_rh",
-  "textures": {
-    "bottom": "frostburn_expansion:block/olenya_door_bottom",
-    "top": "frostburn_expansion:block/olenya_door_top"
-  }
-}

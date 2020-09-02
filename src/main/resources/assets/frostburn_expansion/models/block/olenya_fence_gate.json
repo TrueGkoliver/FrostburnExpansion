@@ -1,6 +1,0 @@
-{
-  "parent": "block/template_fence_gate",
-  "textures": {
-    "texture": "frostburn_expansion:block/olenya_planks"
-  }
-}

@@ -1,0 +1,10 @@
+{
+  "parent": "block/orientable_with_bottom",
+  "textures": {
+    "particle": "frostburn_expansion:block/olneya_beehive_side",
+    "bottom": "frostburn_expansion:block/olneya_beehive_end",
+    "top": "frostburn_expansion:block/olneya_beehive_end",
+    "front": "frostburn_expansion:block/olneya_beehive_front",
+    "side": "frostburn_expansion:block/olneya_beehive_side"
+  }
+}

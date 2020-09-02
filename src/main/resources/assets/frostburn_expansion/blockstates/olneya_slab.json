@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "frostburn_expansion:block/olneya_slab" },
+    "type=top": { "model": "frostburn_expansion:block/olneya_slab_top" },
+    "type=double": { "model": "frostburn_expansion:block/olneya_planks" }
+  }
+}

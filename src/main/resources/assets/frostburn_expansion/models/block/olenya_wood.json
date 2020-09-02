@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "frostburn_expansion:block/olenya_log",
-    "side": "frostburn_expansion:block/olenya_log"
-  }
-}

@@ -14,12 +14,12 @@ public class FrostburnExpansionRender {
         RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.POTTED_AURORAL_SAPLING.get(),RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.AURORAL_LADDER.get(),RenderType.getCutout());
 
-        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.OLENYA_DOOR.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.OLENYA_TRAPDOOR.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.OLENYA_LEAVES.get(), RenderType.getCutoutMipped());
-        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.OLENYA_LEAF_CARPET.get(),RenderType.getCutoutMipped());
-        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.OLENYA_SAPLING.get(),RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.POTTED_OLENYA_SAPLING.get(),RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.OLENYA_LADDER.get(),RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.OLNEYA_DOOR.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.OLNEYA_TRAPDOOR.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.OLNEYA_LEAVES.get(), RenderType.getCutoutMipped());
+        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.OLNEYA_LEAF_CARPET.get(),RenderType.getCutoutMipped());
+        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.OLNEYA_SAPLING.get(),RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.POTTED_OLNEYA_SAPLING.get(),RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(FrostburnExpansionBlocks.OLNEYA_LADDER.get(),RenderType.getCutout());
     }
 }

@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "olneya_chest",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "tag": "frostburn_expansion:olneya_logs"
+    }
+  },
+  "result": {
+    "item": "frostburn_expansion:olneya_chest",
+    "count": 4
+  },
+  "conditions": [
+    {
+      "type": "forge:and",
+      "values": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "frostburn_expansion"
+        },
+        {
+          "type": "abnormals_core:quark_flag",
+          "flag": "wood_to_chest_recipes"
+        },
+        {
+          "type": "abnormals_core:quark_flag",
+          "flag": "variant_chests"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "frostburn_expansion:block/leaf_carpet",
+  "textures": {
+    "all": "frostburn_expansion:block/olneya_leaves"
+  }
+}

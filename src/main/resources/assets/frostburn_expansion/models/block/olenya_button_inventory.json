@@ -1,6 +1,0 @@
-{
-  "parent": "block/button_inventory",
-  "textures": {
-    "texture": "frostburn_expansion:block/olenya_planks"
-  }
-}

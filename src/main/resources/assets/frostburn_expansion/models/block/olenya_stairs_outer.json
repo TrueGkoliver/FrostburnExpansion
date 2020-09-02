@@ -1,8 +1,0 @@
-{
-  "parent": "block/outer_stairs",
-  "textures": {
-    "bottom": "frostburn_expansion:block/olenya_planks",
-    "top": "frostburn_expansion:block/olenya_planks",
-    "side": "frostburn_expansion:block/olenya_planks"
-  }
-}
