@@ -281,7 +281,7 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 	
 	   }
    public void tick() {
-	  System.out.println(this.getPlayingEndimation().getAnimationTickDuration());
+	  //System.out.println(this.getPlayingEndimation().getAnimationTickDuration());
 	  if (!this.isEndimationPlaying(DANCE)) {
 		  this.setIsDancing(false);
 	  }
