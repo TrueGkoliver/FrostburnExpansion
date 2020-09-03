@@ -1,11 +1,19 @@
 package com.teamaurora.frostburn_expansion.core.other;
 
 import com.teamabnormals.abnormals_core.core.utils.DataUtils;
+import com.teamaurora.frostburn_expansion.common.data.FrozenSporeDispenseBehavior;
 import com.teamaurora.frostburn_expansion.core.registry.FrostburnExpansionBlocks;
+import com.teamaurora.frostburn_expansion.core.registry.FrostburnExpansionItems;
+import net.minecraft.block.DispenserBlock;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 
+@SuppressWarnings("deprecated")
 public class FrostburnExpansionData {
+    public static void registerDispenserBehaviors() {
+        DispenserBlock.registerDispenseBehavior(FrostburnExpansionItems.FROZEN_SPORES.get(), new FrozenSporeDispenseBehavior());
+    }
+
     public static void registerCompostables() {
         DataUtils.registerCompostable(0.3f, FrostburnExpansionBlocks.AURORAL_LEAVES.get());
         DataUtils.registerCompostable(0.3f, FrostburnExpansionBlocks.AURORAL_SAPLING.get());

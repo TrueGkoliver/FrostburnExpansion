@@ -58,6 +58,7 @@ public class FrostburnExpansion {
 			FrostburnExpansionData.registerCompostables();
 			FrostburnExpansionData.registerFlammables();
 			FrostburnExpansionEffects.registerBrewingRecipes();
+			FrostburnExpansionData.registerDispenserBehaviors();
 			FrostburnExpansionFeatures.generateFeatures();
 			GlobalEntityTypeAttributes.put(FrostburnExpansionEntities.BRISK.get(), BriskEntity.setCustomAttributes().create());
 		});
