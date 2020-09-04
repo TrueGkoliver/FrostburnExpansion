@@ -239,7 +239,6 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 		        			 entity.addPotionEffect(i);
 		        		 }
 		        	 } else {
-		        		 System.out.println(entity.toString());
 		        		 entity.addPotionEffect(new EffectInstance(FrostburnExpansionEffects.FRAILTY.get(), 3600, 0));
 		        	 }
 	        	 }
@@ -281,7 +280,6 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 	
 	   }
    public void tick() {
-	  //System.out.println(this.getPlayingEndimation().getAnimationTickDuration());
 	  if (!this.isEndimationPlaying(DANCE)) {
 		  this.setIsDancing(false);
 	  }
