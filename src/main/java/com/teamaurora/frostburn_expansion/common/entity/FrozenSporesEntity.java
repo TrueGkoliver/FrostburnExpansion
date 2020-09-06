@@ -4,16 +4,19 @@ import com.teamaurora.frostburn_expansion.core.registry.FrostburnExpansionEntiti
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.ILiquidContainer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.ProjectileItemEntity;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.particles.IParticleData;
 import net.minecraft.particles.ItemParticleData;
 import net.minecraft.particles.ParticleTypes;
+import net.minecraft.potion.EffectInstance;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
@@ -70,11 +73,14 @@ public class FrozenSporesEntity extends ProjectileItemEntity {
     protected void onImpact(RayTraceResult result) {
         if (result.getType() == RayTraceResult.Type.ENTITY) {
             Entity entity = ((EntityRayTraceResult) result).getEntity();
-            if (entity.getType() == EntityType.CREEPER) {
-                Entity brisk = new BriskEntity(FrostburnExpansionEntities.BRISK.get(), entity.getEntityWorld());
+            if (entity.getType() == EntityType.CREEPER && entity instanceof LivingEntity) {
+                LivingEntity living = (LivingEntity) entity;
+                BriskEntity brisk = new BriskEntity(FrostburnExpansionEntities.BRISK.get(), entity.getEntityWorld());
                 brisk.setPositionAndRotation(entity.getPosX(), entity.getPosY(), entity.getPosZ(), entity.getYaw(1.0F), entity.getPitch(1.0F));
+                for (EffectInstance effect : living.getActivePotionEffects()) {
+                    brisk.addPotionEffect(effect);
+                }
                 entity.getEntityWorld().addEntity(brisk);
-                //brisk.setPositionAndRotation(entity.getPosX(), entity.getPosY(), entity.getPosZ(), entity.getYaw(1.0F), entity.getPitch(1.0F));
                 entity.remove();
             } else {
                 entity.attackEntityFrom(DamageSource.causeThrownDamage(this, this.func_234616_v_()), 0);
@@ -88,7 +94,13 @@ public class FrozenSporesEntity extends ProjectileItemEntity {
                     for (int z = -2; z <= 2; ++z) {
                         BlockPos blockPos = pos.add(x, y-1, z);
                         BlockState state = worldIn.getBlockState(blockPos);
-                        if (state.getBlock() == Blocks.WATER && !(Math.abs(x) == 2 && Math.abs(y) == 2) && !(Math.abs(x) == 2 && Math.abs(z) == 2) && !(Math.abs(y) == 2 && Math.abs(z) == 2)) {
+                        boolean isWater = state.getBlock() == Blocks.WATER;
+                        if (worldIn.getBlockState(blockPos).getBlock() instanceof ILiquidContainer) {
+                            if (worldIn.getBlockState(blockPos).getBlock().getFluidState(worldIn.getBlockState(blockPos)).getFluid() == Fluids.WATER) {
+                                isWater = true;
+                            }
+                        }
+                        if (isWater && !(Math.abs(x) == 2 && Math.abs(y) == 2) && !(Math.abs(x) == 2 && Math.abs(z) == 2) && !(Math.abs(y) == 2 && Math.abs(z) == 2)) {
                             worldIn.setBlockState(blockPos, Blocks.ICE.getDefaultState());
                         } else if (state.getBlock() == Blocks.ICE && Math.abs(x) != 2 && Math.abs(y) != 2 && Math.abs(z) != 2) {
                             worldIn.setBlockState(blockPos, Blocks.PACKED_ICE.getDefaultState());
@@ -116,7 +128,13 @@ public class FrozenSporesEntity extends ProjectileItemEntity {
                     BlockPos blockPos = pos.add(x, y, z);
                     BlockState state = worldIn.getBlockState(blockPos);
                     if (worldIn.getBlockState(blockPos.up()).getBlock() != Blocks.WATER) {
-                        if (state.getBlock() == Blocks.WATER && !(Math.abs(x) == 2 && Math.abs(z) == 2)) {
+                        boolean isWater = state.getBlock() == Blocks.WATER;
+                        if (worldIn.getBlockState(blockPos).getBlock() instanceof ILiquidContainer) {
+                            if (worldIn.getBlockState(blockPos).getBlock().getFluidState(worldIn.getBlockState(blockPos)).getFluid() == Fluids.WATER) {
+                                isWater = true;
+                            }
+                        }
+                        if (isWater && !(Math.abs(x) == 2 && Math.abs(z) == 2)) {
                             worldIn.setBlockState(blockPos, Blocks.ICE.getDefaultState());
                         } else if (state.getBlock() == Blocks.ICE && Math.abs(x) != 2 && Math.abs(z) != 2) {
                             worldIn.setBlockState(blockPos, Blocks.PACKED_ICE.getDefaultState());
