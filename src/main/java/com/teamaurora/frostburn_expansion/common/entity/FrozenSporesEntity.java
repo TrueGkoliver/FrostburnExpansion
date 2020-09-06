@@ -1,5 +1,6 @@
 package com.teamaurora.frostburn_expansion.common.entity;
 
+import com.teamaurora.frostburn_expansion.core.registry.FrostburnExpansionEntities;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -69,7 +70,15 @@ public class FrozenSporesEntity extends ProjectileItemEntity {
     protected void onImpact(RayTraceResult result) {
         if (result.getType() == RayTraceResult.Type.ENTITY) {
             Entity entity = ((EntityRayTraceResult) result).getEntity();
-            entity.attackEntityFrom(DamageSource.causeThrownDamage(this, this.func_234616_v_()), 0);
+            if (entity.getType() == EntityType.CREEPER) {
+                Entity brisk = new BriskEntity(FrostburnExpansionEntities.BRISK.get(), entity.getEntityWorld());
+                brisk.setPositionAndRotation(entity.getPosX(), entity.getPosY(), entity.getPosZ(), entity.getYaw(1.0F), entity.getPitch(1.0F));
+                entity.getEntityWorld().addEntity(brisk);
+                //brisk.setPositionAndRotation(entity.getPosX(), entity.getPosY(), entity.getPosZ(), entity.getYaw(1.0F), entity.getPitch(1.0F));
+                entity.remove();
+            } else {
+                entity.attackEntityFrom(DamageSource.causeThrownDamage(this, this.func_234616_v_()), 0);
+            }
         } else if (result.getType() == RayTraceResult.Type.BLOCK) {
             BlockPos pos = this.getPosition();
             World worldIn = this.getEntityWorld();

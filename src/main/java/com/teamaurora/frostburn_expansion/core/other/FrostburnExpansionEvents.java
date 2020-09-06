@@ -4,10 +4,12 @@ import com.teamaurora.frostburn_expansion.common.entity.BriskEntity;
 import com.teamaurora.frostburn_expansion.core.FrostburnExpansion;
 import com.teamaurora.frostburn_expansion.core.FrostburnExpansionConfig;
 import com.teamaurora.frostburn_expansion.core.registry.FrostburnExpansionBlocks;
+import com.teamaurora.frostburn_expansion.core.registry.FrostburnExpansionEffects;
 import com.teamaurora.frostburn_expansion.core.registry.FrostburnExpansionEntities;
 import com.teamaurora.frostburn_expansion.core.registry.FrostburnExpansionItems;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -19,6 +21,7 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.living.LivingSpawnEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.Event;
@@ -69,6 +72,18 @@ public class FrostburnExpansionEvents {
             player.addStat(Stats.POT_FLOWER);
             if (!event.getPlayer().abilities.isCreativeMode) {
                 itemStack.shrink(1);
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public static void onEntityHurt(LivingHurtEvent event) {
+        if (event.getEntity() instanceof LivingEntity) {
+            LivingEntity entity = event.getEntityLiving();
+            if (entity.isPotionActive(FrostburnExpansionEffects.FRAILTY.get())) {
+                int lv = entity.getActivePotionEffect(FrostburnExpansionEffects.FRAILTY.get()).getAmplifier();
+                float fulldamage = event.getAmount() * ((lv*0.2F));
+                event.setAmount(event.getAmount()+fulldamage);
             }
         }
     }
