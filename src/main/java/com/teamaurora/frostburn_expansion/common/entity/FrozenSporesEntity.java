@@ -84,15 +84,17 @@ public class FrozenSporesEntity extends ProjectileItemEntity {
             World worldIn = this.getEntityWorld();
 
             for (int x = -2; x <= 2; ++x) {
-                for (int z = -2; z <= 2; ++z) {
-                    BlockPos blockPos = pos.add(x, -1, z);
-                    BlockState state = worldIn.getBlockState(blockPos);
-                    if (state.getBlock() == Blocks.WATER && !(Math.abs(x) == 2 && Math.abs(z) == 2)) {
-                        worldIn.setBlockState(blockPos, Blocks.ICE.getDefaultState());
-                    } else if (state.getBlock() == Blocks.ICE && Math.abs(x) != 2 && Math.abs(z) != 2) {
-                        worldIn.setBlockState(blockPos, Blocks.PACKED_ICE.getDefaultState());
-                    } else if (state.getBlock() == Blocks.PACKED_ICE && Math.abs(x) != 2 && Math.abs(z) != 2 && !(Math.abs(x) == 1 && Math.abs(z) == 1)) {
-                        worldIn.setBlockState(blockPos, Blocks.BLUE_ICE.getDefaultState());
+                for (int y = -2; y <= 2; ++y) {
+                    for (int z = -2; z <= 2; ++z) {
+                        BlockPos blockPos = pos.add(x, y-1, z);
+                        BlockState state = worldIn.getBlockState(blockPos);
+                        if (state.getBlock() == Blocks.WATER && !(Math.abs(x) == 2 && Math.abs(y) == 2) && !(Math.abs(x) == 2 && Math.abs(z) == 2) && !(Math.abs(y) == 2 && Math.abs(z) == 2)) {
+                            worldIn.setBlockState(blockPos, Blocks.ICE.getDefaultState());
+                        } else if (state.getBlock() == Blocks.ICE && Math.abs(x) != 2 && Math.abs(y) != 2 && Math.abs(z) != 2) {
+                            worldIn.setBlockState(blockPos, Blocks.PACKED_ICE.getDefaultState());
+                        } else if (state.getBlock() == Blocks.PACKED_ICE && Math.abs(x) != 2 && Math.abs(y) != 2 && Math.abs(z) != 2 && !(Math.abs(x) == 1 && Math.abs(y) == 1) && !(Math.abs(x) == 1 && Math.abs(z) == 1) && !(Math.abs(y) == 1 && Math.abs(z) == 1)) {
+                            worldIn.setBlockState(blockPos, Blocks.BLUE_ICE.getDefaultState());
+                        }
                     }
                 }
             }
@@ -113,7 +115,7 @@ public class FrozenSporesEntity extends ProjectileItemEntity {
                 for (int z = -2; z <= 2; ++z) {
                     BlockPos blockPos = pos.add(x, y, z);
                     BlockState state = worldIn.getBlockState(blockPos);
-                    if (worldIn.isAirBlock(blockPos.up())) {
+                    if (worldIn.getBlockState(blockPos.up()).getBlock() != Blocks.WATER) {
                         if (state.getBlock() == Blocks.WATER && !(Math.abs(x) == 2 && Math.abs(z) == 2)) {
                             worldIn.setBlockState(blockPos, Blocks.ICE.getDefaultState());
                         } else if (state.getBlock() == Blocks.ICE && Math.abs(x) != 2 && Math.abs(z) != 2) {

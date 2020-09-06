@@ -53,6 +53,10 @@ import net.minecraftforge.api.distmarker.OnlyIn;
  * @author mostly mojang lol
  *
  */
+@OnlyIn(
+		value = Dist.CLIENT,
+		_interface = IChargeableMob.class
+)
 public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndimatedEntity {
 	private static final DataParameter<Integer> STATE = EntityDataManager.createKey(BriskEntity.class, DataSerializers.VARINT);
 	private static final DataParameter<Boolean> POWERED = EntityDataManager.createKey(BriskEntity.class, DataSerializers.BOOLEAN);
@@ -209,7 +213,7 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 	         BlockPos pos = this.getPosition();
 	         Stream<BlockPos> b = BlockPos.getAllInBox(pos.add(-2, -2, -2), pos.add(2, 2, 2));
 	         Iterator<BlockPos> iter = b.iterator();
-	         this.world.playSound(Minecraft.getInstance().player, this.getPosX(), this.getPosY(), this.getPosZ(), SoundEvents.BLOCK_SNOW_PLACE, this.getSoundCategory(), 1.0F, this.rand.nextFloat() * 0.4F + 0.8F);
+	         this.world.playSound(null, this.getPosX(), this.getPosY(), this.getPosZ(), SoundEvents.BLOCK_SNOW_PLACE, this.getSoundCategory(), 1.0F, this.rand.nextFloat() * 0.4F + 0.8F);
 	         while(iter.hasNext()) {
 	        	 BlockPos poser = iter.next();
 	        	 if (poser.withinDistance(pos, 2)) {
