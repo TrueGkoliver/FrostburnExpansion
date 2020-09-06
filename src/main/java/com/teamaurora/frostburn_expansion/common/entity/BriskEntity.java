@@ -14,6 +14,7 @@ import com.teamaurora.frostburn_expansion.core.registry.FrostburnExpansionEffect
 import com.teamaurora.frostburn_expansion.core.registry.FrostburnExpansionSounds;
 
 import net.minecraft.block.Blocks;
+import net.minecraft.block.ILiquidContainer;
 import net.minecraft.block.SnowBlock;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.*;
@@ -32,6 +33,7 @@ import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.passive.CatEntity;
 import net.minecraft.entity.passive.OcelotEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
@@ -217,6 +219,12 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 	         while(iter.hasNext()) {
 	        	 BlockPos poser = iter.next();
 	        	 if (poser.withinDistance(pos, 2)) {
+					 boolean isWater = world.getBlockState(poser).getBlock() == Blocks.WATER;
+					 if (world.getBlockState(poser).getBlock() instanceof ILiquidContainer) {
+						 if (world.getBlockState(poser).getBlock().getFluidState(world.getBlockState(poser)).getFluid() == Fluids.WATER) {
+							 isWater = true;
+						 }
+					 }
 	        		 if (world.isAirBlock(poser) && world.getBlockState(poser.down()).isSolid() && world.getBlockState(poser.down()).getBlock()!=Blocks.SNOW) {
 	        			 world.setBlockState(poser, Blocks.SNOW.getDefaultState().with(SnowBlock.LAYERS, new Random().nextInt(1)+1));
 	        		 } else if (world.getBlockState(poser).getBlock() == Blocks.SNOW) {
@@ -227,7 +235,9 @@ public class BriskEntity extends MonsterEntity implements IChargeableMob,IEndima
 	        				 i++;
 	        			 }
 	        			 world.setBlockState(poser, world.getBlockState(poser).with(SnowBlock.LAYERS, i));
-	        		 }
+	        		 } else if (isWater) {
+	        		 	world.setBlockState(poser, Blocks.ICE.getDefaultState());
+					 }
 	        	 }
 	         }
 	         for (LivingEntity entity : bi) {
