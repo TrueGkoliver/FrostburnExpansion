@@ -1,10 +1,7 @@
 package com.teamaurora.frostburn_expansion.common.entity;
 
 import com.teamaurora.frostburn_expansion.core.registry.FrostburnExpansionEntities;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.ILiquidContainer;
+import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -93,19 +90,24 @@ public class FrozenSporesEntity extends ProjectileItemEntity {
                 for (int y = -2; y <= 2; ++y) {
                     for (int z = -2; z <= 2; ++z) {
                         BlockPos blockPos = pos.add(x, y-1, z);
-                        BlockState state = worldIn.getBlockState(blockPos);
-                        boolean isWater = state.getBlock() == Blocks.WATER;
-                        if (worldIn.getBlockState(blockPos).getBlock() instanceof ILiquidContainer) {
-                            if (worldIn.getBlockState(blockPos).getBlock().getFluidState(worldIn.getBlockState(blockPos)).getFluid() == Fluids.WATER) {
-                                isWater = true;
+                        if (blockPos.getY() > 0 && blockPos.getY() + 1 <= worldIn.getHeight()) {
+                            BlockState state = worldIn.getBlockState(blockPos);
+                            boolean isWater = state.getBlock() == Blocks.WATER;
+                            if (worldIn.getBlockState(blockPos).getBlock() instanceof ILiquidContainer) {
+                                if (worldIn.getBlockState(blockPos).getBlock().getFluidState(worldIn.getBlockState(blockPos)).getFluid() == Fluids.WATER) {
+                                    isWater = true;
+                                }
                             }
-                        }
-                        if (isWater && !(Math.abs(x) == 2 && Math.abs(y) == 2) && !(Math.abs(x) == 2 && Math.abs(z) == 2) && !(Math.abs(y) == 2 && Math.abs(z) == 2)) {
-                            worldIn.setBlockState(blockPos, Blocks.ICE.getDefaultState());
-                        } else if (state.getBlock() == Blocks.ICE && Math.abs(x) != 2 && Math.abs(y) != 2 && Math.abs(z) != 2) {
-                            worldIn.setBlockState(blockPos, Blocks.PACKED_ICE.getDefaultState());
-                        } else if (state.getBlock() == Blocks.PACKED_ICE && Math.abs(x) != 2 && Math.abs(y) != 2 && Math.abs(z) != 2 && !(Math.abs(x) == 1 && Math.abs(y) == 1) && !(Math.abs(x) == 1 && Math.abs(z) == 1) && !(Math.abs(y) == 1 && Math.abs(z) == 1)) {
-                            worldIn.setBlockState(blockPos, Blocks.BLUE_ICE.getDefaultState());
+                            if (isWater && !(Math.abs(x) == 2 && Math.abs(y) == 2) && !(Math.abs(x) == 2 && Math.abs(z) == 2) && !(Math.abs(y) == 2 && Math.abs(z) == 2)) {
+                                worldIn.setBlockState(blockPos, Blocks.ICE.getDefaultState());
+                            } else if (state.getBlock() == Blocks.ICE && Math.abs(x) != 2 && Math.abs(y) != 2 && Math.abs(z) != 2) {
+                                worldIn.setBlockState(blockPos, Blocks.PACKED_ICE.getDefaultState());
+                            } else if (state.getBlock() == Blocks.PACKED_ICE && Math.abs(x) != 2 && Math.abs(y) != 2 && Math.abs(z) != 2 && !(Math.abs(x) == 1 && Math.abs(y) == 1) && !(Math.abs(x) == 1 && Math.abs(z) == 1) && !(Math.abs(y) == 1 && Math.abs(z) == 1)) {
+                                worldIn.setBlockState(blockPos, Blocks.BLUE_ICE.getDefaultState());
+                            }
+                            if (Blocks.SNOW.isValidPosition(worldIn.getBlockState(blockPos.up()), worldIn, blockPos.up()) && worldIn.getBlockState(blockPos.up()).getBlock() instanceof AirBlock && !(Math.abs(x) == 2 && Math.abs(y) == 2) && !(Math.abs(x) == 2 && Math.abs(z) == 2) && !(Math.abs(y) == 2 && Math.abs(z) == 2)) {
+                                worldIn.setBlockState(blockPos.up(), Blocks.SNOW.getDefaultState());
+                            }
                         }
                     }
                 }
@@ -126,20 +128,25 @@ public class FrozenSporesEntity extends ProjectileItemEntity {
             for (int y = 1; y <= 3; ++y) {
                 for (int z = -2; z <= 2; ++z) {
                     BlockPos blockPos = pos.add(x, y, z);
-                    BlockState state = worldIn.getBlockState(blockPos);
-                    if (worldIn.getBlockState(blockPos.up()).getBlock() != Blocks.WATER) {
-                        boolean isWater = state.getBlock() == Blocks.WATER;
-                        if (worldIn.getBlockState(blockPos).getBlock() instanceof ILiquidContainer) {
-                            if (worldIn.getBlockState(blockPos).getBlock().getFluidState(worldIn.getBlockState(blockPos)).getFluid() == Fluids.WATER) {
-                                isWater = true;
+                    if (blockPos.getY() > 0 && blockPos.getY() + 1 <= worldIn.getHeight()) {
+                        BlockState state = worldIn.getBlockState(blockPos);
+                        if (worldIn.getBlockState(blockPos.up()).getBlock() != Blocks.WATER) {
+                            boolean isWater = state.getBlock() == Blocks.WATER;
+                            if (worldIn.getBlockState(blockPos).getBlock() instanceof ILiquidContainer) {
+                                if (worldIn.getBlockState(blockPos).getBlock().getFluidState(worldIn.getBlockState(blockPos)).getFluid() == Fluids.WATER) {
+                                    isWater = true;
+                                }
                             }
-                        }
-                        if (isWater && !(Math.abs(x) == 2 && Math.abs(z) == 2)) {
-                            worldIn.setBlockState(blockPos, Blocks.ICE.getDefaultState());
-                        } else if (state.getBlock() == Blocks.ICE && Math.abs(x) != 2 && Math.abs(z) != 2) {
-                            worldIn.setBlockState(blockPos, Blocks.PACKED_ICE.getDefaultState());
-                        } else if (state.getBlock() == Blocks.PACKED_ICE && Math.abs(x) != 2 && Math.abs(z) != 2 && !(Math.abs(x) == 1 && Math.abs(z) == 1)) {
-                            worldIn.setBlockState(blockPos, Blocks.BLUE_ICE.getDefaultState());
+                            if (isWater && !(Math.abs(x) == 2 && Math.abs(z) == 2)) {
+                                worldIn.setBlockState(blockPos, Blocks.ICE.getDefaultState());
+                            } else if (state.getBlock() == Blocks.ICE && Math.abs(x) != 2 && Math.abs(z) != 2) {
+                                worldIn.setBlockState(blockPos, Blocks.PACKED_ICE.getDefaultState());
+                            } else if (state.getBlock() == Blocks.PACKED_ICE && Math.abs(x) != 2 && Math.abs(z) != 2 && !(Math.abs(x) == 1 && Math.abs(z) == 1)) {
+                                worldIn.setBlockState(blockPos, Blocks.BLUE_ICE.getDefaultState());
+                            }
+                            if (Blocks.SNOW.isValidPosition(worldIn.getBlockState(blockPos.up()), worldIn, blockPos.up()) && worldIn.getBlockState(blockPos.up()).getBlock() instanceof AirBlock && !(Math.abs(x) == 2 && Math.abs(y) == 2) && !(Math.abs(x) == 2 && Math.abs(z) == 2) && !(Math.abs(y) == 2 && Math.abs(z) == 2)) {
+                                worldIn.setBlockState(blockPos.up(), Blocks.SNOW.getDefaultState());
+                            }
                         }
                     }
                 }
