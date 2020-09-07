@@ -26,6 +26,8 @@ public class FrostburnExpansionConfig {
             defBriskBiomes.add("minecraft:snowy_taiga_mountains");
             defBriskBiomes.add("minecraft:snowy_tundra");
             defBriskBiomes.add("minecraft:ice_spikes");
+            defBriskBiomes.add("frostburn_expansion:aurora_glacier");
+            defBriskBiomes.add("frostburn_expansion:aurora_glacier_edge");
             briskBiomes = builder.define("List of biomes Brisks can spawn in", defBriskBiomes);
             builder.pop();
 
