@@ -39,6 +39,7 @@ public class AuroraGlacierBiome extends Biome {
         DefaultBiomeFeatures.addSedimentDisks(this);
         //DefaultBiomeFeatures.addScatteredSpruceTrees(this);
         FrostburnExpansionBiomeFeatures.addAuroralTrees(this);
+        FrostburnExpansionBiomeFeatures.addNotSoSparseBerryBushes(this);
         DefaultBiomeFeatures.addDefaultFlowers(this);
         DefaultBiomeFeatures.addSparseGrass(this);
         DefaultBiomeFeatures.addMushrooms(this);

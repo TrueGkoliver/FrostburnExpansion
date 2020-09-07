@@ -11,8 +11,11 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.IFeatureConfig;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
+import net.minecraft.world.gen.placement.ChanceConfig;
 import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraft.world.gen.placement.Placement;
+
+import static net.minecraft.world.biome.DefaultBiomeFeatures.SWEET_BERRY_BUSH_CONFIG;
 
 public class FrostburnExpansionBiomeFeatures {
     public static BlockState BLUE_ICE = Blocks.BLUE_ICE.getDefaultState();
@@ -31,5 +34,9 @@ public class FrostburnExpansionBiomeFeatures {
 
     public static void addAuroralTrees(Biome biomeIn) {
         biomeIn.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, FrostburnExpansionFeatures.AURORAL_TREE.withConfiguration(FrostburnExpansionFeatureConfigs.AURORAL_TREE_CONFIG).withPlacement(Placement.COUNT_EXTRA_HEIGHTMAP.configure(new AtSurfaceWithExtraConfig(0, 0.5F, 1))));
+    }
+
+    public static void addNotSoSparseBerryBushes(Biome biomeIn) {
+        biomeIn.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.RANDOM_PATCH.withConfiguration(SWEET_BERRY_BUSH_CONFIG).withPlacement(Placement.CHANCE_HEIGHTMAP_DOUBLE.configure(new ChanceConfig(2))));
     }
 }
