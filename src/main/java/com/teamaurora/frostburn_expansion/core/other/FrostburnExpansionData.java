@@ -18,6 +18,10 @@ public class FrostburnExpansionData {
         DataUtils.registerCompostable(0.3f, FrostburnExpansionBlocks.AURORAL_LEAVES.get());
         DataUtils.registerCompostable(0.3f, FrostburnExpansionBlocks.AURORAL_SAPLING.get());
         DataUtils.registerCompostable(0.3f, FrostburnExpansionBlocks.AURORAL_LEAF_CARPET.get());
+
+        DataUtils.registerCompostable(0.3f, FrostburnExpansionBlocks.OLNEYA_LEAVES.get());
+        DataUtils.registerCompostable(0.3f, FrostburnExpansionBlocks.OLNEYA_SAPLING.get());
+        DataUtils.registerCompostable(0.3f, FrostburnExpansionBlocks.OLNEYA_LEAF_CARPET.get());
     }
 
     public static void registerFlammables() {
@@ -34,5 +38,19 @@ public class FrostburnExpansionData {
         DataUtils.registerFlammable(FrostburnExpansionBlocks.VERTICAL_AURORAL_PLANKS.get(), 5, 20);
         DataUtils.registerFlammable(FrostburnExpansionBlocks.AURORAL_LEAF_CARPET.get(), 30, 60);
         DataUtils.registerFlammable(FrostburnExpansionBlocks.AURORAL_VERTICAL_SLAB.get(), 5, 20);
+
+        DataUtils.registerFlammable(FrostburnExpansionBlocks.OLNEYA_LEAVES.get(), 30, 60);
+        DataUtils.registerFlammable(FrostburnExpansionBlocks.OLNEYA_LOG.get(), 5, 5);
+        DataUtils.registerFlammable(FrostburnExpansionBlocks.OLNEYA_WOOD.get(), 5, 5);
+        DataUtils.registerFlammable(FrostburnExpansionBlocks.STRIPPED_OLNEYA_LOG.get(), 5, 5);
+        DataUtils.registerFlammable(FrostburnExpansionBlocks.STRIPPED_OLNEYA_WOOD.get(), 5, 5);
+        DataUtils.registerFlammable(FrostburnExpansionBlocks.OLNEYA_PLANKS.get(), 5, 20);
+        DataUtils.registerFlammable(FrostburnExpansionBlocks.OLNEYA_SLAB.get(), 5, 20);
+        DataUtils.registerFlammable(FrostburnExpansionBlocks.OLNEYA_STAIRS.get(), 5, 20);
+        DataUtils.registerFlammable(FrostburnExpansionBlocks.OLNEYA_FENCE.get(), 5, 20);
+        DataUtils.registerFlammable(FrostburnExpansionBlocks.OLNEYA_FENCE_GATE.get(), 5, 20);
+        DataUtils.registerFlammable(FrostburnExpansionBlocks.VERTICAL_OLNEYA_PLANKS.get(), 5, 20);
+        DataUtils.registerFlammable(FrostburnExpansionBlocks.OLNEYA_LEAF_CARPET.get(), 30, 60);
+        DataUtils.registerFlammable(FrostburnExpansionBlocks.OLNEYA_VERTICAL_SLAB.get(), 5, 20);
     }
 }
