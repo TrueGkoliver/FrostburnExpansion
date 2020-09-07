@@ -1,5 +1,6 @@
 package com.teamaurora.frostburn_expansion.core.registry;
 
+import com.teamaurora.frostburn_expansion.common.world.gen.feature.AuroralTreeFeature;
 import com.teamaurora.frostburn_expansion.common.world.gen.feature.OlneyaTreeFeature;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
@@ -11,6 +12,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class FrostburnExpansionFeatures {
 
     public static final Feature<BaseTreeFeatureConfig> OLENYA_TREE = new OlneyaTreeFeature(BaseTreeFeatureConfig.CODEC_BASE_TREE_FEATURE_CONFIG);
+    public static final Feature<BaseTreeFeatureConfig> AURORAL_TREE = new AuroralTreeFeature(BaseTreeFeatureConfig.CODEC_BASE_TREE_FEATURE_CONFIG);
 
     public static void generateFeatures() {
         ForgeRegistries.BIOMES.forEach(FrostburnExpansionFeatures::generate);
