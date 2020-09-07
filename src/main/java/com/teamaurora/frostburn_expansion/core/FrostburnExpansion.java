@@ -54,12 +54,13 @@ public class FrostburnExpansion {
 
 	private void setup(final FMLCommonSetupEvent event) {
 		DeferredWorkQueue.runLater(() -> {
+			FrostburnExpansionFeatures.generateFeatures();
+			FrostburnExpansionBiomes.addBiomeTypes();
 			FrostburnExpansionBiomes.registerBiomesToDictionary();
 			FrostburnExpansionData.registerCompostables();
 			FrostburnExpansionData.registerFlammables();
 			FrostburnExpansionEffects.registerBrewingRecipes();
 			FrostburnExpansionData.registerDispenserBehaviors();
-			FrostburnExpansionFeatures.generateFeatures();
 			GlobalEntityTypeAttributes.put(FrostburnExpansionEntities.BRISK.get(), BriskEntity.setCustomAttributes().create());
 		});
 	}

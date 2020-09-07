@@ -1,24 +1,30 @@
 package com.teamaurora.frostburn_expansion.core.registry;
 
+import com.teamabnormals.abnormals_core.core.utils.RegistryHelper;
+import com.teamaurora.frostburn_expansion.common.world.biome.AuroraGlacierBiome;
+import com.teamaurora.frostburn_expansion.common.world.biome.AuroraGlacierEdgeBiome;
 import com.teamaurora.frostburn_expansion.core.FrostburnExpansion;
 
 import net.minecraft.world.biome.Biome;
+import net.minecraftforge.common.BiomeDictionary;
+import net.minecraftforge.common.BiomeManager;
+import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
+@Mod.EventBusSubscriber(modid = FrostburnExpansion.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class FrostburnExpansionBiomes {
 	public static final DeferredRegister<Biome> BIOMES = DeferredRegister.create(ForgeRegistries.BIOMES, FrostburnExpansion.MODID);
 
-	// NOTE: Moved biome builder into the biome class to make this class less of a clusterfuck and more of a registry
-
-	//public static final RegistryObject<BiomeAuroraOasis> AURORA_OASIS = BIOMES.register("aurora_oasis", ()->new BiomeAuroraOasis());
+	public static final RegistryObject<Biome> AURORA_GLACIER = BIOMES.register("aurora_glacier", AuroraGlacierBiome::new);
+	public static final RegistryObject<Biome> AURORA_GLACIER_EDGE = BIOMES.register("aurora_glacier_edge", AuroraGlacierEdgeBiome::new);
 
 	public static void registerBiomesToDictionary() {
-		//BiomeManager.addBiome(BiomeType.ICY, new BiomeEntry(AURORA_OASIS.get(), 5));
-		//BiomeDictionary.addTypes(AURORA_OASIS.get(), BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.RARE);
+		BiomeManager.addBiome(BiomeManager.BiomeType.ICY, new BiomeManager.BiomeEntry(AURORA_GLACIER.get(), 5));
 	}
-	
-	public static void registerSpawns() {
-		//AURORA_OASIS.get().registerSpawns();
+
+	public static void addBiomeTypes() {
+		BiomeDictionary.addTypes(AURORA_GLACIER.get(), BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.RARE);
 	}
 }

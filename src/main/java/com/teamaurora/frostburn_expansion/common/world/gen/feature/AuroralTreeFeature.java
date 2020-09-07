@@ -38,7 +38,7 @@ public class AuroralTreeFeature extends Feature<BaseTreeFeatureConfig> {
             for (int x = -2; x <= 2; x++) {
                 for (int y = 0; y <= i + 1; y++) {
                     for (int z = -2; z <= 2; z++) {
-                        if (((Math.abs(x) != 2 || Math.abs(z) != 2) && y >= 3) || ((x == 0 && y == 0))) {
+                        if (((Math.abs(x) != 2 || Math.abs(z) != 2) && y >= 3) || ((x == 0 && z == 0))) {
                             if (!isAirOrLeaves(worldIn, position.add(x, y, z))) {
                                 flag = true;
                             }
@@ -172,7 +172,7 @@ public class AuroralTreeFeature extends Feature<BaseTreeFeatureConfig> {
             return worldIn.hasBlockState(pos, state -> state.canBeReplacedByLeaves((net.minecraft.world.IWorldReader) worldIn, pos));
         }
         return worldIn.hasBlockState(pos, (state) -> {
-            return state.isAir() || state.isIn(BlockTags.LEAVES);
+            return state.isAir() || state.isIn(BlockTags.LEAVES) || state.getBlock() == Blocks.SNOW;
         });
     }
 

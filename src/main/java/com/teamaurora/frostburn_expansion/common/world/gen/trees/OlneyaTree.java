@@ -14,6 +14,6 @@ public class OlneyaTree extends Tree {
 
     @Nullable
     protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random randomIn, boolean wtf) {
-        return FrostburnExpansionFeatures.OLENYA_TREE.withConfiguration(FrostburnExpansionFeatureConfigs.OLNEYA_TREE_CONFIG);
+        return FrostburnExpansionFeatures.OLNEYA_TREE.withConfiguration(FrostburnExpansionFeatureConfigs.OLNEYA_TREE_CONFIG);
     }
 }

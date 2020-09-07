@@ -54,6 +54,6 @@ An upgrade to the Frostburn Update.
 [[dependencies.frostburn_expansion]]
     modId="abnormals_core"
     mandatory=true
-    versionRange="[2.0.2,)"
+    versionRange="[2.0.3,)"
     ordering="AFTER"
     side="BOTH"

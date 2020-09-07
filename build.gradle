@@ -120,7 +120,7 @@ dependencies {
     // For more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-    compile fg.deobf("curse.maven:abnormals-core:3025510")
+    compile fg.deobf("curse.maven:abnormals-core:3043251")
     compile fg.deobf("curse.maven:autoreglib:3017289")
     compile fg.deobf("curse.maven:quark:3024740")
     compile fg.deobf("curse.maven:buzzier-bees:3021810")
