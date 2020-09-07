@@ -2,6 +2,7 @@ package com.teamaurora.frostburn_expansion.common.world.gen.feature;
 
 import com.google.common.collect.Sets;
 import com.mojang.serialization.Codec;
+import com.teamaurora.frostburn_expansion.core.registry.FrostburnExpansionBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -32,7 +33,7 @@ public class AuroralTreeFeature extends Feature<BaseTreeFeatureConfig> {
     @Override
     public boolean func_230362_a_(ISeedReader worldIn, StructureManager manager, ChunkGenerator generator, Random rand, BlockPos position, BaseTreeFeatureConfig config) {
         int heightOffset = rand.nextInt(3);
-        int i = 10 + heightOffset;
+        int i = 12 + heightOffset;
         if (position.getY() >= 1 && position.getY() + i + 1 <= worldIn.getHeight()) {
             boolean flag = false;
             for (int x = -2; x <= 2; x++) {
@@ -187,6 +188,10 @@ public class AuroralTreeFeature extends Feature<BaseTreeFeatureConfig> {
 
     public static boolean isValidGround(IWorld world, BlockPos pos)
     {
-        return world.getBlockState(pos).canSustainPlant(world, pos, Direction.UP, (IPlantable) Blocks.BIRCH_SAPLING);
+        if (world.getBlockState(pos).getBlock() == Blocks.SNOW_BLOCK) {
+            return world.getBlockState(pos).canSustainPlant(world, pos, Direction.UP, (IPlantable) FrostburnExpansionBlocks.AURORAL_SAPLING.get()) && world.getRandom().nextBoolean();
+        } else {
+            return world.getBlockState(pos).canSustainPlant(world, pos, Direction.UP, (IPlantable) FrostburnExpansionBlocks.AURORAL_SAPLING.get());
+        }
     }
 }
