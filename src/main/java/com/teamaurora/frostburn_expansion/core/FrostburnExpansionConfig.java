@@ -10,10 +10,12 @@ public class FrostburnExpansionConfig {
     public static class Common {
         public final ForgeConfigSpec.ConfigValue<Boolean> alwaysBriskSpawn;
         public final ForgeConfigSpec.ConfigValue<ArrayList<String>> briskBiomes;
+        public final ForgeConfigSpec.ConfigValue<Integer> glacierWeight;
 
         Common(ForgeConfigSpec.Builder builder) {
             builder.comment("Common configurations for Frostburn Expansion").push("common");
 
+            builder.comment("Brisk config options").push("brisks");
             alwaysBriskSpawn = builder.define("Whether Brisks should always spawn in place of Creepers in snowy biomes", false);
             ArrayList<String> defBriskBiomes = new ArrayList<>();
             //if (biomeIn == Biomes.SNOWY_BEACH || biomeIn == Biomes.SNOWY_MOUNTAINS || biomeIn == Biomes.SNOWY_TAIGA || biomeIn == Biomes.SNOWY_TAIGA_HILLS || biomeIn == Biomes.SNOWY_TAIGA_MOUNTAINS || biomeIn == Biomes.SNOWY_TUNDRA || biomeIn == Biomes.ICE_SPIKES) {
@@ -25,6 +27,9 @@ public class FrostburnExpansionConfig {
             defBriskBiomes.add("minecraft:snowy_tundra");
             defBriskBiomes.add("minecraft:ice_spikes");
             briskBiomes = builder.define("List of biomes Brisks can spawn in", defBriskBiomes);
+            builder.pop();
+
+            glacierWeight = builder.define("Weight of Aurora Glacier biome", 5);
 
             builder.pop();
         }

@@ -5,6 +5,7 @@ import com.teamaurora.frostburn_expansion.common.world.biome.AuroraGlacierBiome;
 import com.teamaurora.frostburn_expansion.common.world.biome.AuroraGlacierEdgeBiome;
 import com.teamaurora.frostburn_expansion.core.FrostburnExpansion;
 
+import com.teamaurora.frostburn_expansion.core.FrostburnExpansionConfig;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeManager;
@@ -21,7 +22,7 @@ public class FrostburnExpansionBiomes {
 	public static final RegistryObject<Biome> AURORA_GLACIER_EDGE = BIOMES.register("aurora_glacier_edge", AuroraGlacierEdgeBiome::new);
 
 	public static void registerBiomesToDictionary() {
-		BiomeManager.addBiome(BiomeManager.BiomeType.ICY, new BiomeManager.BiomeEntry(AURORA_GLACIER.get(), 5));
+		BiomeManager.addBiome(BiomeManager.BiomeType.ICY, new BiomeManager.BiomeEntry(AURORA_GLACIER.get(), FrostburnExpansionConfig.COMMON.glacierWeight.get()));
 	}
 
 	public static void addBiomeTypes() {
