@@ -24,8 +24,12 @@ public class FrostburnExpansionBiomeFeatures {
 
     public static void addIceVariants(Biome biomeIn) {
         biomeIn.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, FrostburnExpansionFeatures.NOT_SHIT_ORE.withConfiguration(new NotShitOreFeatureConfig(NotShitOreFeatureConfig.FillerBlockType.PACKED_ICE, BLUE_ICE, 33)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(10, 64, 0, 192))));
-        biomeIn.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, FrostburnExpansionFeatures.NOT_SHIT_ORE.withConfiguration(new NotShitOreFeatureConfig(NotShitOreFeatureConfig.FillerBlockType.PACKED_ICE, SNOW, 43)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(12, 64, 0, 192))));
+        biomeIn.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, FrostburnExpansionFeatures.NOT_SHIT_ORE.withConfiguration(new NotShitOreFeatureConfig(NotShitOreFeatureConfig.FillerBlockType.ALL_ICE, SNOW, 43)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(12, 64, 0, 192))));
         biomeIn.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, FrostburnExpansionFeatures.NOT_SHIT_ORE.withConfiguration(new NotShitOreFeatureConfig(NotShitOreFeatureConfig.FillerBlockType.PACKED_ICE, BOREALENE, 63)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(12, 64, 0, 192))));
+    }
+
+    public static void addFrozenFossils(Biome biomeIn) {
+        biomeIn.addFeature(GenerationStage.Decoration.UNDERGROUND_STRUCTURES, FrostburnExpansionFeatures.GLACIER_FOSSILS.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.CHANCE_PASSTHROUGH.configure(new ChanceConfig(64))));
     }
 
     public static void addGlacierFreezeTopLayer(Biome biomeIn) {

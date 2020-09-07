@@ -24,6 +24,7 @@ public class FrostburnExpansionFeatures {
 
     public static final Feature<NotShitOreFeatureConfig> NOT_SHIT_ORE = new NotShitOreFeature(NotShitOreFeatureConfig.field_236566_a_);
     public static final Feature<NoFeatureConfig> ICE_AND_SNOW_NO_BOREALENE = new IceAndSnowNoBorealeneFeature(NoFeatureConfig.field_236558_a_);
+    public static final Feature<NoFeatureConfig> GLACIER_FOSSILS = new GlacierFossilsFeature(NoFeatureConfig.field_236558_a_);
 
     public static final SurfaceBuilder<SurfaceBuilderConfig> GLACIER = new GlacierSurfaceBuilder(SurfaceBuilderConfig.field_237203_a_);
 
@@ -34,7 +35,8 @@ public class FrostburnExpansionFeatures {
                 AURORAL_TREE.setRegistryName(FrostburnExpansion.MODID, "auroral_tree"),
 
                 NOT_SHIT_ORE.setRegistryName(FrostburnExpansion.MODID, "better_ore"),
-                ICE_AND_SNOW_NO_BOREALENE.setRegistryName(FrostburnExpansion.MODID, "ice_and_snow_modified")
+                ICE_AND_SNOW_NO_BOREALENE.setRegistryName(FrostburnExpansion.MODID, "ice_and_snow_modified"),
+                GLACIER_FOSSILS.setRegistryName(FrostburnExpansion.MODID, "glacier_fossil")
         );
     }
 

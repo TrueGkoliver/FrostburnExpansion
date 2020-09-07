@@ -30,6 +30,7 @@ public class AuroraGlacierBiome extends Biome {
 
         DefaultBiomeFeatures.func_235196_b_(this);
         this.func_235063_a_(DefaultBiomeFeatures.RUINED_PORTAL_MOUNTAIN);
+        FrostburnExpansionBiomeFeatures.addFrozenFossils(this);
         DefaultBiomeFeatures.addCarvers(this);
         //DefaultBiomeFeatures.addLakes(this);
         DefaultBiomeFeatures.addMonsterRooms(this);

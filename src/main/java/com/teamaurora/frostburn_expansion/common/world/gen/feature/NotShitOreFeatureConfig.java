@@ -34,6 +34,13 @@ public class NotShitOreFeatureConfig implements IFeatureConfig {
     }
 
     public static enum FillerBlockType implements IStringSerializable, net.minecraftforge.common.IExtensibleEnum {
+        ALL_ICE("all_ice", (p_214739_0_) -> {
+            if (p_214739_0_ == null) {
+                return false;
+            } else {
+                return p_214739_0_.isIn(Blocks.PACKED_ICE) || p_214739_0_.isIn(Blocks.ICE);
+            }
+        }),
         PACKED_ICE("packed_ice", new BlockMatcher(Blocks.PACKED_ICE));
 
         public static final Codec<com.teamaurora.frostburn_expansion.common.world.gen.feature.NotShitOreFeatureConfig.FillerBlockType> field_236571_d_ = IStringSerializable.createEnumCodec(com.teamaurora.frostburn_expansion.common.world.gen.feature.NotShitOreFeatureConfig.FillerBlockType::values, com.teamaurora.frostburn_expansion.common.world.gen.feature.NotShitOreFeatureConfig.FillerBlockType::byName);

@@ -20,7 +20,11 @@ public class GlacierSurfaceBuilder extends SurfaceBuilder<SurfaceBuilderConfig> 
         SurfaceBuilder.DEFAULT.buildSurface(random, chunkIn, biomeIn, x, z, startHeight, noise, defaultBlock, defaultFluid, seaLevel, seed, config);
         if (startHeight <= 76) {
             for (int i = startHeight > 73 ? 73 : startHeight; i < 74; i++) {
-                chunkIn.setBlockState(new BlockPos(x, i, z), Blocks.PACKED_ICE.getDefaultState(), false);
+                if (i == 73) {
+                    chunkIn.setBlockState(new BlockPos(x, i, z), Blocks.ICE.getDefaultState(), false);
+                } else {
+                    chunkIn.setBlockState(new BlockPos(x, i, z), Blocks.PACKED_ICE.getDefaultState(), false);
+                }
             }
             for (int i = 74; i < 76; i++) {
                 chunkIn.setBlockState(new BlockPos(x, i, z), Blocks.AIR.getDefaultState(), false);
