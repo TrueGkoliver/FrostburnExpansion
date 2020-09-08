@@ -23,5 +23,6 @@ public class FrostburnExpansionItems {
 
 	public static final RegistryObject<Item> AURORAL_BOAT = HELPER.createBoatItem("auroral", FrostburnExpansionBlocks.AURORAL_PLANKS);
 	public static final RegistryObject<Item> OLNEYA_BOAT = HELPER.createBoatItem("olneya", FrostburnExpansionBlocks.OLNEYA_PLANKS);
-	
+
+	public static final RegistryObject<Item> ANCIENT_CLOTH = HELPER.createItem("ancient_cloth", ()->new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
 }
