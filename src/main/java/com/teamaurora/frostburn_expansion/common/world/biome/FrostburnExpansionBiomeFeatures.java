@@ -29,7 +29,7 @@ public class FrostburnExpansionBiomeFeatures {
     }
 
     public static void addFrozenFossils(Biome biomeIn) {
-        biomeIn.addFeature(GenerationStage.Decoration.UNDERGROUND_STRUCTURES, FrostburnExpansionFeatures.GLACIER_FOSSILS.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.CHANCE_PASSTHROUGH.configure(new ChanceConfig(64))));
+        biomeIn.addFeature(GenerationStage.Decoration.UNDERGROUND_STRUCTURES, FrostburnExpansionFeatures.GLACIER_FOSSILS.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.CHANCE_PASSTHROUGH.configure(new ChanceConfig(3))));
     }
 
     public static void addGlacierFreezeTopLayer(Biome biomeIn) {

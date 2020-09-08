@@ -8,7 +8,13 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeAmbience;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.biome.MoodSoundAmbience;
+import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.INoiseRandom;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.FeatureRadiusConfig;
+import net.minecraft.world.gen.placement.ChanceConfig;
+import net.minecraft.world.gen.placement.FrequencyConfig;
+import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 
 public class AuroraGlacierBiome extends Biome {
@@ -34,6 +40,7 @@ public class AuroraGlacierBiome extends Biome {
         DefaultBiomeFeatures.addCarvers(this);
         //DefaultBiomeFeatures.addLakes(this);
         DefaultBiomeFeatures.addMonsterRooms(this);
+        this.addFeature(GenerationStage.Decoration.SURFACE_STRUCTURES, Feature.ICE_PATCH.withConfiguration(new FeatureRadiusConfig(2)).withPlacement(Placement.CHANCE_TOP_SOLID_HEIGHTMAP.configure(new ChanceConfig(3))));
         DefaultBiomeFeatures.addStoneVariants(this);
         FrostburnExpansionBiomeFeatures.addIceVariants(this);
         DefaultBiomeFeatures.addOres(this);
