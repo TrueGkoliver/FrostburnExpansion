@@ -1,5 +1,6 @@
 package com.teamaurora.frostburn_expansion.core.registry;
 
+import com.teamaurora.frostburn_expansion.common.world.biome.FrostburnExpansionBiomeFeatures;
 import com.teamaurora.frostburn_expansion.common.world.gen.feature.*;
 import com.teamaurora.frostburn_expansion.common.world.gen.surfacebuilders.GlacierSurfaceBuilder;
 import com.teamaurora.frostburn_expansion.core.FrostburnExpansion;
@@ -26,6 +27,8 @@ public class FrostburnExpansionFeatures {
     public static final Feature<NoFeatureConfig> ICE_AND_SNOW_NO_BOREALENE = new IceAndSnowNoBorealeneFeature(NoFeatureConfig.field_236558_a_);
     public static final Feature<NoFeatureConfig> GLACIER_FOSSILS = new GlacierFossilsFeature(NoFeatureConfig.field_236558_a_);
 
+    public static final Feature<NoFeatureConfig> OASIS_GRASS_PLACER = new DesertLakesGrassFeature(NoFeatureConfig.field_236558_a_);
+
     public static final SurfaceBuilder<SurfaceBuilderConfig> GLACIER = new GlacierSurfaceBuilder(SurfaceBuilderConfig.field_237203_a_);
 
     @SubscribeEvent
@@ -36,7 +39,9 @@ public class FrostburnExpansionFeatures {
 
                 NOT_SHIT_ORE.setRegistryName(FrostburnExpansion.MODID, "better_ore"),
                 ICE_AND_SNOW_NO_BOREALENE.setRegistryName(FrostburnExpansion.MODID, "ice_and_snow_modified"),
-                GLACIER_FOSSILS.setRegistryName(FrostburnExpansion.MODID, "glacier_fossil")
+                GLACIER_FOSSILS.setRegistryName(FrostburnExpansion.MODID, "glacier_fossil"),
+
+                OASIS_GRASS_PLACER.setRegistryName(FrostburnExpansion.MODID, "oasis_grass_placer")
         );
     }
 
@@ -61,6 +66,11 @@ public class FrostburnExpansionFeatures {
             DefaultBiomeFeatures.addSparseBerryBushes(biome);
             DefaultBiomeFeatures.addSparseBerryBushes(biome);
             DefaultBiomeFeatures.addSparseBerryBushes(biome);
+        }
+        if (biome == Biomes.DESERT_LAKES) {
+            FrostburnExpansionBiomeFeatures.addDesertLakesFeatures(biome);
+        } else if (biome == Biomes.DESERT || biome == Biomes.DESERT_HILLS) {
+            FrostburnExpansionBiomeFeatures.addSparseOlneyaTrees(biome);
         }
     }
 }

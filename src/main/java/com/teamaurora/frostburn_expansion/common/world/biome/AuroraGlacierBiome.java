@@ -33,7 +33,6 @@ public class AuroraGlacierBiome extends Biome {
                         .setMoodSound(MoodSoundAmbience.field_235027_b_)
                         .build())
                 .parent((String)null));
-
         DefaultBiomeFeatures.func_235196_b_(this);
         this.func_235063_a_(DefaultBiomeFeatures.RUINED_PORTAL_MOUNTAIN);
         FrostburnExpansionBiomeFeatures.addFrozenFossils(this);
