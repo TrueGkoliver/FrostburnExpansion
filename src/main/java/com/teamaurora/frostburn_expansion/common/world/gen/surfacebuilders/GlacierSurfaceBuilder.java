@@ -29,6 +29,13 @@ public class GlacierSurfaceBuilder extends SurfaceBuilder<SurfaceBuilderConfig> 
             for (int i = 74; i < 76; i++) {
                 chunkIn.setBlockState(new BlockPos(x, i, z), Blocks.AIR.getDefaultState(), false);
             }
+            BlockPos lowerPos = new BlockPos(x, startHeight-1, z);
+            if (chunkIn.getBlockState(lowerPos).getBlock() == Blocks.WATER) {
+                int i = 0;
+                while (startHeight-1-i >= 1 && chunkIn.getBlockState(lowerPos.down(i)).getBlock() == Blocks.WATER) {
+                    chunkIn.setBlockState(lowerPos.down(i), Blocks.PACKED_ICE.getDefaultState(), false);
+                }
+            }
         }
     }
 
