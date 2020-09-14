@@ -47,8 +47,4 @@ public class FrostburnExpansionBiomeFeatures {
         biomeIn.addFeature(GenerationStage.Decoration.LOCAL_MODIFICATIONS, FrostburnExpansionFeatures.OASIS_GRASS_PLACER.withConfiguration(new NoFeatureConfig()).withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(32))));
         biomeIn.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, FrostburnExpansionFeatures.OLNEYA_TREE.withConfiguration(FrostburnExpansionFeatureConfigs.OLNEYA_TREE_CONFIG).withPlacement(Placement.COUNT_EXTRA_HEIGHTMAP.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
     }
-
-    public static void addSparseOlneyaTrees(Biome biomeIn) {
-        biomeIn.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, FrostburnExpansionFeatures.OLNEYA_TREE.withConfiguration(FrostburnExpansionFeatureConfigs.OLNEYA_TREE_CONFIG).withPlacement(Placement.COUNT_EXTRA_HEIGHTMAP.configure(new AtSurfaceWithExtraConfig(0, 0.0065F, 1))));
-    }
 }

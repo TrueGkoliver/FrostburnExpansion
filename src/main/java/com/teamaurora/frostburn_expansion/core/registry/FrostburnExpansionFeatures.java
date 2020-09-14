@@ -69,8 +69,6 @@ public class FrostburnExpansionFeatures {
         }
         if (biome == Biomes.DESERT_LAKES) {
             FrostburnExpansionBiomeFeatures.addDesertLakesFeatures(biome);
-        } else if (biome == Biomes.DESERT || biome == Biomes.DESERT_HILLS) {
-            FrostburnExpansionBiomeFeatures.addSparseOlneyaTrees(biome);
         }
     }
 }
