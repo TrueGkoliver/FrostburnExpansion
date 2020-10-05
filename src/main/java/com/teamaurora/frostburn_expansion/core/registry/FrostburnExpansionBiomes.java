@@ -26,6 +26,7 @@ public class FrostburnExpansionBiomes {
 	}
 
 	public static void addBiomeTypes() {
-		BiomeDictionary.addTypes(AURORA_GLACIER.get(), BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.RARE);
+		BiomeDictionary.addTypes(AURORA_GLACIER.get(), BiomeDictionary.Type.SNOWY, BiomeDictionary.Type.DRY, BiomeDictionary.Type.RARE);
+		BiomeDictionary.addTypes(AURORA_GLACIER_EDGE.get(), BiomeDictionary.Type.SNOWY, BiomeDictionary.Type.DRY, BiomeDictionary.Type.RARE);
 	}
 }
