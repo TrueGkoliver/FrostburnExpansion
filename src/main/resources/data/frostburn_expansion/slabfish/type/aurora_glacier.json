@@ -1,0 +1,22 @@
+{
+  "rarity": "legendary",
+  "priority": 1,
+  "displayName": {
+    "translate": "entity.frostburn_expansion.slabfish.type.aurora_glacier"
+  },
+  "conditions": [
+    {
+      "type": "or",
+      "conditions": [
+        {
+          "type": "biome",
+          "biome": "frostburn_expansion:aurora_glacier"
+        },
+        {
+          "type": "biome",
+          "biome": "frostburn_expansion:aurora_glacier_edge"
+        }
+      ]
+    }
+  ]
+}

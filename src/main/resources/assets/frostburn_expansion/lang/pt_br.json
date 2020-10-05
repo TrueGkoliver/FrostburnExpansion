@@ -1,0 +1,127 @@
+{
+  "_comment": "Tundra Content",
+  "block.frostburn_expansion.large_snow_bricks": "Tijolos de neve grandes",
+  "block.frostburn_expansion.large_snow_brick_slab": "Laje de tijolos de neve grandes",
+  "block.frostburn_expansion.large_snow_brick_stairs": "Escadas de tijolos de neve grandes",
+  "block.frostburn_expansion.large_snow_brick_wall": "Muro de tijolos de neve grandes",
+  "block.frostburn_expansion.chiseled_large_snow_bricks": "Tijolos de neve grandes talhados",
+  "block.frostburn_expansion.large_snow_brick_vertical_slab" : "Laje vertical de tijolos de neve grandes",
+
+
+  "item.frostburn_expansion.brisk_spawn_egg" : "Ovo gerador de brisk",
+
+  "entity.frostburn_expansion.brisk" : "Brisk",
+
+  "item.frostburn_expansion.frozen_spores": "Esporos congelados",
+  "block.frostburn_expansion.frozen_spore_sack": "Saco de esporos congelados",
+  "block.frostburn_expansion.potted_frozen_spores": "Esporos congelados envasados",
+
+  "item.minecraft.potion.effect.frailty" : "Poção de fragilidade",
+  "item.minecraft.potion.effect.long_frailty" : "Poção de fragilidade",
+  "item.minecraft.potion.effect.strong_frailty" : "Poção de fragilidade",
+
+  "item.minecraft.splash_potion.effect.frailty" : "Poção arremessável de fragilidade",
+  "item.minecraft.splash_potion.effect.long_frailty" : "Poção arremessável de fragilidade",
+  "item.minecraft.splash_potion.effect.strong_frailty" : "Poção arremessável de fragilidade",
+
+  "item.minecraft.lingering_potion.effect.frailty" : "Poção prolongada de fragilidade",
+  "item.minecraft.lingering_potion.effect.long_frailty" : "Poção prolongada de fragilidade",
+  "item.minecraft.lingering_potion.effect.strong_frailty" : "Poção prolongada de fragilidade",
+
+  "item.minecraft.tipped_arrow.effect.frailty" : "Flecha de fragilidade",
+  "item.minecraft.tipped_arrow.effect.long_frailty" : "Flecha de fragilidade",
+  "item.minecraft.tipped_arrow.effect.strong_frailty" : "Flecha de fragilidade",
+
+  "effect.frostburn_expansion.frailty" : "fragilidade",
+
+  "item.frostburn_expansion.music_disc_brisksong.desc" : "Mista Jub - Brisksong",
+
+  "item.frostburn_expansion.music_disc_brisksong": "Disco de música",
+
+
+  "_comment1": "Aurora Glacier Content",
+  "block.frostburn_expansion.borealene": "Borealeno",
+  "block.frostburn_expansion.borealene_slab": "Laje de borealeno",
+  "block.frostburn_expansion.borealene_stairs": "Escadas de borealeno",
+  "block.frostburn_expansion.borealene_wall": "Muro de borealeno",
+  "block.frostburn_expansion.borealene_bricks": "Tijolos de borealeno",
+  "block.frostburn_expansion.borealene_brick_slab": "Laje de tijolos de borealeno",
+  "block.frostburn_expansion.borealene_brick_stairs": "Escadas de tijolos de borealeno",
+  "block.frostburn_expansion.borealene_brick_wall": "Muro de tijolos de borealeno",
+  "block.frostburn_expansion.cracked_borealene_bricks": "Tijolos de borealeno rachados",
+  "block.frostburn_expansion.chiseled_borealene_bricks": "Tijolos de borealeno talhados",
+  "block.frostburn_expansion.borealene_pillar": "Pilar de borealeno",
+  "block.frostburn_expansion.borealene_lamp": "Lâmpada de borealeno",
+  "block.frostburn_expansion.borealene_vertical_slab" : "Laje vertical de borealeno",
+  "block.frostburn_expansion.borealene_brick_vertical_slab" : "Laje vertical de tijolos de borealeno",
+
+
+  "block.frostburn_expansion.stripped_auroral_log": "Tronco de madeira auroral descascado",
+  "block.frostburn_expansion.stripped_auroral_wood": "Madeira de árvore auroral descascada",
+  "block.frostburn_expansion.auroral_log": "Tronco de árvore auroral",
+  "block.frostburn_expansion.auroral_wood": "Madeira auroral",
+  "block.frostburn_expansion.auroral_leaves" : "Folhas aurorais",
+  "block.frostburn_expansion.auroral_sapling" : "Muda de árvore auroral",
+  "block.frostburn_expansion.potted_auroral_sapling": "Muda de árvore auroral envasada",
+
+  "block.frostburn_expansion.auroral_planks": "Tábuas de madeira auroral",
+  "block.frostburn_expansion.auroral_slab": "Laje de madeira auroral",
+  "block.frostburn_expansion.auroral_stairs": "Escadas de madeira auroral",
+  "block.frostburn_expansion.auroral_pressure_plate": "Placa de pressão de madeira auroral",
+  "block.frostburn_expansion.auroral_fence": "Cerca de madeira auroral",
+  "block.frostburn_expansion.auroral_fence_gate": "Portão de madeira auroral",
+  "block.frostburn_expansion.auroral_button": "Botão de madeira auroral",
+  "block.frostburn_expansion.auroral_trapdoor" : "Alçapão de madeira auroral",
+  "block.frostburn_expansion.auroral_door" : "Porta de madeira auroral",
+  "block.frostburn_expansion.auroral_sign": "Placa de madeira auroral",
+
+  "block.frostburn_expansion.vertical_auroral_planks" : "Tábuas verticais de madeira auroral",
+  "block.frostburn_expansion.auroral_vertical_slab" : "Laje vertical de madeira auroral",
+  "block.frostburn_expansion.auroral_ladder" : "Escada de mão de madeira auroral",
+  "block.frostburn_expansion.auroral_leaf_carpet" : "Tapete de folhas aurorais",
+  "block.frostburn_expansion.auroral_bookshelf": "Estante de livros de madeira auroral",
+  "block.frostburn_expansion.auroral_chest": "Baú de madeira auroral",
+  "block.frostburn_expansion.auroral_trapped_chest": "Baú de madeira auroral com armadilha",
+
+  "block.frostburn_expansion.auroral_beehive": "Colmeia artificial de madeira auroral",
+
+  "item.frostburn_expansion.auroral_boat": "Bote de madeira auroral",
+  
+  "entity.frostburn_expansion.slabfish.type.aurora_glacier": "Geleira auroral",
+
+
+  "_comment2": "Desert Content",
+  "item.frostburn_expansion.ancient_cloth": "Tecido ancião",
+
+  "_comment3": "Desert Lakes Content",
+  "block.frostburn_expansion.stripped_olneya_log": "Tronco de olneya descascado",
+  "block.frostburn_expansion.stripped_olneya_wood": "Madeira de olneya descascada",
+  "block.frostburn_expansion.olneya_log": "Tronco de olneya",
+  "block.frostburn_expansion.olneya_wood": "Madeira de olneya",
+  "block.frostburn_expansion.olneya_leaves" : "Folhas de olneya",
+  "block.frostburn_expansion.olneya_sapling" : "Muda de olneya",
+  "block.frostburn_expansion.potted_olneya_sapling": "Muda de olneya envasada",
+
+  "block.frostburn_expansion.olneya_planks": "Tábuas de olneya",
+  "block.frostburn_expansion.olneya_slab": "Laje de olneya",
+  "block.frostburn_expansion.olneya_stairs": "Escadas de olneya",
+  "block.frostburn_expansion.olneya_pressure_plate": "Placa de pressão de olneya",
+  "block.frostburn_expansion.olneya_fence": "Cerca de olneya",
+  "block.frostburn_expansion.olneya_fence_gate": "Portão de olneya",
+  "block.frostburn_expansion.olneya_button": "Botão de olneya",
+  "block.frostburn_expansion.olneya_trapdoor" : "Alçapão de olneya",
+  "block.frostburn_expansion.olneya_door" : "Porta de olneya",
+  "block.frostburn_expansion.olneya_sign": "Placa de olneya",
+
+  "block.frostburn_expansion.vertical_olneya_planks" : "Tábuas verticais de olneya",
+  "block.frostburn_expansion.olneya_vertical_slab" : "Laje vertical de olneya",
+  "block.frostburn_expansion.olneya_ladder" : "Escada de mão de olneya",
+  "block.frostburn_expansion.olneya_leaf_carpet" : "Tapete de folhas de olneya",
+  "block.frostburn_expansion.olneya_bookshelf": "Estante de livros de olneya",
+  "block.frostburn_expansion.olneya_chest": "Baú de olneya",
+  "block.frostburn_expansion.olneya_trapped_chest": "Baú de olneya com armadilha",
+
+  "block.frostburn_expansion.olneya_beehive": "Colmeia artificial de olneya",
+
+  "item.frostburn_expansion.olneya_boat": "Bote de olneya"
+  }
