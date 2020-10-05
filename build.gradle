@@ -23,9 +23,9 @@ mixin {
     add sourceSets.main, "frostburn_expansion.refmap.json"
 }
 
-version = '1.0'
+version = '1.0.0'
 group = 'com.teamaurora.frostburn_expansion' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'frostburn_expansion'
+archivesBaseName = 'Frostburn-Expansion-1.16.1'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
@@ -133,12 +133,12 @@ dependencies {
 jar {
     manifest {
         attributes([
-            "Specification-Title": "frostburn_expansion",
-            "Specification-Vendor": "teamaurora",
+            "Specification-Title": "Frostburn_Expansion",
+            "Specification-Vendor": "Team Aurora",
             "Specification-Version": "1", // We are version 1 of ourselves
             "Implementation-Title": project.name,
             "Implementation-Version": "${version}",
-            "Implementation-Vendor" :"teamaurora",
+            "Implementation-Vendor" :"Team Aurora",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
             "MixinConfigs": "frostburn_expansion.mixins.json"
         ])
